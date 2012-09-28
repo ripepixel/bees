@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  subscription_id: 1
+  product_id: 1
+  quantity: 1
+  price: 9.99
+  recipient1: MyString
+  age1: 1
+  gender1: MyString
+  recipient2: MyString
+  age2: 1
+  gender2: MyString
+
+two:
+  subscription_id: 1
+  product_id: 1
+  quantity: 1
+  price: 9.99
+  recipient1: MyString
+  age1: 1
+  gender1: MyString
+  recipient2: MyString
+  age2: 1
+  gender2: MyString

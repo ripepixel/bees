@@ -1,0 +1,112 @@
+<% if @subscription.errors.any? %>
+	<% @subscription.errors.full_messages.each do |msg| %>
+		<p><%= msg %></p>
+	<% end %>
+<% end %>
+
+<div class="row mbottom30">
+	<h3>Checkout</h3>
+
+</div>
+
+<div class="row mbottom10">
+	<div class="eight columns">
+		<strong>Item</strong>
+	</div>
+	<div class="four columns">
+		<strong>Item Total</strong>
+	</div>
+</div>
+
+<div class="row mbottom20">
+	<div class="eight columns">
+		<%= @product.name %><br />
+		<p>You will be billed <%= number_to_currency(@product.sub_price) %> every <%= pluralize(@product.sub_frequency, @product.sub_period) %>
+	</div>
+	<div class="four columns">
+		<strong><%= number_to_currency(@product.sub_price) %></strong>
+	</div>
+</div>
+
+<div class="row mbottom20">
+	<div class="four columns">
+	</div>
+	<div class="two columns">
+	</div>
+	<div class="two columns">
+		Delivery:
+	</div>
+	<div class="four columns">
+		<strong>FREE</strong>
+	</div>
+</div>
+
+<div class="row mbottom30">
+	<div class="four columns">
+		
+	</div>
+	<div class="two columns">
+		
+	</div>
+	<div class="two columns">
+		Total:
+	</div>
+	<div class="four columns">
+		<strong><%= number_to_currency(@product.sub_price) %></strong>
+	</div>
+</div>
+
+<div class="row mbottom30">
+	<div class="twelve columns">
+		<p>Monthly plans can be cancelled, through your account, at any time.</p>
+	</div>
+		<%= form_for @subscription do |f| %>
+		
+			<%= f.fields_for :subscription_items do |builder| %>
+				<%= render 'subscription_item_fields', f: builder %>
+			<% end %>
+		
+		<div class="row">
+			<div class="twelve columns">
+				<h5>Delivery Details</h5>
+			</div>
+		</div>
+		<div class="row">
+			<div class="six columns">
+				<p><%= f.label :street, "Street" %>
+				<%= f.text_field :street, class: "input-text" %></p>
+
+				<p><%= f.label :town, "Town" %>
+				<%= f.text_field :town, class: "input-text" %></p>
+			</div>
+			<div class="six columns">
+				<p><%= f.label :county, "County" %>
+				<%= f.text_field :county, class: "input-text" %></p>
+
+				<p><%= f.label :postcode, "Post Code" %>
+				<%= f.text_field :postcode, class: "input-text" %></p>
+
+			</div>
+		</div>
+		<div class="row"><p><strong>Is this a gift?</strong><input type="checkbox" id="gift" /></p></div>
+		<div id="gift_fields" class="row" style="display:none;">
+			<h5>Gift Message</h5>
+			<p>Please enter a message, below, and it will be included with the first delivery.</p>
+			<p><%= f.label :gift_message, "Message" %>
+				<%= f.text_area :gift_message, class: "input-text", cols: 15 %></p>
+		</div>
+		<p>We, currently, only deliver to mainland UK.</p>
+		<p><%= f.submit "Order", class: "nice button radius green" %></p>
+		<% end %>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+    var $aDiv = $("#gift_fields").hide();
+
+    $("#gift").click(function() {
+       $aDiv[this.checked ? "show" : "hide"]();
+    });
+});
+
+</script>

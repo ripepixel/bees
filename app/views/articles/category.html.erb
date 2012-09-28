@@ -1,0 +1,26 @@
+<div class="row mbottom30">
+	
+	<h3>Articles in <%= @articles.first.article_category.name %></h3>
+	<p><%= link_to "<< Back to Blog", blog_path %></p>
+	
+	<% @articles.each do |post| %>
+		<div class="row mbottom20">
+			<div class="four columns">
+				<%= image_tag post.image.to_s if post.image? %>
+			</div>
+			
+			<div class="eight columns">
+				<h4><%= link_to post.title, article_path(post.permalink) %></h4>
+				<p class="small">Published on <%= post.created_at.strftime("%d/%m/%Y") %> in <%= link_to post.article_category.name, articles_category_path(:name => post.article_category.name) %><br />
+					<%= pluralize(post.comments.count, "comment") %>
+				</p>
+				<%= raw textilize post.body[0..300] %>
+				<p><%= link_to "read full article", article_path(post.permalink) %></p>
+			</div>
+		</div>
+		<hr />
+	<% end %>
+	
+	<p><%= will_paginate @articles %></p>
+</div>
+

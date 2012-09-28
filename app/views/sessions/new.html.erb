@@ -1,0 +1,30 @@
+<div class="row mbottom30">
+	<div class="panel">
+		<div class="six columns">
+			<h2>Log In</h2>
+			<%= form_tag sessions_path, class: "nice" do %>
+	
+			<p><%= label_tag :email %>
+				<%= email_field_tag :email, params[:email], class: "input-text" %>
+			</p>
+	
+			<p><%= label_tag :password %>
+				<%= password_field_tag :password, nil, class: "input-text" %>
+			</p>
+	
+			<p><%= submit_tag "Log In", class: "button nice radius small blue" %></p>
+	
+			<% end %>
+			<p><%= link_to "Forgotten password?", reset_password_path %></p>
+		</div>
+
+		<div class="six columns">
+			<h2 class="subs">Log in to your account</h2>
+			<p>Manage your subscription details</p>
+			<p>Access member only content (coming soon!)</p>
+
+			<p>Don't have an account? <%= link_to "Sign up here", signup_path %> or <%= link_to "purchase a subscription", join_path %>.</p>
+		</div>
+
+	</div>
+</div>

@@ -1,0 +1,37 @@
+<div class="row mbottom30">
+	<div class="panel">
+		<div class="six columns">
+			<h2>Sign Up</h2>
+				<%= form_for @user, html: { class: "nice" } do |f| %>
+			  <% if @user.errors.any? %>
+			    <div class="error_messages">
+			      <p class="red">There have been errors with your submission.</p>
+			      <% @user.errors.full_messages.each do |msg| %>
+			      	<p class="red-cancel"><%= msg %></p>
+			      <% end %>
+			    </div>
+			  <% end %>
+
+			  <p>
+			    <%= f.label :email %>
+			    <%= f.email_field :email, class: "input-text" %></p>
+  
+			  <p>
+			    <%= f.label :password %>
+			    <%= f.password_field :password, class: "input-text" %>
+			  </p>
+  
+			  <p>
+			    <%= f.label :password_confirmation, "Confirm Password" %>
+			    <%= f.password_field :password_confirmation, class: "input-text" %>
+			  </p>
+  
+			  <p><%= f.submit "Sign Up", class: "nice button radius small green" %></p>
+			<% end %>
+			<p>Already have an account? <%= link_to "Log in here", login_path %>.</p>
+		</div>
+		<div class="six columns">
+			<%= image_tag "single-box.png" %>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,30 @@
+<div class="row">
+	<h5>Recipient(s) Details</h5>
+</div>
+<div class="row">
+	<div class="six columns">
+		<p><%= f.label :recipient1, "Child's Name" %>
+		<%= f.text_field :recipient1, class: "input-text" %></p>
+
+		<p><%= f.label :age1, "Child's Age (years)" %>
+		<%= f.text_field :age1, class: "input-text small" %></p>
+
+		<p><%= f.label :gender1, "Child's Gender", style: "display: inline;" %> <span style="margin-left: 20px;" class="small has-tip tip-right" data-width="150" title="Our gift boxes can be tailored to be gender specific so they are more suitable for the receiving child.">Why do we ask?</span>
+					<%= f.select :gender1, options_for_select(["Boy", "Girl", "Neutral"], "Neutral") %>
+		</p>
+	</div>
+	<div class="six columns">
+	<% if @product.has_sibling? %>
+		<p><%= f.label :recipient2, "Sibling's Name" %>
+		<%= f.text_field :recipient2, class: "input-text" %></p>
+
+		<p><%= f.label :age2, "Sibling's Age (years)" %>
+		<%= f.text_field :age2, class: "input-text small" %></p>
+	
+		<p><%= f.label :gender2, "Sibling's Gender", style: "display: inline;" %> <span style="margin-left: 20px;" class="small has-tip tip-right" data-width="150" title="Our gift boxes can be tailored to be gender specific so they are more suitable for the receiving child.">Why do we ask?</span>
+						<%= f.select :gender2, options_for_select(["Boy", "Girl", "Neutral"], "Neutral") %>
+					</p>
+	<% end %>
+	<%= f.hidden_field :product_id, value: @product.id %>
+	</div>
+</div>

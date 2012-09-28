@@ -1,0 +1,24 @@
+<div class="panel-emph">
+	<h4>Join Us</h4>
+	<p>Our craft boxes are delivered monthly and contain a range of items to keep the kids entertained for hours.</p>
+	<p><%= link_to "Join", subscriptions_path, class: "button nice radius medium blue" %></p>
+</div>
+
+<div class="panel">
+	<h4>Latest Articles</h4>
+	<% @latest_articles.each do |lat| %>
+		<p><%= link_to lat.title, article_path(lat.permalink) %></p>
+	<% end %>
+	
+	<p><%= link_to "All Articles", articles_all_path %></p>
+	
+</div>
+
+<div class="panel">
+	<h4>Categories</h4>
+	<ul>
+		<% @article_cats.each do |ac| %>
+			<li><%= link_to ac.name, articles_category_path(:name => ac.name) if has_articles(ac) %></li>
+		<% end %>
+	</ul>
+</div>

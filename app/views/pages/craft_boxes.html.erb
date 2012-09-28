@@ -1,0 +1,35 @@
+<div class="row mbottom30">
+	
+	<div class="eight columns">
+		<h3>Craft Boxes</h3>
+		<p>Our craft boxes are aimed at children from 3 years up to 7 years, although older children (and adults) enjoy using them too.</p>
+		<div id="featured">
+			<%= image_tag "box-home.jpg" %>
+			<%= image_tag "pirate-box-josh1.jpg" %>
+			<%= image_tag "single-box-slide.jpg" %>
+			<%= image_tag "pirate-box-josh2.jpg" %>
+		</div>
+	</div>
+	
+	<div class="four columns">
+		<div class="panel-emph">
+			<h4>Join Today</h4>
+			<p>Have a look at our subscription packages and receive a great craft box, filled with craft projects, every month!</p>
+			<p><%= link_to "Join", join_path, class: "button nice radius medium blue" %> </p>
+		</div>
+	</div>
+	
+</div>
+
+<script type="text/javascript">
+   $(window).load(function() {
+       $('#featured').orbit({
+			     animation: 'fade',                  // fade, horizontal-slide, vertical-slide, horizontal-push
+			     animationSpeed: 1200, 
+			     pauseOnHover: true,
+					 startClockOnMouseOut: true,
+			     directionalNav: false,
+			     fluid: true                         // or set a aspect ratio for content slides (ex: '4x3') 
+			});
+   });
+</script>

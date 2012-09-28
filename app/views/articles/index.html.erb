@@ -1,0 +1,47 @@
+<div class="row mbottom30">
+	
+	<div class="eight columns">
+		<div class="row mbottom30">
+			<h3>Little Busy Bees Blog</h3>
+			<hr />
+
+			<h4><%= link_to @featured.title, article_path(@featured.permalink) %></h4>
+			<p class="small">Published on <%= @featured.created_at.strftime('%d/%m/%Y') %> in <%= link_to @featured.article_category.name, articles_category_path(:name => @featured.article_category.name) %><br /><%= pluralize(@featured.comments.count, "comment") %></p>
+			
+			<p><%= image_tag @featured.image.to_s, width: "350" if @featured.image? %></p>
+			
+			<%= raw textilize @featured.body[0..300] %>
+			<%= link_to "read full article", article_path(@featured.permalink) %>
+			
+			<p></p>
+
+			<hr />
+		</div>
+
+		<div class="row mbottom30">
+			<% @articles.each do |post| %>
+				<div class="four columns">
+				<h4><%= link_to post.title, article_path(post.permalink) %></h4>
+				<p class="small">Published on <%= post.created_at.strftime('%d/%m/%Y') %> in <%= link_to post.article_category.name, articles_category_path(:name => post.article_category.name) %><br />
+					<%= pluralize(post.comments.count, "comment") %>
+				</p>
+				<%= raw textilize post.body[0..200] %>
+				<%= link_to "read full article", article_path(post.permalink) %>
+				</div>
+			<% end %>
+
+			
+			
+		</div>
+		<div class="row mbottom30">
+			<%= button_to "View All Blog Articles", articles_all_path, class: "nice button radius small blue" %>
+		</div>
+	</div>
+	
+	<div class="four columns">
+		<%= render "sidebar" %>
+	</div>
+	
+</div>
+
+

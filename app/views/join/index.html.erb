@@ -1,0 +1,60 @@
+<div class="row mbottom30">
+	<div class="seven columns">
+		<h1 class="subs">Craft Subscription Boxes</h1>
+		<%= image_tag "box-home.jpg" %>
+		
+		<div class="row">	
+				<h2 class="subs">Why choose Little Busy Bees?</h2>
+				<p><strong>Convenient</strong></p>
+				<p>Each box has, at least 3 projects, with all the craft materials and instructions to complete them and is delivered <strong>free</strong> direct to your door. Some months we also add a little special gift!</p>
+				
+				<p><strong>Educational</strong></p>
+				<p>The boxes are designed by parents and tested by children, ensuring each box is fun and educational to use.</p>
+
+				<p><strong>Cancel Anytime</strong></p>
+				<p>We'd hope you would stay with us forever, however, you can easily cancel your subscription at any time.</p>
+
+				<p><strong>Sibling Option</strong></p>
+				<p>Our sibling option allows you to add extra craft items into the box, so there's no arguing!</p>
+		</div>
+	</div>
+	
+	<div class="five columns">
+		<div class="panel">
+			<h2 class="subs">Sign Up</h2>
+			<%= form_tag 'subscriptions/new', :method => :post, class: "nice" do %>
+				<p><%= label_tag "Select Plan" %>
+					<%= select_tag :product_id, options_from_collection_for_select(@products, :id, :name_with_sub_price) %>
+				</p>
+
+				<% if !current_user %>
+				<p><%= label_tag "Email Address" %>
+						<%= text_field_tag :email, nil, class: "oversize input-text" %>
+				</p>
+
+				<p><%= label_tag "Create a password" %>
+					<%= password_field_tag :password, nil, class: "oversize input-text" %></p>
+				<p>If you already have an account, <%= link_to "log in here", login_path %></p>
+				<% else %>
+					<p>You are logged in as <%= current_user.email %>. <%= link_to "Logout?", logout_path %></p>
+				<% end %>
+				
+				<p>The plans will automatically renew and can be cancelled at any time.</p>
+				
+				<p><%= submit_tag "Continue", class: "nice radius medium button" %></p>	
+
+			<% end %>
+		</div>
+
+		<div class="home-panel">
+			<h4>Sibling Option</h4>
+			<p>If you have more than one child, we have the perfect option to put a stop to the arguments over 'whose turn it is to use the red crayon'.</p>
+			<p>We have created a <strong>sibling option</strong> for each craft subscription plan. This adds extra craft items into the box, so there are more than enough for each child to use. This saves money on having to buy two separate subscriptions.</p>
+			<p>Make sure to choose the sibling option when selecting your craft subscription package.</p>
+		</div>
+
+	</div>
+</div>
+
+
+

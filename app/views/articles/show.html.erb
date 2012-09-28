@@ -1,0 +1,64 @@
+<div class="row mbottom30">
+	
+	<div class="eight columns">
+		<h2><%= @article.title %></h2>
+		
+		<%= image_tag @article.image.to_s if @article.image? %>
+		<p>&nbsp;</p>
+
+		<%= raw textilize @article.body %>
+
+		<p>Published on <%= @article.created_at.strftime('%d/%m/%Y') %> in <%= link_to @article.article_category.name, articles_category_path(:name => @article.article_category.name) %></p>
+
+		
+		<div class="row mtop30 mbottom30">
+			<div class="four columns">
+				<%= link_to("< Latest Articles", article_path(@article.next_article.permalink)) if @article.next_article %>
+			</div>
+			
+			<div class="four columns">
+				<%= link_to("Older Articles >", article_path(@article.previous_article.permalink)) if @article.previous_article %>
+			</div>
+		</div>
+		
+		<div class="row mbottom30">
+			<h4>Comments</h4>
+			<% if @comments.empty? %>
+				<p>There are no comments for this article. Would you like to add yours?</p>
+			<% else %>
+				<% @comments.each do |com| %>
+					<div class="row mbottom20">
+						<div class="two columns">
+							<%= com.guest_username.capitalize %> said:
+						</div>
+						<div class="ten columns">
+							<div class="panel">
+								<%= com.comment %>
+								<p>&nbsp;</p>
+								<p class="small">Posted: <%= time_ago_in_words(com.created_at) %> ago</p>
+							</div>
+						</div>
+					</div>
+				<% end %>
+			<% end %>
+			
+			<h5>Add Your Comment</h5>
+			<%= form_for(:comment, :url => comments_path(:article_id => @article.id)) do |f| %>
+				<%= f.hidden_field :article_id, value: @article.id %>
+				<p><%= f.label :guest_username, "Name" %><%= f.text_field :guest_username, class: "input-text", required: true %> </p>
+				<p><%= f.label :guest_email, "Email" %><%= f.email_field :guest_email, class: "input-text", required: true %> </p>
+				<p><%= f.label :comment, "Your Comment" %> <%= f.text_area :comment, rows: 8, class: "input-text", required: true %></p>
+				<p><%= submit_tag "Add Comment", class: "button nice radius small blue" %></p>
+			<% end %>
+			
+			
+			
+		</div>
+		
+	</div>
+	
+	<div class="four columns">
+		<%= render "sidebar" %>
+	</div>
+	
+</div>

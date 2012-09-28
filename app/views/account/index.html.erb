@@ -1,0 +1,60 @@
+<div class="row mbottom30">
+	<h4>Your Account</h4>
+</div>
+
+<div class="row mbottom30">
+	<div class="panel">
+		<h5>Subscriptions</h5>
+		<% if @subscriptions.empty? %>
+			<p>You have not purchased any subscriptions yet :( Would you like to look at our <%= link_to "subscriptions", join_path %>?</p>
+		<% else %>
+		<table width="99%">
+			<thead>
+				<tr>
+					<th>Item</th>
+					<th>Price</th>
+					<th>Start Date</th>
+					<th>Status</th>
+					<th>View</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @subscriptions.each do |sub| %>
+				<tr>
+					<td><%= sub.subscription_items.first.product.name %></td>
+					<td><%= number_to_currency(sub.subscription_items.first.price) %></td>
+					<td><%= sub.first_delivery.strftime('%d/%m/%Y')  %></td>
+					<td><%= sub.status %>
+					<td><%= link_to "View", action: :subscription, subscription_id: sub.id %></td>
+				</tr>
+				<% end %>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<% @cancelled.each do |cancel| %>
+					<tr class="cancelled">
+						<td><%= cancel.subscription_items.first.product.name %></td>
+						<td><%= number_to_currency(cancel.subscription_items.first.price) %></td>
+						<td><%= cancel.first_delivery.strftime('%d/%m/%Y')  %></td>
+						<td><%= cancel.status %>
+						<td><%= link_to "View", action: :subscription, subscription_id: cancel.id %></td>
+					</tr>
+				<% end %>
+			</tbody>
+		</table>
+		
+		<% end %>
+	</div>
+	
+</div>
+
+<div class="row mbottom30">
+	<div class="panel">
+		<h5>Profile</h5>
+		<p><%= link_to "Change your password", change_password_path %></p>
+	</div>
+</div>

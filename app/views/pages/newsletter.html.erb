@@ -1,0 +1,19 @@
+<div class="row mbottom30">
+
+	<h2>Sign Up to Our Newsletter</h2>
+	<div class="home-panel-orange mbottom30">
+		<p>Sign up to the Little Busy Bees newsletter, before the 1st December, to be placed in a prize draw to win a selection of children's books, <strong>worth at least &pound;50</strong> (RRP price).*</p>
+	</div>
+	<p>If you would like to receive updates containing information about Little Busy Bees, our competitions, new craft ideas and special offers, please enter your email address below.</p>
+
+	<%= form_tag newsletter_signup_path, class: "nice" do %>
+		<p><%= text_field_tag 'email', nil, class: "input-text", :placeholder => 'Your email address' %></p>
+		<p><%= submit_tag "Subscribe", class: "nice button radius small red" %></p>
+	<% end %>
+
+	<p>We will not send you any spam mail, nor sell or give your details away to any other third parties. It's just us and you baby! And if you do get fed up of us rambling on, you can easily un-subscribe by clicking on the un-subscribe links in any of the emails we send you.</p>
+
+
+	<p>* A winner will be selected at random, on the 1st December and contacted via email. Please ensure the email address you enter is checked regularly. Your email address must still be registered to the mailing list when the winner is selected. Open to UK residents only, sorry.</p>
+
+</div>

@@ -1,0 +1,52 @@
+
+<div class="row mbottom30">
+	<div class="three columns">
+		<%= render "menu" %>
+	</div>
+	
+	<div class="five columns">
+		<h4>Frequently Asked Questions</h4>
+		
+		<dl class="nice vertical tabs">
+  		<dd><a href="#whatsitabout">So, what's it all about?</a></dd>
+  		<dd><a href="#howdoijoin">How do I join?</a></dd>
+  		<dd><a href="#paymentoptions">What are the payment options?</a></dd>
+  		<dd><a href="#whatsinthebox">What's included in the boxes?</a></dd>
+  		<dd><a href="#whenwillitarrive">When will it arrive?</a></dd>
+  		<dd><a href="#wheredeliver">Where do you deliver to?</a></dd>
+  		<dd><a href="#changeaddress">Can I change my delivery address?</a></dd>
+  		<dd><a href="#boxnotarrived">My box hasn't arrived. Help!</a></dd>
+  		<dd><a href="#whengetcharged">When do I get charged?</a></dd>
+  		<dd><a href="#sendagift">Can I send it as a gift?</a></dd>
+  		<dd><a href="#damages">What about damaged items?</a></dd>
+  		<dd><a href="#cancellation">What's your cancellation policy?</a></dd>
+		</dl>
+		
+		
+	</div>
+	
+	<div class="four columns">
+		<div class="panel">
+			<h3>Answer</h3>
+		<ul class="tabs-content">
+  		<li id="whatsitaboutTab"><p>Little Busy Bees is a monthly subscription service for children's craft projects.</p>
+  			<p>Each month you will receive a box, packed with great projects, based around a theme; such as Pirates or Jungle animals.</p>
+  			<p>Our aim is to create an enjoyable, educational and fun (and sometimes messy!) experience for the children. Plus, the grown ups get to have a break too.</p></li>
+  		<li id="howdoijoinTab"><p>Joining is simple. Select your <%= link_to "kids craft subscription package here, ", join_path %> enter the child's details, delivery details and payment details.</p> <p>That's it!</p></li>
+  		<li id="paymentoptionsTab"><p>We currently use a company called GoCardless to process our payments.</p><p>The difference between these and the likes of Paypal et al is that you subscribe using a direct debit system (with your bank details) and not your credit or debit cards.</p><p>It's also a lot cheaper, for us, to process your payments, meaning we can pass the savings onto you directly.</p><p>They are also a great bunch of people! You can find more info about them at <%= link_to "GoCardless", "http://gocardless.com/about", :target => "_blank" %>.</p></li>
+  		<li id="whatsintheboxTab"><p>Within each craft box, you will find all* the items needed to complete the projects. This includes paints, glue, colours, paper, paint brushes, instructions etc. We even include a disposable apron, to keep the little ones a bit cleaner.</p><p>* Some items we can not include, for obvious reasons; such as warm water, however, our instructions will tell you the items you may also require to complete the project. These should be readily available in most homes (scissors, for example).</p></li>
+  		<li id="whenwillitarriveTab"><p>Our delivery process is based around the 15th of each month. Depending on the weight of the craft boxes, will depend on which delivery company we use. However, you should receive your delivery between 3 and 7 days after this date.</p></li>
+  		<li id="wheredeliverTab"><p>Currently, we only deliver our craft boxes to Mainland UK. However, we are looking to expand this option, so please keep your ears peeled.</p></li>
+  		<li id="changeaddressTab"><p>Yes you certainly can. Just sign into your account, select your subscription package and edit the delivery address details. It would be advisable to try and change your details, either, before the 10th of the month or after the 20th. Just so we don't end up sending your boxes to the wrong place when we are processing our deliveries.</p></li>
+  		<li id="boxnotarrivedTab"><p>Our craft boxes are shipped between the 15th and 18th of every month and should only take a few days to arrive.</p><p>If you have still not received your box by the 25th of the month, please let us know and we will chase it up for you.</p></li>
+  		<li id="whengetchargedTab"><p>Our charging process takes place around the 14th of every month. If you have signed up before this date, you will be charged in the current month.</p><p>If you sign up after the 14th, your first payment and delivery will take place the following month. You will be notified each time a payment has successfully been made.</p></li>
+  		<li id="sendagiftTab"><p>If you're feeling generous, then you can send the craft boxes as a gift. Simply choose the gift option, from the main menu, select the subscription package you require and enter your details. You can also add a special message, which we will put into the boxes for you.</p><p>Gift subscriptions are paid for in full at the time of ordering, they are not a monthly payment.</p></li>
+  		<li id="damagesTab"><p>Although we carefully check and package each of our craft boxes, with the nature of the delivery system, there may be the odd damaged item on arrival. We don't like this, but once it has left our building, your craft box is in the hands of the courier.</p><p>Should you find that any items are damaged, please contact us straight away and we will send out a replacement item.</p></li>
+  		<li id="cancellationTab"><p>Obviously you're not going to want to cancel because our craft boxes are so awesome!</p><p>However, should you have to, because your children have actually moved out now and you have a massive pile of craft boxes sat in your living room. We have made it very easy for you to do so.</p><p>Simply sign into your account, select the subscription package and hit the cancel button. You will be asked to make sure, just in case you have got fat fingers and hit the wrong button, then upon clicking OK your subscription will be cancelled.</p><p>We will shed a tear and mourn the loss of a great customer, but carry on making awesome craft boxes for other children. Just not yours anymore.</p>
+  			<p>If you have opted for the 3 or 6 monthly subscription packages, unfortunately we do not provide refunds for outstanding boxes. However, you will still receive any boxes, up until the end of your subscription period.</p></li>
+		</ul>
+		<p>&nbsp;</p>
+		</div>
+	</div>
+	
+</div>

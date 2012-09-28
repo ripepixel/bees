@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	
+	<!-- Uncomment to make IE8 render like IE7 -->
+	<!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
+	
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="<%= meta_desc %>" />
+	<meta name="keywords" content="<%= meta_keys %>" />
+	
+	<title><%= page_title %></title>
+  
+	<!-- Included CSS Files -->
+	<link href='http://fonts.googleapis.com/css?family=Pontano+Sans' rel='stylesheet' type='text/css'>
+	<%= stylesheet_link_tag    "application" %>
+	
+	<!-- Included JS Files  -->
+	<%= javascript_include_tag "application" %>
+  
+  <%= csrf_meta_tags %>
+  
+  <!-- Google Stuff -->
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31256435-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body>
+	<div id="top-login">
+		<div class="row">
+			<div class="four columns">
+				<%= link_to (image_tag "social/facebook.png"), "http://www.facebook.com/pages/Little-Busy-Bees/130669143733224", alt: "Facebook", title: "Facebook" %> <%= link_to (image_tag "social/twitter.png"), "http://www.twitter.com/littlebusybees/", alt: "Twitter", title: "Twitter" %> <%= link_to (image_tag "social/pinterest.png"), "http://www.pinterest.com/littlebusybees/", alt: "Pinterest", title: "Pinterest" %>
+			</div>
+			
+			<div class="eight columns">
+				<div class="right">
+				<% if current_user %>
+				Hi <%= current_user.email %>. <%= link_to "My Account", account_path %> | <%= link_to "Log Out", logout_path %>
+			<% else %>
+		 		<%= link_to "Login", login_path %> | <%= link_to "Signup", signup_path %>
+			<% end  %>
+				</div>
+			</div>
+			
+			
+		</div>
+	</div>
+	<div id="top-nav">
+		
+		<div class="row">
+			<div class="four columns">
+				<%= link_to (image_tag "logo-sketched.png"), root_url, alt: "Little Busy Bees", title: "Little Busy Bees Craft Boxes" %>
+			</div>
+			<div class="eight columns">
+				<ul class="nav-bar">
+					<li><%= link_to "Home", root_path, class: "main" %></li>
+					<li><%= link_to "Join", join_path, class: "main" %></li>
+					<li><%= link_to "Craft Boxes", craft_boxes_path, class: "main" %></li>
+					<li><%= link_to "Blog", blog_path, class: "main" %></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+  <div class="container">
+    <div class="container">
+			
+		<div class="row">
+			<% if flash[:error] %>
+				<div class="alert-box error">
+					<%= flash[:error] %>
+					<a href="" class="close">&times;</a>
+				</div>
+			<% end %>
+
+			<% if flash[:notice] %>
+				<div class="alert-box success fade">
+					<%= flash[:notice] %>
+					<a href="" class="close">&times;</a>
+				</div>
+			<% end %>
+
+			<% if flash[:alert] %>
+				<div class="alert-box error fade">
+					<%= flash[:alert] %>
+					<a href="" class="close">&times;</a>
+				</div>
+			<% end %>
+		</div>
+
+			<%= yield %>
+		</div>
+
+		
+
+	</div>
+	
+	<div id="footer">
+			<div class="row">
+				<div class="twelve columns">
+						<div class="four columns">
+							<h5>Newsletter Signup</h5>
+							<%= form_tag newsletter_signup_path, class: "nice" do %>
+							<%= text_field_tag 'email', nil, class: "input-text", :placeholder => 'Your email address' %>
+							<% end %>
+							<p>Put you email address above and hit enter, to register to our newsletter. We won't spam you.</p>
+						</div>
+						<div class="four columns">
+							<h5>Latest Blog Posts</h5>
+							<ul>
+								<% latest_blog_posts.each do |blog| %>
+									<li><%= link_to blog.title, article_path(blog.permalink) %></li>
+								<% end %>
+							</ul>
+						</div>
+						<div class="four columns">
+								<h5>Pages</h5>
+								<ul>
+									<li><%= link_to "contact", contact_path %></li>
+									<li><%= link_to "faq", faq_path %></li>
+									<li><%= link_to "about us", about_us_url %></li>
+									<li><%= link_to "terms", terms_path %></li>
+								</ul>
+						</div>
+				</div>
+			</div>
+			<div class="row mtop20">
+				<div class="four columns">
+				</div>
+				<div class="four columns">
+					<p><%= image_tag "busy-box-300x100.png", :width => "150", alt: "Little Busy Box Company", title: "Little Busy Box Company" %></p>
+					<p class="small">&copy; Copyright 2012 Little Busy Box Company Ltd</p>
+				</div>
+				<div class="four columns">
+				</div>
+			</div>
+		</div>
+	
+</body>
+</html>

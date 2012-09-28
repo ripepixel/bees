@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 1
+  street: MyString
+  town: MyString
+  county: MyString
+  postcode: MyString
+  status: MyString
+  first_delivery: 2012-08-25
+  resource_id: MyString
+
+two:
+  user_id: 1
+  street: MyString
+  town: MyString
+  county: MyString
+  postcode: MyString
+  status: MyString
+  first_delivery: 2012-08-25
+  resource_id: MyString
