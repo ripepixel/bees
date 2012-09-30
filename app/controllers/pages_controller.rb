@@ -36,7 +36,7 @@ class PagesController < ApplicationController
     @message = params[:message]
     if validate(@sender, @subject, @message)
       ContactMailer.contact(@sender, @subject, @message, @name).deliver      
-      flash[:success] = "Message sent successfully"      
+      flash[:success] = "Your message has been sent. We will reply as soon as possible."      
       redirect_to contact_path
     else
       flash.now[:error] = @error     

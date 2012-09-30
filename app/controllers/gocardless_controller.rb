@@ -6,6 +6,8 @@ class GocardlessController < ApplicationController
       #Rails.logger.info("GOCARDLESS: #{params.inspect}")
       sub = Subscription.find(params[:state])
       sub.update_attributes(:status => "Active", :resource_id => params[:resource_id])
+      # Send confirmation email
+      ContactMailer.subscription_success(current_user.email, sub).deliver
       redirect_to root_url, notice: "Yay, your subscription has been created."
     rescue GoCardless::ApiError => e
       @error = e

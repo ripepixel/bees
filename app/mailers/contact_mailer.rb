@@ -20,5 +20,11 @@ class ContactMailer < ActionMailer::Base
   	@subject = "Password Changed on Little Busy Bees"
   	mail(:to => to, :subject => @subject)
   end
+  
+  def subscription_success(to, sub)
+    @sub = sub
+    @subject = "Thanks for your order from Little Busy Bees"
+    mail(:to => to, :subject => @subject)
+  end
 
 end
