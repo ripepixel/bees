@@ -18,6 +18,14 @@ body {
 	font-family: 'Pontano Sans', sans-serif;
 }
 
+#right-corner {
+	position: fixed; /* Make sure you can align it exactly */
+    cursor: pointer; /* Change the cursor on mouse over */
+    top: 0px; /* Change to 100px to put it under a 100px banner */
+    right: 0px; /* Change to 100px to put it left of a 100px right-side bar */
+    z-index: 99999; /* make sure it is the top element always */
+}
+
 h1.home-title {
 	font-size: 2em;
 }
