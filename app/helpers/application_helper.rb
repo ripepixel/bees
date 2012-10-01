@@ -1,7 +1,7 @@
 module ApplicationHelper
   
   def page_title
-  	(@page_title + " - " if @page_title).to_s + 'Little Busy Bees'
+  	(@page_title + " - " if @page_title).to_s + 'Little Busy Bees - Childrens Craft Boxes'
   end
 
   def meta_keys
