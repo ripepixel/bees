@@ -1,6 +1,6 @@
 class Subscription < ActiveRecord::Base
-  attr_accessible :county, :first_delivery, :postcode, :resource_id, :status, :street, :town, :user_id, :subscription_items_attributes, :product_id, :gift_message
-  attr_accessor :product_id
+  attr_accessible :county, :first_delivery, :postcode, :resource_id, :status, :street, :town, :user_id, :subscription_items_attributes, :product_id, :gift_message, :promo_code
+  attr_accessor :product_id, :promo_code
   
   has_many :subscription_items, dependent: :destroy
   has_many :products, :through => :subscription_items

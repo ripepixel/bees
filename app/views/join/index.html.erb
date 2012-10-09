@@ -40,9 +40,14 @@
 				<% end %>
 				
 				<p>The plans will automatically renew and can be cancelled at any time.</p>
-				<p><strong>Please note: Our first deliveries will start in November,you will not be billed until then.</strong></p>
 				
+				<p><%= label_tag "Do you have a promo code?" %>
+						<%= text_field_tag :code, nil, class: "oversize input-text" %>
+				</p>
+
 				<p><%= submit_tag "Continue", class: "nice radius medium button" %></p>	
+
+				<p><strong>Please note: Our first deliveries will start in December,you will not be billed until then.</strong></p>
 
 			<% end %>
 		</div>

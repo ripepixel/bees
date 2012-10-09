@@ -17,16 +17,46 @@
 		<strong>Item Total</strong>
 	</div>
 </div>
+<% if @promo %>
+	<div class="row mbottom30">
+		<div class="eight columns">
+			<strong>PROMO - <%= @promo.details %></strong><br />
+		</div>
+		<div class="four columns">
+			<% if @promo.promo_type == "percentage" %>
+				<strong>-<%= @promo.discount %>%</strong>
+			<% else %>
+				<strong>-<%= number_to_currency(@promo.discount) %></strong>
+			<% end %>
+		</div>
+	</div>
 
-<div class="row mbottom20">
-	<div class="eight columns">
-		<%= @product.name %><br />
-		<p>You will be billed <%= number_to_currency(@product.sub_price) %> every <%= pluralize(@product.sub_frequency, @product.sub_period) %>
+	<div class="row mbottom20">
+		<div class="eight columns">
+			<%= @product.name %><br />
+			<% if @promo.promo_type == "percentage" %>
+				<% price = @product.sub_price - ((@product.sub_price / 100) * @promo.discount) %>
+				<p>You will be billed <%= number_to_currency(price) %> every <%= pluralize(@product.sub_frequency, @product.sub_period) %></p>
+			<% else %>
+				<p>You will be billed <%= number_to_currency(@product.sub_price - @promo.discount) %> every <%= pluralize(@product.sub_frequency, @product.sub_period) %></p>
+			<% end %>
+		</div>
+		<div class="four columns">
+			<strong><%= number_to_currency(@product.sub_price) %></strong>
+		</div>
 	</div>
-	<div class="four columns">
-		<strong><%= number_to_currency(@product.sub_price) %></strong>
+<% else %>
+
+	<div class="row mbottom20">
+		<div class="eight columns">
+			<%= @product.name %><br />
+			<p>You will be billed <%= number_to_currency(@product.sub_price) %> every <%= pluralize(@product.sub_frequency, @product.sub_period) %></p>
+		</div>
+		<div class="four columns">
+			<strong><%= number_to_currency(@product.sub_price) %></strong>
+		</div>
 	</div>
-</div>
+<% end %>
 
 <div class="row mbottom20">
 	<div class="four columns">
@@ -51,9 +81,19 @@
 	<div class="two columns">
 		Total:
 	</div>
-	<div class="four columns">
-		<strong><%= number_to_currency(@product.sub_price) %></strong>
-	</div>
+	<% if @promo && @promo.promo_type == "percentage" %>
+		<div class="four columns">
+			<strong><%= number_to_currency(price) %></strong>
+		</div>
+	<% elsif @promo && @promo.promo_type == "money" %>
+		<div class="four columns">
+			<strong><%= number_to_currency(@product.sub_price - @promo.discount) %></strong>
+		</div>
+	<% else %>
+		<div class="four columns">
+			<strong><%= number_to_currency(@product.sub_price) %></strong>
+		</div>
+	<% end %>
 </div>
 
 <div class="row mbottom30">
@@ -95,6 +135,10 @@
 			<p><%= f.label :gift_message, "Message" %>
 				<%= f.text_area :gift_message, class: "input-text", cols: 15 %></p>
 		</div>
+		<% if @promo %>
+			<%= f.hidden_field :promo_code, value: @promo.id %>
+		<% end %>
+		
 		<p>We, currently, only deliver to mainland UK.</p>
 		<p><%= f.submit "Order", class: "nice button radius green" %></p>
 		<% end %>

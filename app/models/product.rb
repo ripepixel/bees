@@ -2,6 +2,7 @@ class Product < ActiveRecord::Base
   attr_accessible :details, :has_sibling, :image, :is_subscription, :name, :sub_frequency, :sub_period, :sub_price
   
   has_many :subscription_items
+  has_many :promo_codes
   
   mount_uploader :image, ImageUploader
   

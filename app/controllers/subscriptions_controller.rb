@@ -6,6 +6,23 @@ respond_to :html, :json
     @product = Product.find(params[:product_id])
     @subscription = Subscription.new
     @subscription.subscription_items.build
+
+    if !params[:code].empty?
+      promo = PromoCode.find_by_code(params[:code])
+      if promo
+        if promo.expiry_date > Date.today
+          if promo.product_id && promo.product_id == @product.id
+            @promo = promo
+          else
+            flash[:error] = "Sorry, that Promo Code is not for this item"
+          end
+        else
+          flash[:error] = "Sorry, that Promo Code has expired"
+        end
+      else
+        flash[:error] = "Sorry that Promo Code is invalid"
+      end
+    end
     
     if !current_user
 		  # see if email exists if not logged in
@@ -42,10 +59,24 @@ respond_to :html, :json
   	item = @subscription.subscription_items.first
     
     if @subscription.save
+      # Promo Code
+      promo = PromoCode.find(params[:subscription][:promo_code]) if params[:subscription][:promo_code]
+      if promo
+        if promo.promo_type == "percentage"
+         @pprice = item.price - (( item.price / 100 ) * promo.discount)
+        elsif promo.promo_type == "money"
+          @pprice = item.price - promo.discount
+        else
+         @pprice = item.price
+        end
+      else
+        @pprice = item.price
+     end
+
       url_params = {
         :redirect_uri => confirm_subscription_url,
-  			:amount => item.price,
-  			:interval_unit => item.product.sub_period,
+  			:amount => @pprice,
+        :interval_unit => item.product.sub_period,
   			:interval_length => item.product.sub_frequency,
   			:name => item.product.name,
   			:state => @subscription.id,
@@ -54,6 +85,12 @@ respond_to :html, :json
   			  :email => current_user.email
   			}
   		}
+
+      # Add Promo Uses
+      if promo
+        promo_usage = PromoUse.new(promo_code_id: promo.id, user_id: current_user.id, subscription_id: @subscription.id)
+        promo_usage.save
+      end
 
   		url = GoCardless.new_subscription_url(url_params)
   		redirect_to url
@@ -77,8 +114,8 @@ respond_to :html, :json
   
   def get_start_date
     # Set first date to November for launch
-    if Date.today < Date.parse("2012-11-01")
-    	start_date = "2012-11-14"
+    if Date.today < Date.parse("2012-12-01")
+    	start_date = "2012-12-14"
     else
     	if Date.today.day <= 13
 	    	start_date = "#{Date.today.year}-#{Date.today.month}-14"
