@@ -4,6 +4,8 @@ class Subscription < ActiveRecord::Base
   
   has_many :subscription_items, dependent: :destroy
   has_many :products, :through => :subscription_items
+  has_many :promo_uses
+  has_many :promo_codes, through: :promo_uses
   belongs_to :user
   
   accepts_nested_attributes_for :subscription_items, allow_destroy: true

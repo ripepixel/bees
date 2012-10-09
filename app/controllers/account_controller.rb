@@ -15,6 +15,8 @@ class AccountController < ApplicationController
     	redirect_to account_url, alert: "Error finding Subscription details"
     else
 	    if @subscription && @subscription.user_id == current_user.id
+        # check for promo codes used
+        @promo = PromoUse.find_by_subscription_id(@subscription.id)
 	    	@gcsub = GoCardless.client.subscription(@subscription.resource_id)
 	      render "subscription"
 	    else

@@ -16,7 +16,6 @@
 						<strong>Price</strong>
 					</div>
 				</div>
-				
 				<% @subscription.subscription_items.each do |subs| %>
 					<div class="row mbottom20">
 						<div class="nine columns">
@@ -27,11 +26,24 @@
 						</div>
 						
 						<div class="three columns">
-							<%= number_to_currency(subs.price) %>
+								<%= number_to_currency(subs.price) %>
 						</div>
-						
-						
 					</div>
+					<div class="row mbottom20">
+						<% if @promo %>
+						<div class="nine columns">
+							PROMO: <%= @promo.promo_code.details %> 
+						</div>
+						<div class="three columns">
+							<% if @promo.promo_code.promo_type == "percentage" %>
+								- <%= number_to_currency(((subs.price / 100) * @promo.promo_code.discount))  %>
+							<% else %>
+								- <%= number_to_currency(subs.price - @promo.promo_code.discount) %>
+							<% end %>
+						</div>
+						<% end %>
+					</div>
+
 				<% end %>
 				
 				<div class="row mbottom30">
@@ -68,7 +80,16 @@
 		<div class="four columns">
 			<div class="panel">
 				<h5>Schedule</h5>
-				<p>Your subscription is for <%= number_to_currency(@subscription.subscription_items.first.price) %> every <%= pluralize(@subscription.subscription_items.first.product.sub_frequency, @subscription.subscription_items.first.product.sub_period) %></p>
+				<% if @promo %>
+					<% if @promo.promo_code.promo_type == "percentage" %>
+						<% price = @subscription.subscription_items.first.price - ((@subscription.subscription_items.first.price / 100) * @promo.promo_code.discount)  %>
+					<% else %>
+						<% price = @subscription.subscription_items.first.price - @promo.promo_code.discount %>
+					<% end %>
+				<% else %>
+					<% price = @subscription.subscription_items.first.price %>
+				<% end %>
+				<p>Your subscription is for <%= number_to_currency(price) %> every <%= pluralize(@subscription.subscription_items.first.product.sub_frequency, @subscription.subscription_items.first.product.sub_period) %></p>
 				<p>First Payment: <%= @gcsub.start_at.strftime("%d/%m/%Y") %></p>
 				<p><% unless @subscription.status == "Cancelled" %> Next Payment: <%= @gcsub.next_interval_start.to_time.strftime("%d/%m/%Y") %> <% end -%></p>
 				<% if @subscription.status == "Active" %>
