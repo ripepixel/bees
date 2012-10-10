@@ -73,19 +73,38 @@ respond_to :html, :json
         @pprice = item.price
      end
 
+     if promo && promo.one_time
+      # If one time payment promo apply a setup_fee for the first payment
+      sdate = Date.parse(start_date) >> item.product.sub_frequency
       url_params = {
         :redirect_uri => confirm_subscription_url,
-  			:amount => @pprice,
+        :amount => item.price,
         :interval_unit => item.product.sub_period,
-  			:interval_length => item.product.sub_frequency,
-  			:name => item.product.name,
-  			:state => @subscription.id,
-  			:start_at => start_date,
-  			:user => {
-  			  :email => current_user.email
-  			}
-  		}
+        :interval_length => item.product.sub_frequency,
+        :name => item.product.name,
+        :state => @subscription.id,
+        :start_at => sdate,
+        :setup_fee => @pprice,
+        :user => {
+          :email => current_user.email
+        }
+      }
+     else
+      url_params = {
+        :redirect_uri => confirm_subscription_url,
+        :amount => @pprice,
+        :interval_unit => item.product.sub_period,
+        :interval_length => item.product.sub_frequency,
+        :name => item.product.name,
+        :state => @subscription.id,
+        :start_at => start_date,
+        :user => {
+          :email => current_user.email
+        }
+      }
+     end
 
+      
       # Add Promo Uses
       if promo
         promo_usage = PromoUse.new(promo_code_id: promo.id, user_id: current_user.id, subscription_id: @subscription.id)
@@ -113,7 +132,7 @@ respond_to :html, :json
    end
   
   def get_start_date
-    # Set first date to November for launch
+    # Set first date to December for launch
     if Date.today < Date.parse("2012-12-01")
     	start_date = "2012-12-14"
     else

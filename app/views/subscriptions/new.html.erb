@@ -18,6 +18,7 @@
 	</div>
 </div>
 <% if @promo %>
+<% price = @product.sub_price - ((@product.sub_price / 100) * @promo.discount) if @promo.promo_type == "percentage" %>
 	<div class="row mbottom30">
 		<div class="eight columns">
 			<strong>PROMO - <%= @promo.details %></strong><br />
@@ -34,11 +35,14 @@
 	<div class="row mbottom20">
 		<div class="eight columns">
 			<%= @product.name %><br />
-			<% if @promo.promo_type == "percentage" %>
-				<% price = @product.sub_price - ((@product.sub_price / 100) * @promo.discount) %>
-				<p>You will be billed <%= number_to_currency(price) %> every <%= pluralize(@product.sub_frequency, @product.sub_period) %></p>
+			<% if @promo.one_time == true %>
+				<p>You will be billed <%= number_to_currency(@product.sub_price) %> every <%= pluralize(@product.sub_frequency, @product.sub_period) %>, after a first payment of <%= number_to_currency(price) %></p>
 			<% else %>
-				<p>You will be billed <%= number_to_currency(@product.sub_price - @promo.discount) %> every <%= pluralize(@product.sub_frequency, @product.sub_period) %></p>
+				<% if @promo.promo_type == "percentage" %>
+					<p>You will be billed <%= number_to_currency(price) %> every <%= pluralize(@product.sub_frequency, @product.sub_period) %></p>
+				<% else %>
+					<p>You will be billed <%= number_to_currency(@product.sub_price - @promo.discount) %> every <%= pluralize(@product.sub_frequency, @product.sub_period) %></p>
+				<% end %>
 			<% end %>
 		</div>
 		<div class="four columns">
