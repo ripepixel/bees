@@ -1,0 +1,34 @@
+<h2>Thanks for your order.</h2>
+
+<p>Hey, thanks for your order. We appreciate it.</p>
+
+<p>You have been kind enough to order the following:</p>
+
+<%= @sub.subscription_items.each do |subs| %>
+
+	<h4><%= subs.product.name %></h4>
+	<p>For <%= number_to_currency(subs.price) %></p>
+
+	<% if @promo %>
+		<p>PROMO: <%= @promo.promo_code.details %> 
+	
+		<% if @promo.promo_code.promo_type == "percentage" %>
+			- <%= number_to_currency(((subs.price / 100) * @promo.promo_code.discount))  %>
+		<% else %>
+			- <%= number_to_currency(subs.price - @promo.promo_code.discount) %>
+		<% end %>
+		</p>
+	<% end %>
+<% end %>
+
+<p>This will be delivered to: </p>
+<p><%= @sub.subscription_items.first.recipient1 %></p>
+<p><%= @sub.subscription_items.first.recipient2 if @sub.subscription_items.first.recipient2? %></p>
+<p><%= @sub.street %><br />
+<%= @sub.town %><br />
+<%= @sub.county %><br />
+<%= @sub.postcode %>
+</p>
+
+<p>Many Thanks<br />
+The Little Busy Bees</p>

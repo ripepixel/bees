@@ -23,6 +23,7 @@ class ContactMailer < ActionMailer::Base
   
   def subscription_success(to, sub)
     @sub = sub
+    @promo = PromoUse.find_by_subscription_id(@sub.id)
     @subject = "Thanks for your order from Little Busy Bees"
     mail(:to => to, :subject => @subject)
   end
