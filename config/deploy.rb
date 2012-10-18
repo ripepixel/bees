@@ -9,8 +9,8 @@ set :deploy_via, :remote_cache
 set :use_sudo, false
 
 set :scm, "git"
-set :repository, "git@github.com:ripepixel/bees.git"
-# set :repository, "https://github.com/ripepixel/bees.git"
+#set :repository, "git@github.com:ripepixel/bees.git"
+set :repository, "https://github.com/ripepixel/bees.git"
 set :branch, "master"
 
 default_run_options[:pty] = true
@@ -48,9 +48,6 @@ end
     run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
   end
   after "deploy:finalize_update", "deploy:symlink_config"
-  after :deploy do
-    run "chmod -R g+w #{release_path}/tmp"
-  end
 
   desc "Make sure local git is in sync with remote."
   task :check_revision, roles: :web do
