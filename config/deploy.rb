@@ -5,7 +5,7 @@ server "95.154.207.211", :web, :app, :db, primary: true
 set :application, "bees"
 set :user, "deploy"
 set :deploy_to, "/home/#{user}/apps/#{application}"
-set :deploy_via, :remote_cache
+#set :deploy_via, :remote_cache
 set :use_sudo, false
 
 set :scm, "git"
