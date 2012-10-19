@@ -28,4 +28,12 @@ class ContactMailer < ActionMailer::Base
     mail(:to => to, :subject => @subject)
   end
 
+  def new_subscription_admin(sub)
+    to = "contact@littlebusybees.co.uk"
+    @sub = sub
+    @promo = PromoUse.find_by_subscription_id(@sub.id)
+    @subject = "New Subscription on Little Busy Bees"
+    mail(:to => to, :subject => @subject)
+  end
+
 end
