@@ -41,7 +41,7 @@ class PagesController < ApplicationController
     @message = params[:message]
     if validate(@sender, @subject, @message)
       ContactMailer.contact(@sender, @subject, @message, @name).deliver      
-      flash[:success] = "Your message has been sent. We will reply as soon as possible."      
+      flash[:notice] = "Your message has been sent. We will reply as soon as possible."      
       redirect_to contact_path
     else
       flash.now[:error] = @error     
@@ -56,7 +56,7 @@ class PagesController < ApplicationController
 
   def newsletter_signup
     Gibbon.new(MAIL_CHIMP_API_KEY).list_subscribe(:id => '4b102b80dc', :email_address => params[:email])
-    flash[:success] = "Hey, thanks for signing up to our newsletter."
+    flash[:notice] = "Hey, thanks for signing up to our newsletter."
     redirect_to root_url
   end
   

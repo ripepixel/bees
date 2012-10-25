@@ -43,7 +43,7 @@
 </script>
 </head>
 <body>
-	
+	<div id="main-container">
 	<div id="top-login">
 		<div class="row">
 			<div class="four columns">
@@ -75,6 +75,7 @@
 					<li><%= link_to "Join", join_path, class: "main" %></li>
 					<li><%= link_to "Craft Boxes", craft_boxes_path, class: "main" %></li>
 					<li><%= link_to "Blog", blog_path, class: "main" %></li>
+					<li><%= link_to "Contact", contact_path, class: "main" %></li>
 				</ul>
 			</div>
 		</div>
@@ -107,23 +108,33 @@
 		</div>
 
 			<%= yield %>
-		</div>
+	</div>
 
 		
 
 	</div>
-	
+	<div id="newsletter-bar">
+		<div class="row">
+			<div class="four columns">
+				<h5>Newsletter Signup</h5>
+				<p>Enter your email address to receive our latest news, reviews and competitions.</p>
+			</div>
+			<div class="four columns">
+				<%= form_tag newsletter_signup_path, class: "nice" do %>
+					<%= text_field_tag 'email', nil, class: "input-text", :placeholder => 'Your email address' %>
+			</div>
+			<div class="four columns">
+					<%= submit_tag "Signup", class: "button large nice radius black" %>
+				<% end %>
+			</div>
+		</div>
+	</div>
+
 	<div id="footer">
 			<div class="row">
 				<div class="twelve columns">
-						<div class="four columns">
-							<h5>Newsletter Signup</h5>
-							<%= form_tag newsletter_signup_path, class: "nice" do %>
-							<%= text_field_tag 'email', nil, class: "input-text", :placeholder => 'Your email address' %>
-							<% end %>
-							<p>Put you email address above and hit enter, to register to our newsletter. We won't spam you.</p>
-						</div>
-						<div class="four columns">
+						
+						<div class="eight columns">
 							<h5>Latest Blog Posts</h5>
 							<ul>
 								<% latest_blog_posts.each do |blog| %>
@@ -146,13 +157,13 @@
 				<div class="four columns">
 				</div>
 				<div class="four columns">
-					<p><%= image_tag "busy-box-300x100.png", :width => "150", alt: "Little Busy Box Company", title: "Little Busy Box Company" %></p>
 					<p class="small">&copy; Copyright 2012 Little Busy Box Company Ltd</p>
 				</div>
 				<div class="four columns">
+					<p><%= image_tag "busy-box-300x100.png", :width => "150", alt: "Little Busy Box Company", title: "Little Busy Box Company" %></p>
 				</div>
 			</div>
 		</div>
-	
+	</div>
 </body>
 </html>

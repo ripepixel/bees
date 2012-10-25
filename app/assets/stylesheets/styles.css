@@ -13,9 +13,21 @@ html {
 	font-size: 0.8em;
 }
 body {
-	/*background: url("noise.png") repeat scroll 0 0 #ECE9D6; */
+	background: url("background-paper.jpg") repeat scroll 0 0 #ECE9D6;
 	background-color: white;
 	font-family: 'Pontano Sans', sans-serif;
+}
+
+#main-container {
+	margin: 20px auto;
+	width: 1200px;
+	border-radius: 5px 5px 5px 5px;
+	box-shadow: 0 0 7px rgba(0, 0, 0, 0.6);
+	background-color: #fff;
+}
+
+.row {
+	max-width: 1100px;
 }
 
 #right-corner {
@@ -59,6 +71,7 @@ h4.gift, h5.gift {
 	background-color: #000;
 	padding: 10px 0px;
 	color: #fff;
+	border-radius: 5px 5px 0 0;
 }
 
 #top-login a {
@@ -99,6 +112,7 @@ h4.gift, h5.gift {
 	padding: 18px 18px 2px;
 	border: 2px solid #FFCC33;
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+	min-height: 200px;
 }
 
 .home-panel h5 {
@@ -146,6 +160,27 @@ h4.gift, h5.gift {
 	padding: 20px 20px 2px;
 }
 
+#newsletter-bar {
+	background: none repeat scroll 0 0 #1F1F1F;
+	border-bottom: 1px solid #282828;
+	width: 100%;
+	padding: 30px 0px;
+}
+
+#newsletter-bar h5 {
+	color: #D4D1C1;
+	font-size: 1.9em;
+}
+
+#newsletter-bar input {
+	color: #B5B5B5;
+	font-size: 20px;
+	height: 50px;
+	margin-right: 10px;
+	padding-left: 20px;
+	width: 90%;
+	border-radius: 3px 3px 3px 3px;
+}
 
 .mbottom10 {
 	margin-bottom: 10px;
@@ -227,4 +262,5 @@ tr.cancelled {
 	width: 100%;
 	background-color: #D4D1C1;
 	padding: 30px 0px;
+	border-radius: 0 0 5px 5px;
 }
