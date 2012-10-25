@@ -1,6 +1,6 @@
 <div class="row mbottom30">
-	<div class="panel">
-		<div class="six columns">
+	<div class="two columns"></div>
+		<div class="four columns">
 			<h2>Sign Up</h2>
 				<%= form_for @user, html: { class: "nice" } do |f| %>
 			  <% if @user.errors.any? %>
@@ -31,7 +31,6 @@
 			<p>Already have an account? <%= link_to "Log in here", login_path %>.</p>
 		</div>
 		<div class="six columns">
-			<%= image_tag "single-box.png" %>
+			<%= image_tag "signup-bee-pointer.png" %>
 		</div>
-	</div>
 </div>
