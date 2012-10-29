@@ -1,0 +1,59 @@
+
+<html>
+<head>
+	<link href='http://fonts.googleapis.com/css?family=Pontano+Sans' rel='stylesheet' type='text/css'>
+	<%= stylesheet_link_tag    "application" %>
+	
+	<!-- Included JS Files  -->
+	<%= javascript_include_tag "application" %>
+  
+  	<%= csrf_meta_tags %>
+</head>
+
+<body>
+	<% @subscriptions.each do |sub| %>
+	<div id="a4page">
+		<h3>Delivery Details</h3>
+		<p><%= sub.street %><br />
+			<%= sub.town %><br />
+			<%= sub.county %><br />
+			<%= sub.postcode %>
+		</p>
+
+		<p><%= sub.subscription_items.first.recipient1 %> - 
+		<%= sub.subscription_items.first.age1 %> - 
+		<%= sub.subscription_items.first.gender1 %></p>
+		<p><%= sub.subscription_items.first.recipient2 %> - 
+		<%= sub.subscription_items.first.age2 %> - 
+		<%= sub.subscription_items.first.gender2 %></p>
+
+		<% if !sub.gift_message.blank? %>
+			<h4>Gift Message</h4>
+			<p><%= sub.gift_message %></p>
+		<% else %>
+			<p>No Gift Message!</p>
+		<% end %>
+
+		<table class="nice" width="99%">
+				<thead>
+					<tr>
+					<th>Item</th>
+					<th>Box Number</th>
+				</tr>
+				</thead>
+				<tbody>
+					<% sub.subscription_items.each do |item| %>
+					<tr>
+						<td><%= item.product.name %></td>
+						<td><strong><%= ((Date.today.year*12+Date.today.month) - (sub.first_delivery.year*12+sub.first_delivery.month) + 1) %></strong></td>
+					</tr>
+					<% end %>
+				</tbody>	
+			</table>
+
+	</div>
+	<div class="page-break"></div>
+	<% end %>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<div class="row mbottom30">
+	<h4>Admin Area</h4>
+</div>
+
+<div class="row mbottom30">
+	<div class="panel">
+		<h5>Subscriptions</h5>
+		<% if @subscriptions.empty? %>
+			<p>There are no subscriptions yet :(</p>
+		<% else %>
+		<table width="99%">
+			<thead>
+				<tr>
+					<th>Item</th>
+					<th>Price</th>
+					<th>Start Date</th>
+					<th>Status</th>
+					<th>Ordered</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @subscriptions.each do |sub| %>
+				<tr>
+					<td><%= link_to sub.subscription_items.first.product.name, manager_subscription_details_path(id: sub.id) %></td>
+					<td><%= number_to_currency(sub.subscription_items.first.price) %></td>
+					<td><%= sub.first_delivery.strftime('%d/%m/%Y')  %></td>
+					<td><%= sub.status %></td>
+					<td><%= sub.created_at.strftime('%d/%m/%Y') %></td>
+				</tr>
+				<% end %>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<% @cancelled.each do |cancel| %>
+					<tr class="cancelled">
+						<td><%= cancel.subscription_items.first.product.name %></td>
+						<td><%= number_to_currency(cancel.subscription_items.first.price) %></td>
+						<td><%= cancel.first_delivery.strftime('%d/%m/%Y')  %></td>
+						<td><%= cancel.status %></td>
+						<td><%= cancel.created_at.strftime('%d/%m/%Y') %></td>
+					</tr>
+				<% end %>
+			</tbody>
+		</table>
+		
+		<% end %>
+	</div>
+	
+</div>

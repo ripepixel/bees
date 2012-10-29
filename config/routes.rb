@@ -1,5 +1,6 @@
 Bees::Application.routes.draw do
 
+  
   get "comments/create"
 
   get "account", to: "account#index"
@@ -44,6 +45,12 @@ Bees::Application.routes.draw do
   post 'newsletter_signup', to: 'pages#newsletter_signup'
   post 'send_new_password', to: 'sessions#send_new_password'
   post 'send_change_password', to: 'account#send_change_password'
+
+
+  # Manager Static Pages
+  get 'manager', to: 'manager#index'
+  get 'manager/subscription_details', to: 'manager#subscription_details'
+  get 'manager/pack_sheets', to: 'manager#pack_sheets'
   
   ActiveAdmin.routes(self)
 

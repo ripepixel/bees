@@ -1,0 +1,83 @@
+<div class="row mbottom30">
+	<h4>Subscription Details</h4>
+	<p><%= link_to "<< back to subscriptions", manager_path %></p>
+</div>
+
+<div class="row mbottom30">
+	<div class="six columns">
+		<div class="panel">
+			<div class="twelve columns"
+				<p><%= @subscription.user.email %><br />
+					<%= @subscription.street %><br />
+					<%= @subscription.town %><br />
+					<%= @subscription.county %><br />
+					<%= @subscription.postcode %>
+				</p>
+			</div>
+			<table class="nice" width="99%">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Age</th>
+						<th>Gender</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><%= @subscription.subscription_items.first.recipient1 %></td>
+						<td><%= @subscription.subscription_items.first.age1 %></td>
+						<td><%= @subscription.subscription_items.first.gender1 %></td>
+					</tr>
+					<tr>
+						<td><%= @subscription.subscription_items.first.recipient2 %></td>
+						<td><%= @subscription.subscription_items.first.age2 %></td>
+						<td><%= @subscription.subscription_items.first.gender2 %></td>
+					</tr>
+				</tbody>
+			</table>
+			</div>
+	</div>
+	<div class="six columns">
+		<div class="panel">
+			<p>Status: <%= @subscription.status %><br />
+				First Del. : <%= @subscription.first_delivery.strftime('%d/%m/%Y') %><br />
+				GC Sub ID: <%= @subscription.resource_id %>			
+			</p>
+			<p>Box Number: <%= ((Date.today.year*12+Date.today.month) - (@subscription.first_delivery.year*12+@subscription.first_delivery.month) + 1) %></p>
+		</div>
+	</div>
+</div>
+<% if !@subscription.gift_message.blank? %>
+<div class="row mbottom30">
+	<div class="twelve columns">
+		<div class="panel">
+			<h4>Gift Message</h4>
+			<p><%= @subscription.gift_message %></p>
+		</div>
+	</div>
+</div>
+<% end %>
+
+<div class="row mbottom30">
+	<div class="twelve columns">
+		<div class="panel">
+			<h3>Item</h3>
+			<table class="nice" width="99%">
+				<thead>
+					<tr>
+					<th>Item</th>
+					<th>Price</th>
+				</tr>
+				</thead>
+				<tbody>
+					<% @subscription.subscription_items.each do |item| %>
+					<tr>
+						<td><%= item.product.name %></td>
+						<td><%= number_to_currency(item.price) %></td>
+					</tr>
+					<% end %>
+				</tbody>	
+			</table>
+		</div>
+	</div>
+</div>

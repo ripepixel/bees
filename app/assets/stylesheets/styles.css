@@ -265,3 +265,14 @@ tr.cancelled {
 	padding: 30px 0px;
 	border-radius: 0 0 5px 5px;
 }
+
+
+#a4page {
+	height: 290mm;
+	width: 205mm;
+	background-color: white;
+	padding-left: 30px;
+	overflow: hidden;
+}
+
+.page-break  { display: block; page-break-before: always; }
