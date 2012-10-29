@@ -79600,3 +79600,3429 @@ Served asset /foundation/misc/input-bg.png - 304 Not Modified (0ms)
 
 Started GET "/assets/foundation/misc/button-gloss.png" for 127.0.0.1 at 2012-10-29 14:35:47 +0000
 Served asset /foundation/misc/button-gloss.png - 304 Not Modified (0ms)
+
+
+Started GET "/manager/subscription_details?id=48" for 127.0.0.1 at 2012-10-29 14:37:44 +0000
+Processing by ManagerController#subscription_details as HTML
+  Parameters: {"id"=>"48"}
+  [1m[35mAdminUser Load (0.0ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1
+  [1m[36mSubscription Load (0.0ms)[0m  [1mSELECT "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."id" = ? LIMIT 1[0m  [["id", "48"]]
+  [1m[35mUser Load (15.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSubscriptionItem Load (0.0ms)[0m  [1mSELECT "subscription_items".* FROM "subscription_items" WHERE "subscription_items"."subscription_id" = 48 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "subscription_items".* FROM "subscription_items" WHERE "subscription_items"."subscription_id" = 48 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "subscription_items".* FROM "subscription_items" WHERE "subscription_items"."subscription_id" = 48 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "subscription_items".* FROM "subscription_items" WHERE "subscription_items"."subscription_id" = 48 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "subscription_items".* FROM "subscription_items" WHERE "subscription_items"."subscription_id" = 48 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "subscription_items".* FROM "subscription_items" WHERE "subscription_items"."subscription_id" = 48 LIMIT 1
+  [1m[36mSubscriptionItem Load (0.0ms)[0m  [1mSELECT "subscription_items".* FROM "subscription_items" WHERE "subscription_items"."subscription_id" = 48[0m
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1
+  Rendered manager/subscription_details.html.erb within layouts/application (15.6ms)
+  [1m[36mArticle Load (0.0ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE (published = 't') ORDER BY created_at DESC LIMIT 4[0m
+Completed 200 OK in 62ms (Views: 46.9ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-29 14:37:44 +0000
+Served asset /application.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/foundation/globals.css?body=1" for 127.0.0.1 at 2012-10-29 14:37:44 +0000
+Served asset /foundation/globals.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/typography.css?body=1" for 127.0.0.1 at 2012-10-29 14:37:44 +0000
+Served asset /foundation/typography.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/grid.css?body=1" for 127.0.0.1 at 2012-10-29 14:37:45 +0000
+Served asset /foundation/grid.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/foundation/ui.css?body=1" for 127.0.0.1 at 2012-10-29 14:37:45 +0000
+Served asset /foundation/ui.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/forms.css?body=1" for 127.0.0.1 at 2012-10-29 14:37:45 +0000
+Served asset /foundation/forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/orbit.css?body=1" for 127.0.0.1 at 2012-10-29 14:37:45 +0000
+Served asset /foundation/orbit.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/reveal.css?body=1" for 127.0.0.1 at 2012-10-29 14:37:45 +0000
+Served asset /foundation/reveal.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/mobile.css?body=1" for 127.0.0.1 at 2012-10-29 14:37:45 +0000
+Served asset /foundation/mobile.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/index.css?body=1" for 127.0.0.1 at 2012-10-29 14:37:45 +0000
+Served asset /foundation/index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2012-10-29 14:37:45 +0000
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-29 14:37:45 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-29 14:37:45 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.purr.js?body=1" for 127.0.0.1 at 2012-10-29 14:37:45 +0000
+Served asset /jquery.purr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/best_in_place.js?body=1" for 127.0.0.1 at 2012-10-29 14:37:45 +0000
+Served asset /best_in_place.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/modernizr.foundation.js?body=1" for 127.0.0.1 at 2012-10-29 14:37:45 +0000
+Served asset /foundation/modernizr.foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.reveal.js?body=1" for 127.0.0.1 at 2012-10-29 14:37:45 +0000
+Served asset /foundation/jquery.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.orbit-1.4.0.js?body=1" for 127.0.0.1 at 2012-10-29 14:37:45 +0000
+Served asset /foundation/jquery.orbit-1.4.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.customforms.js?body=1" for 127.0.0.1 at 2012-10-29 14:37:45 +0000
+Served asset /foundation/jquery.customforms.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.placeholder.min.js?body=1" for 127.0.0.1 at 2012-10-29 14:37:45 +0000
+Served asset /foundation/jquery.placeholder.min.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/foundation/jquery.tooltips.js?body=1" for 127.0.0.1 at 2012-10-29 14:37:45 +0000
+Served asset /foundation/jquery.tooltips.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/app.js?body=1" for 127.0.0.1 at 2012-10-29 14:37:45 +0000
+Served asset /foundation/app.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2012-10-29 14:37:45 +0000
+Served asset /foundation/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2012-10-29 14:37:45 +0000
+Served asset /jquery-ui.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/lib/namespace.js?body=1" for 127.0.0.1 at 2012-10-29 14:37:45 +0000
+Served asset /active_admin/lib/namespace.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.checkbox-toggler.js?body=1" for 127.0.0.1 at 2012-10-29 14:37:46 +0000
+Served asset /active_admin/components/jquery.aa.checkbox-toggler.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.dropdown-menu.js?body=1" for 127.0.0.1 at 2012-10-29 14:37:46 +0000
+Served asset /active_admin/components/jquery.aa.dropdown-menu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.popover.js?body=1" for 127.0.0.1 at 2012-10-29 14:37:46 +0000
+Served asset /active_admin/components/jquery.aa.popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.table-checkbox-toggler.js?body=1" for 127.0.0.1 at 2012-10-29 14:37:46 +0000
+Served asset /active_admin/components/jquery.aa.table-checkbox-toggler.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/pages/application.js?body=1" for 127.0.0.1 at 2012-10-29 14:37:46 +0000
+Served asset /active_admin/pages/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/pages/batch_actions.js?body=1" for 127.0.0.1 at 2012-10-29 14:37:46 +0000
+Served asset /active_admin/pages/batch_actions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.0.0.1 at 2012-10-29 14:37:46 +0000
+Served asset /active_admin/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.0.0.1 at 2012-10-29 14:37:46 +0000
+Served asset /active_admin/base.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.0.0.1 at 2012-10-29 14:37:46 +0000
+Served asset /active_admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gocardless.js?body=1" for 127.0.0.1 at 2012-10-29 14:37:46 +0000
+Served asset /gocardless.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/manager.js?body=1" for 127.0.0.1 at 2012-10-29 14:37:46 +0000
+Served asset /manager.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/subscriptions.js?body=1" for 127.0.0.1 at 2012-10-29 14:37:46 +0000
+Served asset /subscriptions.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-29 14:37:46 +0000
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/background-paper.jpg" for 127.0.0.1 at 2012-10-29 14:37:46 +0000
+Served asset /background-paper.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/social/facebook.png" for 127.0.0.1 at 2012-10-29 14:37:46 +0000
+Served asset /social/facebook.png - 304 Not Modified (15ms)
+
+
+Started GET "/assets/social/twitter.png" for 127.0.0.1 at 2012-10-29 14:37:46 +0000
+Served asset /social/twitter.png - 304 Not Modified (15ms)
+
+
+Started GET "/assets/social/pinterest.png" for 127.0.0.1 at 2012-10-29 14:37:46 +0000
+Served asset /social/pinterest.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo-sketched.png" for 127.0.0.1 at 2012-10-29 14:37:46 +0000
+Served asset /logo-sketched.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/busy-box-300x100.png" for 127.0.0.1 at 2012-10-29 14:37:46 +0000
+Served asset /busy-box-300x100.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/misc/input-bg.png" for 127.0.0.1 at 2012-10-29 14:37:46 +0000
+Served asset /foundation/misc/input-bg.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/misc/button-gloss.png" for 127.0.0.1 at 2012-10-29 14:37:46 +0000
+Served asset /foundation/misc/button-gloss.png - 304 Not Modified (0ms)
+
+
+Started GET "/manager" for 127.0.0.1 at 2012-10-29 14:48:27 +0000
+Processing by ManagerController#index as HTML
+  [1m[35mAdminUser Load (0.0ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "subscriptions" WHERE (status = 'Active')[0m
+  [1m[35mSubscription Load (0.0ms)[0m  SELECT "subscriptions".* FROM "subscriptions" WHERE (status = 'Active') ORDER BY created_at DESC
+  [1m[36mSubscriptionItem Load (0.0ms)[0m  [1mSELECT "subscription_items".* FROM "subscription_items" WHERE "subscription_items"."subscription_id" = 48 LIMIT 1[0m
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "subscription_items".* FROM "subscription_items" WHERE "subscription_items"."subscription_id" = 48 LIMIT 1[0m
+  [1m[35mSubscriptionItem Load (0.0ms)[0m  SELECT "subscription_items".* FROM "subscription_items" WHERE "subscription_items"."subscription_id" = 47 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "subscription_items".* FROM "subscription_items" WHERE "subscription_items"."subscription_id" = 47 LIMIT 1
+  [1m[36mSubscription Load (0.0ms)[0m  [1mSELECT "subscriptions".* FROM "subscriptions" WHERE (status = 'Cancelled') ORDER BY created_at DESC[0m
+  Rendered manager/index.html.erb within layouts/application (15.6ms)
+  [1m[35mArticle Load (0.0ms)[0m  SELECT "articles".* FROM "articles" WHERE (published = 't') ORDER BY created_at DESC LIMIT 4
+Completed 200 OK in 125ms (Views: 125.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/foundation/globals.css?body=1" for 127.0.0.1 at 2012-10-29 14:48:27 +0000
+Served asset /foundation/globals.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-29 14:48:27 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/typography.css?body=1" for 127.0.0.1 at 2012-10-29 14:48:27 +0000
+Served asset /foundation/typography.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/ui.css?body=1" for 127.0.0.1 at 2012-10-29 14:48:27 +0000
+Served asset /foundation/ui.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/grid.css?body=1" for 127.0.0.1 at 2012-10-29 14:48:27 +0000
+Served asset /foundation/grid.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/foundation/forms.css?body=1" for 127.0.0.1 at 2012-10-29 14:48:27 +0000
+Served asset /foundation/forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/orbit.css?body=1" for 127.0.0.1 at 2012-10-29 14:48:27 +0000
+Served asset /foundation/orbit.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/reveal.css?body=1" for 127.0.0.1 at 2012-10-29 14:48:27 +0000
+Served asset /foundation/reveal.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/mobile.css?body=1" for 127.0.0.1 at 2012-10-29 14:48:27 +0000
+Served asset /foundation/mobile.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2012-10-29 14:48:27 +0000
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/index.css?body=1" for 127.0.0.1 at 2012-10-29 14:48:27 +0000
+Served asset /foundation/index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-29 14:48:27 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-29 14:48:27 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.purr.js?body=1" for 127.0.0.1 at 2012-10-29 14:48:27 +0000
+Served asset /jquery.purr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/best_in_place.js?body=1" for 127.0.0.1 at 2012-10-29 14:48:27 +0000
+Served asset /best_in_place.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/modernizr.foundation.js?body=1" for 127.0.0.1 at 2012-10-29 14:48:27 +0000
+Served asset /foundation/modernizr.foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.reveal.js?body=1" for 127.0.0.1 at 2012-10-29 14:48:27 +0000
+Served asset /foundation/jquery.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.orbit-1.4.0.js?body=1" for 127.0.0.1 at 2012-10-29 14:48:28 +0000
+Served asset /foundation/jquery.orbit-1.4.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.customforms.js?body=1" for 127.0.0.1 at 2012-10-29 14:48:28 +0000
+Served asset /foundation/jquery.customforms.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.placeholder.min.js?body=1" for 127.0.0.1 at 2012-10-29 14:48:28 +0000
+Served asset /foundation/jquery.placeholder.min.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/foundation/jquery.tooltips.js?body=1" for 127.0.0.1 at 2012-10-29 14:48:28 +0000
+Served asset /foundation/jquery.tooltips.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/app.js?body=1" for 127.0.0.1 at 2012-10-29 14:48:28 +0000
+Served asset /foundation/app.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2012-10-29 14:48:28 +0000
+Served asset /foundation/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2012-10-29 14:48:28 +0000
+Served asset /jquery-ui.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/lib/namespace.js?body=1" for 127.0.0.1 at 2012-10-29 14:48:28 +0000
+Served asset /active_admin/lib/namespace.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.checkbox-toggler.js?body=1" for 127.0.0.1 at 2012-10-29 14:48:28 +0000
+Served asset /active_admin/components/jquery.aa.checkbox-toggler.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.dropdown-menu.js?body=1" for 127.0.0.1 at 2012-10-29 14:48:28 +0000
+Served asset /active_admin/components/jquery.aa.dropdown-menu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.popover.js?body=1" for 127.0.0.1 at 2012-10-29 14:48:28 +0000
+Served asset /active_admin/components/jquery.aa.popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.table-checkbox-toggler.js?body=1" for 127.0.0.1 at 2012-10-29 14:48:28 +0000
+Served asset /active_admin/components/jquery.aa.table-checkbox-toggler.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/pages/application.js?body=1" for 127.0.0.1 at 2012-10-29 14:48:28 +0000
+Served asset /active_admin/pages/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/pages/batch_actions.js?body=1" for 127.0.0.1 at 2012-10-29 14:48:28 +0000
+Served asset /active_admin/pages/batch_actions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.0.0.1 at 2012-10-29 14:48:28 +0000
+Served asset /active_admin/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.0.0.1 at 2012-10-29 14:48:28 +0000
+Served asset /active_admin/base.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.0.0.1 at 2012-10-29 14:48:28 +0000
+Served asset /active_admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gocardless.js?body=1" for 127.0.0.1 at 2012-10-29 14:48:28 +0000
+Served asset /gocardless.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/manager.js?body=1" for 127.0.0.1 at 2012-10-29 14:48:28 +0000
+Served asset /manager.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/subscriptions.js?body=1" for 127.0.0.1 at 2012-10-29 14:48:28 +0000
+Served asset /subscriptions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-29 14:48:28 +0000
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/background-paper.jpg" for 127.0.0.1 at 2012-10-29 14:48:28 +0000
+Served asset /background-paper.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/social/facebook.png" for 127.0.0.1 at 2012-10-29 14:48:29 +0000
+Served asset /social/facebook.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/social/twitter.png" for 127.0.0.1 at 2012-10-29 14:48:29 +0000
+Served asset /social/twitter.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo-sketched.png" for 127.0.0.1 at 2012-10-29 14:48:29 +0000
+Served asset /logo-sketched.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/social/pinterest.png" for 127.0.0.1 at 2012-10-29 14:48:29 +0000
+Served asset /social/pinterest.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/busy-box-300x100.png" for 127.0.0.1 at 2012-10-29 14:48:29 +0000
+Served asset /busy-box-300x100.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/misc/input-bg.png" for 127.0.0.1 at 2012-10-29 14:48:29 +0000
+Served asset /foundation/misc/input-bg.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/misc/button-gloss.png" for 127.0.0.1 at 2012-10-29 14:48:29 +0000
+Served asset /foundation/misc/button-gloss.png - 304 Not Modified (0ms)
+
+
+Started GET "/manager" for 127.0.0.1 at 2012-10-29 14:50:02 +0000
+Processing by ManagerController#index as HTML
+  [1m[36mAdminUser Load (0.0ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE (status = 'pending')
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "subscriptions" WHERE (status = 'Active')[0m
+  [1m[35mSubscription Load (0.0ms)[0m  SELECT "subscriptions".* FROM "subscriptions" WHERE (status = 'Active') ORDER BY created_at DESC
+  [1m[36mSubscriptionItem Load (0.0ms)[0m  [1mSELECT "subscription_items".* FROM "subscription_items" WHERE "subscription_items"."subscription_id" = 48 LIMIT 1[0m
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "subscription_items".* FROM "subscription_items" WHERE "subscription_items"."subscription_id" = 48 LIMIT 1[0m
+  [1m[35mSubscriptionItem Load (0.0ms)[0m  SELECT "subscription_items".* FROM "subscription_items" WHERE "subscription_items"."subscription_id" = 47 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "subscription_items".* FROM "subscription_items" WHERE "subscription_items"."subscription_id" = 47 LIMIT 1
+  [1m[36mSubscription Load (0.0ms)[0m  [1mSELECT "subscriptions".* FROM "subscriptions" WHERE (status = 'Cancelled') ORDER BY created_at DESC[0m
+  Rendered manager/index.html.erb within layouts/application (156.2ms)
+  [1m[35mArticle Load (0.0ms)[0m  SELECT "articles".* FROM "articles" WHERE (published = 't') ORDER BY created_at DESC LIMIT 4
+Completed 200 OK in 266ms (Views: 218.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/foundation/globals.css?body=1" for 127.0.0.1 at 2012-10-29 14:50:03 +0000
+Served asset /foundation/globals.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-29 14:50:03 +0000
+Served asset /application.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/foundation/grid.css?body=1" for 127.0.0.1 at 2012-10-29 14:50:04 +0000
+Served asset /foundation/grid.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/typography.css?body=1" for 127.0.0.1 at 2012-10-29 14:50:04 +0000
+Served asset /foundation/typography.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/ui.css?body=1" for 127.0.0.1 at 2012-10-29 14:50:04 +0000
+Served asset /foundation/ui.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/forms.css?body=1" for 127.0.0.1 at 2012-10-29 14:50:04 +0000
+Served asset /foundation/forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/orbit.css?body=1" for 127.0.0.1 at 2012-10-29 14:50:04 +0000
+Served asset /foundation/orbit.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/mobile.css?body=1" for 127.0.0.1 at 2012-10-29 14:50:04 +0000
+Served asset /foundation/mobile.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/reveal.css?body=1" for 127.0.0.1 at 2012-10-29 14:50:04 +0000
+Served asset /foundation/reveal.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/index.css?body=1" for 127.0.0.1 at 2012-10-29 14:50:04 +0000
+Served asset /foundation/index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2012-10-29 14:50:04 +0000
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:04 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:04 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.purr.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:04 +0000
+Served asset /jquery.purr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/best_in_place.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:04 +0000
+Served asset /best_in_place.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/modernizr.foundation.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:04 +0000
+Served asset /foundation/modernizr.foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.reveal.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:04 +0000
+Served asset /foundation/jquery.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.orbit-1.4.0.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:04 +0000
+Served asset /foundation/jquery.orbit-1.4.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.customforms.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:04 +0000
+Served asset /foundation/jquery.customforms.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.placeholder.min.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:04 +0000
+Served asset /foundation/jquery.placeholder.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.tooltips.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:04 +0000
+Served asset /foundation/jquery.tooltips.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/app.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:04 +0000
+Served asset /foundation/app.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:04 +0000
+Served asset /foundation/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:04 +0000
+Served asset /jquery-ui.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/lib/namespace.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:04 +0000
+Served asset /active_admin/lib/namespace.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.checkbox-toggler.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:04 +0000
+Served asset /active_admin/components/jquery.aa.checkbox-toggler.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.dropdown-menu.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:05 +0000
+Served asset /active_admin/components/jquery.aa.dropdown-menu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.popover.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:05 +0000
+Served asset /active_admin/components/jquery.aa.popover.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.table-checkbox-toggler.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:05 +0000
+Served asset /active_admin/components/jquery.aa.table-checkbox-toggler.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/pages/application.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:05 +0000
+Served asset /active_admin/pages/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/pages/batch_actions.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:05 +0000
+Served asset /active_admin/pages/batch_actions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:05 +0000
+Served asset /active_admin/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:05 +0000
+Served asset /active_admin/base.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:05 +0000
+Served asset /active_admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gocardless.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:05 +0000
+Served asset /gocardless.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/manager.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:05 +0000
+Served asset /manager.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/subscriptions.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:05 +0000
+Served asset /subscriptions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:05 +0000
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/background-paper.jpg" for 127.0.0.1 at 2012-10-29 14:50:05 +0000
+Served asset /background-paper.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/social/twitter.png" for 127.0.0.1 at 2012-10-29 14:50:05 +0000
+Served asset /social/twitter.png - 304 Not Modified (15ms)
+
+
+Started GET "/assets/logo-sketched.png" for 127.0.0.1 at 2012-10-29 14:50:05 +0000
+Served asset /logo-sketched.png - 304 Not Modified (15ms)
+
+
+Started GET "/assets/social/pinterest.png" for 127.0.0.1 at 2012-10-29 14:50:05 +0000
+Served asset /social/pinterest.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/social/facebook.png" for 127.0.0.1 at 2012-10-29 14:50:05 +0000
+Served asset /social/facebook.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/busy-box-300x100.png" for 127.0.0.1 at 2012-10-29 14:50:05 +0000
+Served asset /busy-box-300x100.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/misc/input-bg.png" for 127.0.0.1 at 2012-10-29 14:50:05 +0000
+Served asset /foundation/misc/input-bg.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/misc/button-gloss.png" for 127.0.0.1 at 2012-10-29 14:50:06 +0000
+Served asset /foundation/misc/button-gloss.png - 304 Not Modified (0ms)
+
+
+Started GET "/manager" for 127.0.0.1 at 2012-10-29 14:50:24 +0000
+Processing by ManagerController#index as HTML
+  [1m[36mAdminUser Load (0.0ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE (status = 'pending')
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "subscriptions" WHERE (status = 'Active')[0m
+  [1m[35mSubscription Load (0.0ms)[0m  SELECT "subscriptions".* FROM "subscriptions" WHERE (status = 'Active') ORDER BY created_at DESC
+  [1m[36mSubscriptionItem Load (0.0ms)[0m  [1mSELECT "subscription_items".* FROM "subscription_items" WHERE "subscription_items"."subscription_id" = 48 LIMIT 1[0m
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "subscription_items".* FROM "subscription_items" WHERE "subscription_items"."subscription_id" = 48 LIMIT 1[0m
+  [1m[35mSubscriptionItem Load (0.0ms)[0m  SELECT "subscription_items".* FROM "subscription_items" WHERE "subscription_items"."subscription_id" = 47 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "subscription_items".* FROM "subscription_items" WHERE "subscription_items"."subscription_id" = 47 LIMIT 1
+  [1m[36mSubscription Load (0.0ms)[0m  [1mSELECT "subscriptions".* FROM "subscriptions" WHERE (status = 'Cancelled') ORDER BY created_at DESC[0m
+  Rendered manager/index.html.erb within layouts/application (15.6ms)
+  [1m[35mArticle Load (0.0ms)[0m  SELECT "articles".* FROM "articles" WHERE (published = 't') ORDER BY created_at DESC LIMIT 4
+Completed 200 OK in 62ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-29 14:50:24 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/typography.css?body=1" for 127.0.0.1 at 2012-10-29 14:50:24 +0000
+Served asset /foundation/typography.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/grid.css?body=1" for 127.0.0.1 at 2012-10-29 14:50:24 +0000
+Served asset /foundation/grid.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/globals.css?body=1" for 127.0.0.1 at 2012-10-29 14:50:24 +0000
+Served asset /foundation/globals.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/ui.css?body=1" for 127.0.0.1 at 2012-10-29 14:50:24 +0000
+Served asset /foundation/ui.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/forms.css?body=1" for 127.0.0.1 at 2012-10-29 14:50:24 +0000
+Served asset /foundation/forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/orbit.css?body=1" for 127.0.0.1 at 2012-10-29 14:50:24 +0000
+Served asset /foundation/orbit.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/reveal.css?body=1" for 127.0.0.1 at 2012-10-29 14:50:24 +0000
+Served asset /foundation/reveal.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/mobile.css?body=1" for 127.0.0.1 at 2012-10-29 14:50:24 +0000
+Served asset /foundation/mobile.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/index.css?body=1" for 127.0.0.1 at 2012-10-29 14:50:24 +0000
+Served asset /foundation/index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2012-10-29 14:50:24 +0000
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:24 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:24 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.purr.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:25 +0000
+Served asset /jquery.purr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/best_in_place.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:25 +0000
+Served asset /best_in_place.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/modernizr.foundation.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:25 +0000
+Served asset /foundation/modernizr.foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.reveal.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:25 +0000
+Served asset /foundation/jquery.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.orbit-1.4.0.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:25 +0000
+Served asset /foundation/jquery.orbit-1.4.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.customforms.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:25 +0000
+Served asset /foundation/jquery.customforms.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.placeholder.min.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:25 +0000
+Served asset /foundation/jquery.placeholder.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.tooltips.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:25 +0000
+Served asset /foundation/jquery.tooltips.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/app.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:25 +0000
+Served asset /foundation/app.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:25 +0000
+Served asset /foundation/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:25 +0000
+Served asset /jquery-ui.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/lib/namespace.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:25 +0000
+Served asset /active_admin/lib/namespace.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.checkbox-toggler.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:25 +0000
+Served asset /active_admin/components/jquery.aa.checkbox-toggler.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.dropdown-menu.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:25 +0000
+Served asset /active_admin/components/jquery.aa.dropdown-menu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.popover.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:25 +0000
+Served asset /active_admin/components/jquery.aa.popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.table-checkbox-toggler.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:25 +0000
+Served asset /active_admin/components/jquery.aa.table-checkbox-toggler.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/pages/batch_actions.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:25 +0000
+Served asset /active_admin/pages/batch_actions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/pages/application.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:25 +0000
+Served asset /active_admin/pages/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:25 +0000
+Served asset /active_admin/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:25 +0000
+Served asset /active_admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:25 +0000
+Served asset /active_admin/base.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gocardless.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:25 +0000
+Served asset /gocardless.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/manager.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:25 +0000
+Served asset /manager.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/subscriptions.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:26 +0000
+Served asset /subscriptions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-29 14:50:26 +0000
+Served asset /application.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/background-paper.jpg" for 127.0.0.1 at 2012-10-29 14:50:26 +0000
+Served asset /background-paper.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/social/twitter.png" for 127.0.0.1 at 2012-10-29 14:50:26 +0000
+Served asset /social/twitter.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/social/facebook.png" for 127.0.0.1 at 2012-10-29 14:50:26 +0000
+Served asset /social/facebook.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo-sketched.png" for 127.0.0.1 at 2012-10-29 14:50:26 +0000
+Served asset /logo-sketched.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/busy-box-300x100.png" for 127.0.0.1 at 2012-10-29 14:50:26 +0000
+Served asset /busy-box-300x100.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/social/pinterest.png" for 127.0.0.1 at 2012-10-29 14:50:26 +0000
+Served asset /social/pinterest.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/misc/button-gloss.png" for 127.0.0.1 at 2012-10-29 14:50:26 +0000
+Served asset /foundation/misc/button-gloss.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/misc/input-bg.png" for 127.0.0.1 at 2012-10-29 14:50:26 +0000
+Served asset /foundation/misc/input-bg.png - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateProducts (20120825221648)
+Migrating to CreateSubscriptions (20120825222351)
+Migrating to CreateSubscriptionItems (20120825222507)
+Migrating to CreateUsers (20120825224456)
+Migrating to DeviseCreateAdminUsers (20120825230403)
+Migrating to CreateAdminNotes (20120826000407)
+Migrating to MoveAdminNotesToComments (20120826000408)
+Migrating to CreateArticleCategories (20120827121457)
+Migrating to CreateArticles (20120827121540)
+Migrating to CreateComments (20120827155109)
+Migrating to AddGiftMessageToSubscriptions (20120918142319)
+Migrating to CreatePromoCodes (20121009080954)
+Migrating to CreatePromoUses (20121009090024)
+Migrating to AddOneTimeToPromoCodes (20121010082535)
+Migrating to CreateSuppliers (20121029150126)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  CREATE TABLE "suppliers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "address" text, "telephone" varchar(255), "email" varchar(255), "website" varchar(255), "account_number" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20121029150126')[0m
+  [1m[35m (140.6ms)[0m  commit transaction
+Migrating to CreateBoxes (20121029150425)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  CREATE TABLE "boxes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "box_number" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20121029150425')[0m
+  [1m[35m (93.8ms)[0m  commit transaction
+Migrating to CreateStockItems (20121029150653)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (15.6ms)[0m  CREATE TABLE "stock_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "supplier_id" integer, "name" varchar(255), "cost" decimal(8,2), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20121029150653')[0m
+  [1m[35m (78.1ms)[0m  commit transaction
+Migrating to CreateBoxContents (20121029150820)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  CREATE TABLE "box_contents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "box_id" integer, "stock_item_id" integer, "quantity" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20121029150820')[0m
+  [1m[35m (93.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("active_admin_comments")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_active_admin_comments_on_author_type_and_author_id')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_active_admin_comments_on_namespace')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_admin_notes_on_resource_type_and_resource_id')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("admin_users")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_admin_users_on_reset_password_token')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_admin_users_on_email')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("article_categories")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("articles")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("box_contents")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("boxes")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("comments")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_comments_on_article_id')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("products")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("promo_codes")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("promo_uses")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("stock_items")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("subscription_items")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("subscriptions")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("suppliers")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/admin" for 127.0.0.1 at 2012-10-29 15:18:08 +0000
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.0ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1[0m
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activeadmin-0.5.0/app/views/active_admin/dashboard/index.html.arb (78.1ms)
+Completed 200 OK in 203ms (Views: 93.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2012-10-29 15:18:10 +0000
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2012-10-29 15:18:10 +0000
+Served asset /active_admin.css - 304 Not Modified (15ms)
+
+
+Started GET "/admin/suppliers" for 127.0.0.1 at 2012-10-29 15:18:13 +0000
+Processing by Admin::SuppliersController#index as HTML
+  [1m[35mAdminUser Load (0.0ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "suppliers" LIMIT 30 OFFSET 0) subquery_for_count [0m
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activeadmin-0.5.0/app/views/active_admin/resource/index.html.arb (1359.4ms)
+Completed 200 OK in 1438ms (Views: 1390.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2012-10-29 15:18:15 +0000
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2012-10-29 15:18:15 +0000
+Served asset /active_admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/datepicker/datepicker-input-icon.png" for 127.0.0.1 at 2012-10-29 15:18:15 +0000
+Served asset /active_admin/datepicker/datepicker-input-icon.png - 200 OK (15ms)
+
+
+Started GET "/admin/suppliers/new" for 127.0.0.1 at 2012-10-29 15:18:17 +0000
+Processing by Admin::SuppliersController#new as HTML
+  [1m[35mAdminUser Load (0.0ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activeadmin-0.5.0/app/views/active_admin/resource/new.html.arb (703.1ms)
+Completed 200 OK in 750ms (Views: 718.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2012-10-29 15:18:18 +0000
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2012-10-29 15:18:18 +0000
+Served asset /active_admin.css - 304 Not Modified (15ms)
+
+
+Started POST "/admin/suppliers" for 127.0.0.1 at 2012-10-29 15:18:36 +0000
+Processing by Admin::SuppliersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/UfZzDk98kcRPTg6bHOrMUfFuWZbbfhCUbda7TDt2yw=", "supplier"=>{"name"=>"Royal Mail", "address"=>"The Post Office", "telephone"=>"", "email"=>"", "website"=>"", "account_number"=>""}, "commit"=>"Create Supplier"}
+  [1m[36mAdminUser Load (0.0ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "suppliers" ("account_number", "address", "created_at", "email", "name", "telephone", "updated_at", "website") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["account_number", ""], ["address", "The Post Office"], ["created_at", Mon, 29 Oct 2012 15:18:36 UTC +00:00], ["email", ""], ["name", "Royal Mail"], ["telephone", ""], ["updated_at", Mon, 29 Oct 2012 15:18:36 UTC +00:00], ["website", ""]]
+  [1m[35m (62.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/admin/suppliers/1
+Completed 302 Found in 109ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/suppliers/1" for 127.0.0.1 at 2012-10-29 15:18:36 +0000
+Processing by Admin::SuppliersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdminUser Load (0.0ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1[0m
+  [1m[35mSupplier Load (0.0ms)[0m  SELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = 'Supplier' AND "active_admin_comments"."resource_id" = '1' AND "active_admin_comments"."namespace" = 'admin'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = 'Supplier' AND "active_admin_comments"."resource_id" = '1' AND "active_admin_comments"."namespace" = 'admin'
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activeadmin-0.5.0/app/views/active_admin/resource/show.html.arb (265.6ms)
+Completed 200 OK in 281ms (Views: 250.0ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2012-10-29 15:18:37 +0000
+Served asset /active_admin/print.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2012-10-29 15:18:37 +0000
+Served asset /active_admin.css - 304 Not Modified (15ms)
+
+
+Started GET "/admin/subscription_items" for 127.0.0.1 at 2012-10-29 15:18:40 +0000
+Processing by Admin::SubscriptionItemsController#index as HTML
+  [1m[36mAdminUser Load (0.0ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "subscription_items" LIMIT 30 OFFSET 0) subquery_for_count 
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "subscription_items" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "subscription_items" LIMIT 30 OFFSET 0) subquery_for_count 
+  [1m[36mSubscriptionItem Load (0.0ms)[0m  [1mSELECT "subscription_items".* FROM "subscription_items" ORDER BY "subscription_items"."id" desc LIMIT 30 OFFSET 0[0m
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" 
+  [1m[36mSubscription Load (15.6ms)[0m  [1mSELECT "subscriptions".* FROM "subscriptions" [0m
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activeadmin-0.5.0/app/views/active_admin/resource/index.html.arb (2515.6ms)
+Completed 200 OK in 2531ms (Views: 2484.4ms | ActiveRecord: 31.2ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2012-10-29 15:18:42 +0000
+Served asset /active_admin.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2012-10-29 15:18:42 +0000
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/orderable.png" for 127.0.0.1 at 2012-10-29 15:18:43 +0000
+Served asset /active_admin/orderable.png - 200 OK (15ms)
+
+
+Started GET "/admin/stock_items" for 127.0.0.1 at 2012-10-29 15:18:48 +0000
+Processing by Admin::StockItemsController#index as HTML
+  [1m[35mAdminUser Load (0.0ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "stock_items" LIMIT 30 OFFSET 0) subquery_for_count [0m
+  [1m[35mSupplier Load (0.0ms)[0m  SELECT "suppliers".* FROM "suppliers" 
+  [1m[36mBoxContent Load (0.0ms)[0m  [1mSELECT "box_contents".* FROM "box_contents" [0m
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activeadmin-0.5.0/app/views/active_admin/resource/index.html.arb (890.6ms)
+Completed 200 OK in 906ms (Views: 906.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2012-10-29 15:18:49 +0000
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2012-10-29 15:18:49 +0000
+Served asset /active_admin.css - 304 Not Modified (15ms)
+
+
+Started GET "/admin/stock_items/new" for 127.0.0.1 at 2012-10-29 15:18:51 +0000
+Processing by Admin::StockItemsController#new as HTML
+  [1m[35mAdminUser Load (0.0ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1
+  [1m[36mSupplier Load (0.0ms)[0m  [1mSELECT "suppliers".* FROM "suppliers" [0m
+  [1m[35mBoxContent Load (0.0ms)[0m  SELECT "box_contents".* FROM "box_contents" 
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activeadmin-0.5.0/app/views/active_admin/resource/new.html.arb (93.8ms)
+Completed 500 Internal Server Error in 125ms
+
+ActionView::Template::Error (undefined method `box_content_id' for #<StockItem:0x21ecf58>):
+    1: insert_tag renderer_for(:new)
+  activemodel (3.2.8) lib/active_model/attribute_methods.rb:407:in `method_missing'
+  activerecord (3.2.8) lib/active_record/attribute_methods.rb:149:in `method_missing'
+  actionpack (3.2.8) lib/action_view/helpers/form_helper.rb:1154:in `value'
+  actionpack (3.2.8) lib/action_view/helpers/form_helper.rb:1145:in `value'
+  actionpack (3.2.8) lib/action_view/helpers/form_options_helper.rb:580:in `to_select_tag'
+  actionpack (3.2.8) lib/action_view/helpers/form_options_helper.rb:157:in `select'
+  actionpack (3.2.8) lib/action_view/helpers/form_options_helper.rb:642:in `select'
+  formtastic (2.2.1) lib/formtastic/inputs/select_input.rb:154:in `select_html'
+  formtastic (2.2.1) lib/formtastic/inputs/select_input.rb:149:in `block in to_html'
+  actionpack (3.2.8) lib/action_view/helpers/capture_helper.rb:40:in `block in capture'
+  actionpack (3.2.8) lib/action_view/helpers/capture_helper.rb:187:in `with_output_buffer'
+  actionpack (3.2.8) lib/action_view/helpers/capture_helper.rb:40:in `capture'
+  formtastic (2.2.1) lib/formtastic/inputs/base/wrapping.rb:11:in `input_wrapping'
+  formtastic (2.2.1) lib/formtastic/inputs/select_input.rb:146:in `to_html'
+  formtastic (2.2.1) lib/formtastic/helpers/input_helper.rb:240:in `input'
+  activeadmin (0.5.0) lib/active_admin/form_builder.rb:22:in `block in input'
+  activeadmin (0.5.0) lib/active_admin/form_builder.rb:173:in `with_new_form_buffer'
+  activeadmin (0.5.0) lib/active_admin/form_builder.rb:22:in `input'
+  formtastic (2.2.1) lib/formtastic/helpers/inputs_helper.rb:329:in `block in fieldset_contents_from_column_list'
+  formtastic (2.2.1) lib/formtastic/helpers/inputs_helper.rb:317:in `collect'
+  formtastic (2.2.1) lib/formtastic/helpers/inputs_helper.rb:317:in `fieldset_contents_from_column_list'
+  formtastic (2.2.1) lib/formtastic/helpers/inputs_helper.rb:296:in `inputs'
+  activeadmin (0.5.0) lib/active_admin/form_builder.rb:14:in `block in inputs'
+  activeadmin (0.5.0) lib/active_admin/form_builder.rb:173:in `with_new_form_buffer'
+  activeadmin (0.5.0) lib/active_admin/form_builder.rb:14:in `inputs'
+  activeadmin (0.5.0) lib/active_admin/views/pages/form.rb:43:in `block in default_form_config'
+  activeadmin (0.5.0) lib/active_admin/views/pages/form.rb:23:in `instance_exec'
+  activeadmin (0.5.0) lib/active_admin/views/pages/form.rb:23:in `block in main_content'
+  actionpack (3.2.8) lib/action_view/helpers/capture_helper.rb:40:in `block in capture'
+  actionpack (3.2.8) lib/action_view/helpers/capture_helper.rb:187:in `with_output_buffer'
+  actionpack (3.2.8) lib/action_view/helpers/capture_helper.rb:40:in `capture'
+  actionpack (3.2.8) lib/action_view/helpers/form_helper.rb:607:in `fields_for'
+  actionpack (3.2.8) lib/action_view/helpers/form_helper.rb:378:in `form_for'
+  formtastic (2.2.1) lib/formtastic/helpers/form_helper.rb:161:in `block in semantic_form_for'
+  formtastic (2.2.1) lib/formtastic/helpers/form_helper.rb:192:in `with_custom_field_error_proc'
+  formtastic (2.2.1) lib/formtastic/helpers/form_helper.rb:160:in `semantic_form_for'
+  activeadmin (0.5.0) lib/active_admin/view_helpers/form_helper.rb:8:in `active_admin_form_for'
+  arbre (1.0.1) lib/arbre/element.rb:175:in `method_missing'
+  activeadmin (0.5.0) lib/active_admin/views/pages/form.rb:22:in `main_content'
+  activeadmin (0.5.0) lib/active_admin/views/pages/base.rb:78:in `block (2 levels) in build_main_content_wrapper'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+  arbre (1.0.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:18:in `div'
+  activeadmin (0.5.0) lib/active_admin/views/pages/base.rb:77:in `block in build_main_content_wrapper'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+  arbre (1.0.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:18:in `div'
+  activeadmin (0.5.0) lib/active_admin/views/pages/base.rb:76:in `build_main_content_wrapper'
+  activeadmin (0.5.0) lib/active_admin/views/pages/base.rb:60:in `block in build_page_content'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+  arbre (1.0.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:18:in `div'
+  activeadmin (0.5.0) lib/active_admin/views/pages/base.rb:59:in `build_page_content'
+  activeadmin (0.5.0) lib/active_admin/views/pages/base.rb:42:in `block (2 levels) in build_page'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+  arbre (1.0.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:18:in `div'
+  activeadmin (0.5.0) lib/active_admin/views/pages/base.rb:39:in `block in build_page'
+  arbre (1.0.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+  activeadmin (0.5.0) lib/active_admin/views/pages/base.rb:38:in `build_page'
+  activeadmin (0.5.0) lib/active_admin/views/pages/base.rb:10:in `build'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:30:in `block in build_tag'
+  arbre (1.0.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+  activeadmin (0.5.0) app/views/active_admin/resource/new.html.arb:1:in `block in _____ails_nstaller__uby______lib_ruby_gems_______gems_activeadmin_______app_views_active_admin_resource_new_html_arb__441120793_29731284'
+  arbre (1.0.1) lib/arbre/context.rb:45:in `instance_eval'
+  arbre (1.0.1) lib/arbre/context.rb:45:in `initialize'
+  activeadmin (0.5.0) app/views/active_admin/resource/new.html.arb:1:in `new'
+  activeadmin (0.5.0) app/views/active_admin/resource/new.html.arb:1:in `_____ails_nstaller__uby______lib_ruby_gems_______gems_activeadmin_______app_views_active_admin_resource_new_html_arb__441120793_29731284'
+  actionpack (3.2.8) lib/action_view/template.rb:145:in `block in render'
+  activesupport (3.2.8) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.8) lib/action_view/template.rb:143:in `render'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+  actionpack (3.2.8) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.8) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:18:in `render'
+  actionpack (3.2.8) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.8) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.8) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.8) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.8) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.8) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.8) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.8) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.8) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  activeadmin (0.5.0) lib/active_admin/resource_controller/actions.rb:34:in `block (2 levels) in new'
+  actionpack (3.2.8) lib/action_controller/metal/responder.rb:230:in `call'
+  actionpack (3.2.8) lib/action_controller/metal/responder.rb:230:in `default_render'
+  actionpack (3.2.8) lib/action_controller/metal/responder.rb:160:in `to_html'
+  responders (0.9.2) lib/responders/flash_responder.rb:104:in `to_html'
+  actionpack (3.2.8) lib/action_controller/metal/responder.rb:153:in `respond'
+  actionpack (3.2.8) lib/action_controller/metal/responder.rb:146:in `call'
+  actionpack (3.2.8) lib/action_controller/metal/mime_responds.rb:239:in `respond_with'
+  inherited_resources (1.3.1) lib/inherited_resources/actions.rb:19:in `new'
+  activeadmin (0.5.0) lib/active_admin/resource_controller/actions.rb:32:in `new'
+  actionpack (3.2.8) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.8) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.8) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:458:in `_run__806478168__process_action__482376054__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.8) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.8) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.8) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.8) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.8) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  warden (1.2.1) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.1) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.1) lib/warden/manager.rb:34:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/cookies.rb:339:in `call'
+  activerecord (3.2.8) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `_run__720004655__call__428090154__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (46.9ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/admin/stock_items/new" for 127.0.0.1 at 2012-10-29 15:21:02 +0000
+Processing by Admin::StockItemsController#new as HTML
+  [1m[36mAdminUser Load (0.0ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1[0m
+  [1m[35mSupplier Load (0.0ms)[0m  SELECT "suppliers".* FROM "suppliers" 
+  [1m[36mBoxContent Load (0.0ms)[0m  [1mSELECT "box_contents".* FROM "box_contents" [0m
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activeadmin-0.5.0/app/views/active_admin/resource/new.html.arb (1265.6ms)
+Completed 500 Internal Server Error in 1406ms
+
+ActionView::Template::Error (undefined method `box_content_id' for #<StockItem:0x2c3a1e0>):
+    1: insert_tag renderer_for(:new)
+  activemodel (3.2.8) lib/active_model/attribute_methods.rb:407:in `method_missing'
+  activerecord (3.2.8) lib/active_record/attribute_methods.rb:149:in `method_missing'
+  actionpack (3.2.8) lib/action_view/helpers/form_helper.rb:1154:in `value'
+  actionpack (3.2.8) lib/action_view/helpers/form_helper.rb:1145:in `value'
+  actionpack (3.2.8) lib/action_view/helpers/form_options_helper.rb:580:in `to_select_tag'
+  actionpack (3.2.8) lib/action_view/helpers/form_options_helper.rb:157:in `select'
+  actionpack (3.2.8) lib/action_view/helpers/form_options_helper.rb:642:in `select'
+  formtastic (2.2.1) lib/formtastic/inputs/select_input.rb:154:in `select_html'
+  formtastic (2.2.1) lib/formtastic/inputs/select_input.rb:149:in `block in to_html'
+  actionpack (3.2.8) lib/action_view/helpers/capture_helper.rb:40:in `block in capture'
+  actionpack (3.2.8) lib/action_view/helpers/capture_helper.rb:187:in `with_output_buffer'
+  actionpack (3.2.8) lib/action_view/helpers/capture_helper.rb:40:in `capture'
+  formtastic (2.2.1) lib/formtastic/inputs/base/wrapping.rb:11:in `input_wrapping'
+  formtastic (2.2.1) lib/formtastic/inputs/select_input.rb:146:in `to_html'
+  formtastic (2.2.1) lib/formtastic/helpers/input_helper.rb:240:in `input'
+  activeadmin (0.5.0) lib/active_admin/form_builder.rb:22:in `block in input'
+  activeadmin (0.5.0) lib/active_admin/form_builder.rb:173:in `with_new_form_buffer'
+  activeadmin (0.5.0) lib/active_admin/form_builder.rb:22:in `input'
+  formtastic (2.2.1) lib/formtastic/helpers/inputs_helper.rb:329:in `block in fieldset_contents_from_column_list'
+  formtastic (2.2.1) lib/formtastic/helpers/inputs_helper.rb:317:in `collect'
+  formtastic (2.2.1) lib/formtastic/helpers/inputs_helper.rb:317:in `fieldset_contents_from_column_list'
+  formtastic (2.2.1) lib/formtastic/helpers/inputs_helper.rb:296:in `inputs'
+  activeadmin (0.5.0) lib/active_admin/form_builder.rb:14:in `block in inputs'
+  activeadmin (0.5.0) lib/active_admin/form_builder.rb:173:in `with_new_form_buffer'
+  activeadmin (0.5.0) lib/active_admin/form_builder.rb:14:in `inputs'
+  activeadmin (0.5.0) lib/active_admin/views/pages/form.rb:43:in `block in default_form_config'
+  activeadmin (0.5.0) lib/active_admin/views/pages/form.rb:23:in `instance_exec'
+  activeadmin (0.5.0) lib/active_admin/views/pages/form.rb:23:in `block in main_content'
+  actionpack (3.2.8) lib/action_view/helpers/capture_helper.rb:40:in `block in capture'
+  actionpack (3.2.8) lib/action_view/helpers/capture_helper.rb:187:in `with_output_buffer'
+  actionpack (3.2.8) lib/action_view/helpers/capture_helper.rb:40:in `capture'
+  actionpack (3.2.8) lib/action_view/helpers/form_helper.rb:607:in `fields_for'
+  actionpack (3.2.8) lib/action_view/helpers/form_helper.rb:378:in `form_for'
+  formtastic (2.2.1) lib/formtastic/helpers/form_helper.rb:161:in `block in semantic_form_for'
+  formtastic (2.2.1) lib/formtastic/helpers/form_helper.rb:192:in `with_custom_field_error_proc'
+  formtastic (2.2.1) lib/formtastic/helpers/form_helper.rb:160:in `semantic_form_for'
+  activeadmin (0.5.0) lib/active_admin/view_helpers/form_helper.rb:8:in `active_admin_form_for'
+  arbre (1.0.1) lib/arbre/element.rb:175:in `method_missing'
+  activeadmin (0.5.0) lib/active_admin/views/pages/form.rb:22:in `main_content'
+  activeadmin (0.5.0) lib/active_admin/views/pages/base.rb:78:in `block (2 levels) in build_main_content_wrapper'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+  arbre (1.0.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:18:in `div'
+  activeadmin (0.5.0) lib/active_admin/views/pages/base.rb:77:in `block in build_main_content_wrapper'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+  arbre (1.0.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:18:in `div'
+  activeadmin (0.5.0) lib/active_admin/views/pages/base.rb:76:in `build_main_content_wrapper'
+  activeadmin (0.5.0) lib/active_admin/views/pages/base.rb:60:in `block in build_page_content'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+  arbre (1.0.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:18:in `div'
+  activeadmin (0.5.0) lib/active_admin/views/pages/base.rb:59:in `build_page_content'
+  activeadmin (0.5.0) lib/active_admin/views/pages/base.rb:42:in `block (2 levels) in build_page'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+  arbre (1.0.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:18:in `div'
+  activeadmin (0.5.0) lib/active_admin/views/pages/base.rb:39:in `block in build_page'
+  arbre (1.0.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+  activeadmin (0.5.0) lib/active_admin/views/pages/base.rb:38:in `build_page'
+  activeadmin (0.5.0) lib/active_admin/views/pages/base.rb:10:in `build'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:30:in `block in build_tag'
+  arbre (1.0.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+  arbre (1.0.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+  activeadmin (0.5.0) app/views/active_admin/resource/new.html.arb:1:in `block in _____ails_nstaller__uby______lib_ruby_gems_______gems_activeadmin_______app_views_active_admin_resource_new_html_arb___441153282_25150896'
+  arbre (1.0.1) lib/arbre/context.rb:45:in `instance_eval'
+  arbre (1.0.1) lib/arbre/context.rb:45:in `initialize'
+  activeadmin (0.5.0) app/views/active_admin/resource/new.html.arb:1:in `new'
+  activeadmin (0.5.0) app/views/active_admin/resource/new.html.arb:1:in `_____ails_nstaller__uby______lib_ruby_gems_______gems_activeadmin_______app_views_active_admin_resource_new_html_arb___441153282_25150896'
+  actionpack (3.2.8) lib/action_view/template.rb:145:in `block in render'
+  activesupport (3.2.8) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.8) lib/action_view/template.rb:143:in `render'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+  actionpack (3.2.8) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.8) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:18:in `render'
+  actionpack (3.2.8) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.8) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.8) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.8) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.8) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.8) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.8) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.8) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.8) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  activeadmin (0.5.0) lib/active_admin/resource_controller/actions.rb:34:in `block (2 levels) in new'
+  actionpack (3.2.8) lib/action_controller/metal/responder.rb:230:in `call'
+  actionpack (3.2.8) lib/action_controller/metal/responder.rb:230:in `default_render'
+  actionpack (3.2.8) lib/action_controller/metal/responder.rb:160:in `to_html'
+  responders (0.9.2) lib/responders/flash_responder.rb:104:in `to_html'
+  actionpack (3.2.8) lib/action_controller/metal/responder.rb:153:in `respond'
+  actionpack (3.2.8) lib/action_controller/metal/responder.rb:146:in `call'
+  actionpack (3.2.8) lib/action_controller/metal/mime_responds.rb:239:in `respond_with'
+  inherited_resources (1.3.1) lib/inherited_resources/actions.rb:19:in `new'
+  activeadmin (0.5.0) lib/active_admin/resource_controller/actions.rb:32:in `new'
+  actionpack (3.2.8) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.8) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.8) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:458:in `_run__625015246__process_action__40522317__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.8) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.8) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.8) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.8) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.8) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  warden (1.2.1) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.1) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.1) lib/warden/manager.rb:34:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/cookies.rb:339:in `call'
+  activerecord (3.2.8) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `_run__851092352__call__546088409__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (46.9ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow_dark.gif" for 127.0.0.1 at 2012-10-29 15:21:07 +0000
+Served asset /active_admin/nested_menu_arrow_dark.gif - 200 OK (0ms)
+
+
+Started GET "/admin/subscription_items" for 127.0.0.1 at 2012-10-29 15:21:09 +0000
+Processing by Admin::SubscriptionItemsController#index as HTML
+  [1m[35mAdminUser Load (0.0ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "subscription_items" LIMIT 30 OFFSET 0) subquery_for_count [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "subscription_items" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "subscription_items" LIMIT 30 OFFSET 0) subquery_for_count [0m
+  [1m[35mSubscriptionItem Load (0.0ms)[0m  SELECT "subscription_items".* FROM "subscription_items" ORDER BY "subscription_items"."id" desc LIMIT 30 OFFSET 0
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mSubscription Load (0.0ms)[0m  SELECT "subscriptions".* FROM "subscriptions" 
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activeadmin-0.5.0/app/views/active_admin/resource/index.html.arb (2000.0ms)
+Completed 200 OK in 2094ms (Views: 2015.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2012-10-29 15:21:11 +0000
+Served asset /active_admin.css - 304 Not Modified (31ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2012-10-29 15:21:11 +0000
+Served asset /active_admin/print.css - 304 Not Modified (15ms)
+
+
+Started GET "/admin/subscriptions" for 127.0.0.1 at 2012-10-29 15:21:13 +0000
+Processing by Admin::SubscriptionsController#index as HTML
+  [1m[36mAdminUser Load (0.0ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "subscriptions" LIMIT 30 OFFSET 0) subquery_for_count 
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "subscriptions" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "subscriptions" LIMIT 30 OFFSET 0) subquery_for_count 
+  [1m[36mSubscription Load (0.0ms)[0m  [1mSELECT "subscriptions".* FROM "subscriptions" ORDER BY "subscriptions"."id" desc LIMIT 30 OFFSET 0[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" 
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activeadmin-0.5.0/app/views/active_admin/resource/index.html.arb (1453.1ms)
+Completed 200 OK in 1469ms (Views: 1468.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2012-10-29 15:21:15 +0000
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2012-10-29 15:21:15 +0000
+Served asset /active_admin.css - 304 Not Modified (15ms)
+
+
+Started GET "/admin/suppliers" for 127.0.0.1 at 2012-10-29 15:21:17 +0000
+Processing by Admin::SuppliersController#index as HTML
+  [1m[36mAdminUser Load (0.0ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "suppliers" LIMIT 30 OFFSET 0) subquery_for_count 
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "suppliers" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "suppliers" LIMIT 30 OFFSET 0) subquery_for_count 
+  [1m[36mSupplier Load (0.0ms)[0m  [1mSELECT "suppliers".* FROM "suppliers" ORDER BY "suppliers"."id" desc LIMIT 30 OFFSET 0[0m
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activeadmin-0.5.0/app/views/active_admin/resource/index.html.arb (1140.6ms)
+Completed 200 OK in 1156ms (Views: 1156.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2012-10-29 15:21:18 +0000
+Served asset /active_admin.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2012-10-29 15:21:18 +0000
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/admin/boxes" for 127.0.0.1 at 2012-10-29 15:21:20 +0000
+Processing by Admin::BoxesController#index as HTML
+  [1m[35mAdminUser Load (0.0ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1
+  [1m[36m (15.6ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "boxes" LIMIT 30 OFFSET 0) subquery_for_count [0m
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activeadmin-0.5.0/app/views/active_admin/resource/index.html.arb (500.0ms)
+Completed 200 OK in 516ms (Views: 500.0ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2012-10-29 15:21:21 +0000
+Served asset /active_admin.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2012-10-29 15:21:21 +0000
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/admin/boxes/new" for 127.0.0.1 at 2012-10-29 15:21:23 +0000
+Processing by Admin::BoxesController#new as HTML
+  [1m[35mAdminUser Load (0.0ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activeadmin-0.5.0/app/views/active_admin/resource/new.html.arb (437.5ms)
+Completed 200 OK in 469ms (Views: 437.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2012-10-29 15:21:24 +0000
+Served asset /active_admin.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2012-10-29 15:21:24 +0000
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/admin/box_contents" for 127.0.0.1 at 2012-10-29 15:21:27 +0000
+Processing by Admin::BoxContentsController#index as HTML
+  [1m[36mAdminUser Load (0.0ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "box_contents" LIMIT 30 OFFSET 0) subquery_for_count 
+  [1m[36mBox Load (0.0ms)[0m  [1mSELECT "boxes".* FROM "boxes" [0m
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activeadmin-0.5.0/app/views/active_admin/resource/index.html.arb (265.6ms)
+Completed 200 OK in 281ms (Views: 281.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2012-10-29 15:21:28 +0000
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2012-10-29 15:21:28 +0000
+Served asset /active_admin.css - 304 Not Modified (15ms)
+
+
+Started GET "/admin/box_contents/new" for 127.0.0.1 at 2012-10-29 15:21:30 +0000
+Processing by Admin::BoxContentsController#new as HTML
+  [1m[35mAdminUser Load (0.0ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1
+  [1m[36mBox Load (0.0ms)[0m  [1mSELECT "boxes".* FROM "boxes" [0m
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activeadmin-0.5.0/app/views/active_admin/resource/new.html.arb (187.5ms)
+Completed 200 OK in 219ms (Views: 203.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2012-10-29 15:21:30 +0000
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2012-10-29 15:21:30 +0000
+Served asset /active_admin.css - 304 Not Modified (15ms)
+
+
+Started GET "/admin/box_contents/new" for 127.0.0.1 at 2012-10-29 15:22:17 +0000
+Processing by Admin::BoxContentsController#new as HTML
+  [1m[35mAdminUser Load (0.0ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1
+  [1m[36mBox Load (0.0ms)[0m  [1mSELECT "boxes".* FROM "boxes" [0m
+  [1m[35mStockItem Load (0.0ms)[0m  SELECT "stock_items".* FROM "stock_items" 
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activeadmin-0.5.0/app/views/active_admin/resource/new.html.arb (140.6ms)
+Completed 200 OK in 281ms (Views: 156.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2012-10-29 15:22:18 +0000
+Served asset /active_admin.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2012-10-29 15:22:18 +0000
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2012-10-29 15:22:18 +0000
+Served asset /active_admin.js - 304 Not Modified (46ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow.gif" for 127.0.0.1 at 2012-10-29 15:22:19 +0000
+Served asset /active_admin/nested_menu_arrow.gif - 304 Not Modified (0ms)
+
+
+Started GET "/admin/stock_items" for 127.0.0.1 at 2012-10-29 15:22:25 +0000
+Processing by Admin::StockItemsController#index as HTML
+  [1m[36mAdminUser Load (0.0ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "stock_items" LIMIT 30 OFFSET 0) subquery_for_count 
+  [1m[36mSupplier Load (0.0ms)[0m  [1mSELECT "suppliers".* FROM "suppliers" [0m
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activeadmin-0.5.0/app/views/active_admin/resource/index.html.arb (281.2ms)
+Completed 200 OK in 297ms (Views: 296.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2012-10-29 15:22:25 +0000
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2012-10-29 15:22:25 +0000
+Served asset /active_admin.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2012-10-29 15:22:26 +0000
+Served asset /active_admin.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow.gif" for 127.0.0.1 at 2012-10-29 15:22:26 +0000
+Served asset /active_admin/nested_menu_arrow.gif - 304 Not Modified (0ms)
+
+
+Started GET "/admin/stock_items/new" for 127.0.0.1 at 2012-10-29 15:22:27 +0000
+Processing by Admin::StockItemsController#new as HTML
+  [1m[35mAdminUser Load (0.0ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1
+  [1m[36mSupplier Load (0.0ms)[0m  [1mSELECT "suppliers".* FROM "suppliers" [0m
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activeadmin-0.5.0/app/views/active_admin/resource/new.html.arb (140.6ms)
+Completed 200 OK in 172ms (Views: 156.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2012-10-29 15:22:28 +0000
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2012-10-29 15:22:28 +0000
+Served asset /active_admin.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2012-10-29 15:22:28 +0000
+Served asset /active_admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow.gif" for 127.0.0.1 at 2012-10-29 15:22:28 +0000
+Served asset /active_admin/nested_menu_arrow.gif - 304 Not Modified (0ms)
+
+
+Started POST "/admin/stock_items" for 127.0.0.1 at 2012-10-29 15:23:52 +0000
+Processing by Admin::StockItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/UfZzDk98kcRPTg6bHOrMUfFuWZbbfhCUbda7TDt2yw=", "stock_item"=>{"supplier_id"=>"1", "name"=>"2nd Class Postage (less than 700g)", "cost"=>"2.20"}, "commit"=>"Create Stock item"}
+  [1m[35mAdminUser Load (0.0ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (125.0ms)[0m  INSERT INTO "stock_items" ("cost", "created_at", "name", "supplier_id", "updated_at") VALUES (?, ?, ?, ?, ?)  [["cost", #<BigDecimal:3104100,'0.22E1',18(18)>], ["created_at", Mon, 29 Oct 2012 15:23:52 UTC +00:00], ["name", "2nd Class Postage (less than 700g)"], ["supplier_id", 1], ["updated_at", Mon, 29 Oct 2012 15:23:52 UTC +00:00]]
+  [1m[36m (93.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/admin/stock_items/1
+Completed 302 Found in 250ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/stock_items/1" for 127.0.0.1 at 2012-10-29 15:23:52 +0000
+Processing by Admin::StockItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAdminUser Load (0.0ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1
+  [1m[36mStockItem Load (0.0ms)[0m  [1mSELECT "stock_items".* FROM "stock_items" WHERE "stock_items"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mSupplier Load (0.0ms)[0m  SELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = 1 LIMIT 1
+  [1m[36m (15.6ms)[0m  [1mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = 'StockItem' AND "active_admin_comments"."resource_id" = '1' AND "active_admin_comments"."namespace" = 'admin'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = 'StockItem' AND "active_admin_comments"."resource_id" = '1' AND "active_admin_comments"."namespace" = 'admin'
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activeadmin-0.5.0/app/views/active_admin/resource/show.html.arb (312.5ms)
+Completed 200 OK in 328ms (Views: 312.5ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2012-10-29 15:23:53 +0000
+Served asset /active_admin.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2012-10-29 15:23:53 +0000
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2012-10-29 15:23:53 +0000
+Served asset /active_admin.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow.gif" for 127.0.0.1 at 2012-10-29 15:23:53 +0000
+Served asset /active_admin/nested_menu_arrow.gif - 304 Not Modified (0ms)
+
+
+Started GET "/admin/stock_items" for 127.0.0.1 at 2012-10-29 15:23:55 +0000
+Processing by Admin::StockItemsController#index as HTML
+  [1m[36mAdminUser Load (0.0ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "stock_items" LIMIT 30 OFFSET 0) subquery_for_count 
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "stock_items" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "stock_items" LIMIT 30 OFFSET 0) subquery_for_count 
+  [1m[36mStockItem Load (0.0ms)[0m  [1mSELECT "stock_items".* FROM "stock_items" ORDER BY "stock_items"."id" desc LIMIT 30 OFFSET 0[0m
+  [1m[35mSupplier Load (0.0ms)[0m  SELECT "suppliers".* FROM "suppliers" 
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activeadmin-0.5.0/app/views/active_admin/resource/index.html.arb (734.4ms)
+Completed 200 OK in 750ms (Views: 750.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2012-10-29 15:23:56 +0000
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2012-10-29 15:23:56 +0000
+Served asset /active_admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2012-10-29 15:23:56 +0000
+Served asset /active_admin.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow.gif" for 127.0.0.1 at 2012-10-29 15:23:56 +0000
+Served asset /active_admin/nested_menu_arrow.gif - 304 Not Modified (0ms)
+
+
+Started GET "/admin/stock_items/new" for 127.0.0.1 at 2012-10-29 15:24:38 +0000
+Processing by Admin::StockItemsController#new as HTML
+  [1m[36mAdminUser Load (0.0ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1[0m
+  [1m[35mSupplier Load (0.0ms)[0m  SELECT "suppliers".* FROM "suppliers" 
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activeadmin-0.5.0/app/views/active_admin/resource/new.html.arb (203.1ms)
+Completed 200 OK in 219ms (Views: 218.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2012-10-29 15:24:38 +0000
+Served asset /active_admin/print.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2012-10-29 15:24:38 +0000
+Served asset /active_admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2012-10-29 15:24:38 +0000
+Served asset /active_admin.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow.gif" for 127.0.0.1 at 2012-10-29 15:24:39 +0000
+Served asset /active_admin/nested_menu_arrow.gif - 304 Not Modified (0ms)
+
+
+Started POST "/admin/stock_items" for 127.0.0.1 at 2012-10-29 15:25:50 +0000
+Processing by Admin::StockItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/UfZzDk98kcRPTg6bHOrMUfFuWZbbfhCUbda7TDt2yw=", "stock_item"=>{"supplier_id"=>"1", "name"=>"2nd Class Postage (between 750g and 1100g)", "cost"=>"3.50"}, "commit"=>"Create Stock item"}
+  [1m[36mAdminUser Load (0.0ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "stock_items" ("cost", "created_at", "name", "supplier_id", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["cost", #<BigDecimal:2fc1720,'0.35E1',18(18)>], ["created_at", Mon, 29 Oct 2012 15:25:50 UTC +00:00], ["name", "2nd Class Postage (between 750g and 1100g)"], ["supplier_id", 1], ["updated_at", Mon, 29 Oct 2012 15:25:50 UTC +00:00]]
+  [1m[35m (62.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/admin/stock_items/2
+Completed 302 Found in 94ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/stock_items/2" for 127.0.0.1 at 2012-10-29 15:25:50 +0000
+Processing by Admin::StockItemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdminUser Load (0.0ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1[0m
+  [1m[35mStockItem Load (15.6ms)[0m  SELECT "stock_items".* FROM "stock_items" WHERE "stock_items"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mSupplier Load (0.0ms)[0m  [1mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = 'StockItem' AND "active_admin_comments"."resource_id" = '2' AND "active_admin_comments"."namespace" = 'admin'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = 'StockItem' AND "active_admin_comments"."resource_id" = '2' AND "active_admin_comments"."namespace" = 'admin'[0m
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activeadmin-0.5.0/app/views/active_admin/resource/show.html.arb (125.0ms)
+Completed 200 OK in 141ms (Views: 125.0ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2012-10-29 15:25:50 +0000
+Served asset /active_admin.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2012-10-29 15:25:50 +0000
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2012-10-29 15:25:50 +0000
+Served asset /active_admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow.gif" for 127.0.0.1 at 2012-10-29 15:25:50 +0000
+Served asset /active_admin/nested_menu_arrow.gif - 304 Not Modified (0ms)
+
+
+Started GET "/admin/stock_items" for 127.0.0.1 at 2012-10-29 15:27:32 +0000
+Processing by Admin::StockItemsController#index as HTML
+  [1m[35mAdminUser Load (0.0ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "stock_items" LIMIT 30 OFFSET 0) subquery_for_count [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "stock_items" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "stock_items" LIMIT 30 OFFSET 0) subquery_for_count [0m
+  [1m[35mStockItem Load (0.0ms)[0m  SELECT "stock_items".* FROM "stock_items" ORDER BY "stock_items"."id" desc LIMIT 30 OFFSET 0
+  [1m[36mSupplier Load (0.0ms)[0m  [1mSELECT "suppliers".* FROM "suppliers" [0m
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activeadmin-0.5.0/app/views/active_admin/resource/index.html.arb (781.2ms)
+Completed 200 OK in 797ms (Views: 796.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2012-10-29 15:27:33 +0000
+Served asset /active_admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2012-10-29 15:27:33 +0000
+Served asset /active_admin.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2012-10-29 15:27:33 +0000
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow.gif" for 127.0.0.1 at 2012-10-29 15:27:33 +0000
+Served asset /active_admin/nested_menu_arrow.gif - 304 Not Modified (0ms)
+
+
+Started GET "/admin/stock_items" for 127.0.0.1 at 2012-10-29 15:32:37 +0000
+Processing by Admin::StockItemsController#index as HTML
+  [1m[35mAdminUser Load (0.0ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "stock_items" LIMIT 30 OFFSET 0) subquery_for_count [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "stock_items" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "stock_items" LIMIT 30 OFFSET 0) subquery_for_count [0m
+  [1m[35mStockItem Load (0.0ms)[0m  SELECT "stock_items".* FROM "stock_items" ORDER BY "stock_items"."id" desc LIMIT 30 OFFSET 0
+  [1m[36mSupplier Load (0.0ms)[0m  [1mSELECT "suppliers".* FROM "suppliers" [0m
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activeadmin-0.5.0/app/views/active_admin/resource/index.html.arb (796.9ms)
+Completed 200 OK in 1016ms (Views: 812.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2012-10-29 15:32:39 +0000
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2012-10-29 15:32:39 +0000
+Served asset /active_admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2012-10-29 15:32:39 +0000
+Served asset /active_admin.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow.gif" for 127.0.0.1 at 2012-10-29 15:32:40 +0000
+Served asset /active_admin/nested_menu_arrow.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/datepicker/datepicker-input-icon.png" for 127.0.0.1 at 2012-10-29 15:32:40 +0000
+Served asset /active_admin/datepicker/datepicker-input-icon.png - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin/orderable.png" for 127.0.0.1 at 2012-10-29 15:32:40 +0000
+Served asset /active_admin/orderable.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow_dark.gif" for 127.0.0.1 at 2012-10-29 15:32:41 +0000
+Served asset /active_admin/nested_menu_arrow_dark.gif - 304 Not Modified (0ms)
+
+
+Started GET "/admin/stock_items" for 127.0.0.1 at 2012-10-29 15:33:10 +0000
+Processing by Admin::StockItemsController#index as HTML
+  [1m[35mAdminUser Load (0.0ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "stock_items" LIMIT 30 OFFSET 0) subquery_for_count [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "stock_items" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "stock_items" LIMIT 30 OFFSET 0) subquery_for_count [0m
+  [1m[35mStockItem Load (0.0ms)[0m  SELECT "stock_items".* FROM "stock_items" ORDER BY "stock_items"."id" desc LIMIT 30 OFFSET 0
+  [1m[36mSupplier Load (0.0ms)[0m  [1mSELECT "suppliers".* FROM "suppliers" [0m
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activeadmin-0.5.0/app/views/active_admin/resource/index.html.arb (875.0ms)
+Completed 200 OK in 1000ms (Views: 890.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2012-10-29 15:33:12 +0000
+Served asset /active_admin.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2012-10-29 15:33:12 +0000
+Served asset /active_admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2012-10-29 15:33:12 +0000
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow.gif" for 127.0.0.1 at 2012-10-29 15:33:12 +0000
+Served asset /active_admin/nested_menu_arrow.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/orderable.png" for 127.0.0.1 at 2012-10-29 15:33:12 +0000
+Served asset /active_admin/orderable.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/datepicker/datepicker-input-icon.png" for 127.0.0.1 at 2012-10-29 15:33:12 +0000
+Served asset /active_admin/datepicker/datepicker-input-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow_dark.gif" for 127.0.0.1 at 2012-10-29 15:33:14 +0000
+Served asset /active_admin/nested_menu_arrow_dark.gif - 304 Not Modified (0ms)
+
+
+Started GET "/admin/stock_items" for 127.0.0.1 at 2012-10-29 15:34:03 +0000
+Processing by Admin::StockItemsController#index as HTML
+  [1m[35mAdminUser Load (0.0ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "stock_items" LIMIT 30 OFFSET 0) subquery_for_count [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "stock_items" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "stock_items" LIMIT 30 OFFSET 0) subquery_for_count [0m
+  [1m[35mStockItem Load (0.0ms)[0m  SELECT "stock_items".* FROM "stock_items" ORDER BY "stock_items"."id" desc LIMIT 30 OFFSET 0
+  [1m[36mSupplier Load (0.0ms)[0m  [1mSELECT "suppliers".* FROM "suppliers" [0m
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activeadmin-0.5.0/app/views/active_admin/resource/index.html.arb (609.4ms)
+Completed 200 OK in 812ms (Views: 609.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2012-10-29 15:34:05 +0000
+Served asset /active_admin.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2012-10-29 15:34:05 +0000
+Served asset /active_admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2012-10-29 15:34:05 +0000
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow.gif" for 127.0.0.1 at 2012-10-29 15:34:05 +0000
+Served asset /active_admin/nested_menu_arrow.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/orderable.png" for 127.0.0.1 at 2012-10-29 15:34:05 +0000
+Served asset /active_admin/orderable.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow_dark.gif" for 127.0.0.1 at 2012-10-29 15:34:05 +0000
+Served asset /active_admin/nested_menu_arrow_dark.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/datepicker/datepicker-input-icon.png" for 127.0.0.1 at 2012-10-29 15:34:05 +0000
+Served asset /active_admin/datepicker/datepicker-input-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/admin/stock_items" for 127.0.0.1 at 2012-10-29 15:34:52 +0000
+Processing by Admin::StockItemsController#index as HTML
+  [1m[35mAdminUser Load (0.0ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "stock_items" LIMIT 30 OFFSET 0) subquery_for_count [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "stock_items" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "stock_items" LIMIT 30 OFFSET 0) subquery_for_count [0m
+  [1m[35mStockItem Load (0.0ms)[0m  SELECT "stock_items".* FROM "stock_items" ORDER BY "stock_items"."id" desc LIMIT 30 OFFSET 0
+  [1m[36mSupplier Load (0.0ms)[0m  [1mSELECT "suppliers".* FROM "suppliers" [0m
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activeadmin-0.5.0/app/views/active_admin/resource/index.html.arb (531.2ms)
+Completed 200 OK in 750ms (Views: 546.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2012-10-29 15:34:54 +0000
+Served asset /active_admin.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2012-10-29 15:34:54 +0000
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2012-10-29 15:34:54 +0000
+Served asset /active_admin.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow_dark.gif" for 127.0.0.1 at 2012-10-29 15:34:54 +0000
+Served asset /active_admin/nested_menu_arrow_dark.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/datepicker/datepicker-input-icon.png" for 127.0.0.1 at 2012-10-29 15:34:54 +0000
+Served asset /active_admin/datepicker/datepicker-input-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow.gif" for 127.0.0.1 at 2012-10-29 15:34:54 +0000
+Served asset /active_admin/nested_menu_arrow.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/orderable.png" for 127.0.0.1 at 2012-10-29 15:34:54 +0000
+Served asset /active_admin/orderable.png - 304 Not Modified (0ms)
+
+
+Started GET "/admin/products" for 127.0.0.1 at 2012-10-29 15:34:59 +0000
+Processing by Admin::ProductsController#index as HTML
+  [1m[35mAdminUser Load (0.0ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "products" LIMIT 30 OFFSET 0) subquery_for_count [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "products" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "products" LIMIT 30 OFFSET 0) subquery_for_count [0m
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" ORDER BY "products"."id" desc LIMIT 30 OFFSET 0
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activeadmin-0.5.0/app/views/active_admin/resource/index.html.arb (765.6ms)
+Completed 200 OK in 781ms (Views: 781.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2012-10-29 15:34:59 +0000
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2012-10-29 15:35:00 +0000
+Served asset /active_admin.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2012-10-29 15:35:00 +0000
+Served asset /active_admin.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin/orderable.png" for 127.0.0.1 at 2012-10-29 15:35:00 +0000
+Served asset /active_admin/orderable.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow.gif" for 127.0.0.1 at 2012-10-29 15:35:00 +0000
+Served asset /active_admin/nested_menu_arrow.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow_dark.gif" for 127.0.0.1 at 2012-10-29 15:35:00 +0000
+Served asset /active_admin/nested_menu_arrow_dark.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/datepicker/datepicker-input-icon.png" for 127.0.0.1 at 2012-10-29 15:35:00 +0000
+Served asset /active_admin/datepicker/datepicker-input-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/admin/subscription_items" for 127.0.0.1 at 2012-10-29 15:35:03 +0000
+Processing by Admin::SubscriptionItemsController#index as HTML
+  [1m[36mAdminUser Load (0.0ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "subscription_items" LIMIT 30 OFFSET 0) subquery_for_count 
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "subscription_items" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "subscription_items" LIMIT 30 OFFSET 0) subquery_for_count 
+  [1m[36mSubscriptionItem Load (0.0ms)[0m  [1mSELECT "subscription_items".* FROM "subscription_items" ORDER BY "subscription_items"."id" desc LIMIT 30 OFFSET 0[0m
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" 
+  [1m[36mSubscription Load (0.0ms)[0m  [1mSELECT "subscriptions".* FROM "subscriptions" [0m
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activeadmin-0.5.0/app/views/active_admin/resource/index.html.arb (1453.1ms)
+Completed 200 OK in 1469ms (Views: 1468.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2012-10-29 15:35:05 +0000
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2012-10-29 15:35:05 +0000
+Served asset /active_admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2012-10-29 15:35:05 +0000
+Served asset /active_admin.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow.gif" for 127.0.0.1 at 2012-10-29 15:35:05 +0000
+Served asset /active_admin/nested_menu_arrow.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow_dark.gif" for 127.0.0.1 at 2012-10-29 15:35:05 +0000
+Served asset /active_admin/nested_menu_arrow_dark.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/orderable.png" for 127.0.0.1 at 2012-10-29 15:35:05 +0000
+Served asset /active_admin/orderable.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/datepicker/datepicker-input-icon.png" for 127.0.0.1 at 2012-10-29 15:35:05 +0000
+Served asset /active_admin/datepicker/datepicker-input-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/admin/subscription_items" for 127.0.0.1 at 2012-10-29 15:35:34 +0000
+Processing by Admin::SubscriptionItemsController#index as HTML
+  [1m[35mAdminUser Load (0.0ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "subscription_items" LIMIT 30 OFFSET 0) subquery_for_count [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "subscription_items" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "subscription_items" LIMIT 30 OFFSET 0) subquery_for_count [0m
+  [1m[35mSubscriptionItem Load (0.0ms)[0m  SELECT "subscription_items".* FROM "subscription_items" ORDER BY "subscription_items"."id" desc LIMIT 30 OFFSET 0
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mSubscription Load (0.0ms)[0m  SELECT "subscriptions".* FROM "subscriptions" 
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activeadmin-0.5.0/app/views/active_admin/resource/index.html.arb (2234.4ms)
+Completed 200 OK in 2359ms (Views: 2250.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2012-10-29 15:35:37 +0000
+Served asset /active_admin.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2012-10-29 15:35:37 +0000
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2012-10-29 15:35:37 +0000
+Served asset /active_admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow.gif" for 127.0.0.1 at 2012-10-29 15:35:38 +0000
+Served asset /active_admin/nested_menu_arrow.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow_dark.gif" for 127.0.0.1 at 2012-10-29 15:35:38 +0000
+Served asset /active_admin/nested_menu_arrow_dark.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/datepicker/datepicker-input-icon.png" for 127.0.0.1 at 2012-10-29 15:35:38 +0000
+Served asset /active_admin/datepicker/datepicker-input-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/orderable.png" for 127.0.0.1 at 2012-10-29 15:35:38 +0000
+Served asset /active_admin/orderable.png - 304 Not Modified (0ms)
+
+
+Started GET "/admin/promo_codes" for 127.0.0.1 at 2012-10-29 15:35:40 +0000
+Processing by Admin::PromoCodesController#index as HTML
+  [1m[36mAdminUser Load (0.0ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "promo_codes" LIMIT 30 OFFSET 0) subquery_for_count 
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "promo_codes" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "promo_codes" LIMIT 30 OFFSET 0) subquery_for_count 
+  [1m[36mPromoCode Load (0.0ms)[0m  [1mSELECT "promo_codes".* FROM "promo_codes" ORDER BY "promo_codes"."id" desc LIMIT 30 OFFSET 0[0m
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" 
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activeadmin-0.5.0/app/views/active_admin/resource/index.html.arb (953.1ms)
+Completed 200 OK in 969ms (Views: 953.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2012-10-29 15:35:41 +0000
+Served asset /active_admin.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2012-10-29 15:35:41 +0000
+Served asset /active_admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2012-10-29 15:35:41 +0000
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow_dark.gif" for 127.0.0.1 at 2012-10-29 15:35:42 +0000
+Served asset /active_admin/nested_menu_arrow_dark.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow.gif" for 127.0.0.1 at 2012-10-29 15:35:42 +0000
+Served asset /active_admin/nested_menu_arrow.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/datepicker/datepicker-input-icon.png" for 127.0.0.1 at 2012-10-29 15:35:42 +0000
+Served asset /active_admin/datepicker/datepicker-input-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/orderable.png" for 127.0.0.1 at 2012-10-29 15:35:42 +0000
+Served asset /active_admin/orderable.png - 304 Not Modified (0ms)
+
+
+Started GET "/admin/suppliers" for 127.0.0.1 at 2012-10-29 15:36:35 +0000
+Processing by Admin::SuppliersController#index as HTML
+  [1m[36mAdminUser Load (0.0ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "suppliers" LIMIT 30 OFFSET 0) subquery_for_count 
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "suppliers" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "suppliers" LIMIT 30 OFFSET 0) subquery_for_count 
+  [1m[36mSupplier Load (0.0ms)[0m  [1mSELECT "suppliers".* FROM "suppliers" ORDER BY "suppliers"."id" desc LIMIT 30 OFFSET 0[0m
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activeadmin-0.5.0/app/views/active_admin/resource/index.html.arb (1234.4ms)
+Completed 200 OK in 1250ms (Views: 1234.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2012-10-29 15:36:37 +0000
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2012-10-29 15:36:37 +0000
+Served asset /active_admin.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2012-10-29 15:36:37 +0000
+Served asset /active_admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow.gif" for 127.0.0.1 at 2012-10-29 15:36:37 +0000
+Served asset /active_admin/nested_menu_arrow.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow_dark.gif" for 127.0.0.1 at 2012-10-29 15:36:37 +0000
+Served asset /active_admin/nested_menu_arrow_dark.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/orderable.png" for 127.0.0.1 at 2012-10-29 15:36:37 +0000
+Served asset /active_admin/orderable.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/datepicker/datepicker-input-icon.png" for 127.0.0.1 at 2012-10-29 15:36:37 +0000
+Served asset /active_admin/datepicker/datepicker-input-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-29 15:37:07 +0000
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.0ms)
+  [1m[35mAdminUser Load (0.0ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1
+  [1m[36mArticle Load (0.0ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE (published = 't') ORDER BY created_at DESC LIMIT 4[0m
+Completed 200 OK in 328ms (Views: 328.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-29 15:37:07 +0000
+Served asset /application.css - 304 Not Modified (109ms)
+
+
+Started GET "/assets/foundation/globals.css?body=1" for 127.0.0.1 at 2012-10-29 15:37:08 +0000
+Served asset /foundation/globals.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/foundation/typography.css?body=1" for 127.0.0.1 at 2012-10-29 15:37:08 +0000
+Served asset /foundation/typography.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/grid.css?body=1" for 127.0.0.1 at 2012-10-29 15:37:08 +0000
+Served asset /foundation/grid.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/foundation/ui.css?body=1" for 127.0.0.1 at 2012-10-29 15:37:08 +0000
+Served asset /foundation/ui.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/foundation/forms.css?body=1" for 127.0.0.1 at 2012-10-29 15:37:08 +0000
+Served asset /foundation/forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/orbit.css?body=1" for 127.0.0.1 at 2012-10-29 15:37:08 +0000
+Served asset /foundation/orbit.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/foundation/reveal.css?body=1" for 127.0.0.1 at 2012-10-29 15:37:08 +0000
+Served asset /foundation/reveal.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/foundation/mobile.css?body=1" for 127.0.0.1 at 2012-10-29 15:37:08 +0000
+Served asset /foundation/mobile.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/index.css?body=1" for 127.0.0.1 at 2012-10-29 15:37:08 +0000
+Served asset /foundation/index.css - 304 Not Modified (31ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2012-10-29 15:37:08 +0000
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:08 +0000
+Served asset /jquery.js - 304 Not Modified (78ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:08 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.purr.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:08 +0000
+Served asset /jquery.purr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/best_in_place.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:08 +0000
+Served asset /best_in_place.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/foundation/modernizr.foundation.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:08 +0000
+Served asset /foundation/modernizr.foundation.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/foundation/jquery.reveal.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:08 +0000
+Served asset /foundation/jquery.reveal.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/foundation/jquery.orbit-1.4.0.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:08 +0000
+Served asset /foundation/jquery.orbit-1.4.0.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/foundation/jquery.customforms.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:09 +0000
+Served asset /foundation/jquery.customforms.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/foundation/jquery.placeholder.min.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:09 +0000
+Served asset /foundation/jquery.placeholder.min.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/foundation/jquery.tooltips.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:09 +0000
+Served asset /foundation/jquery.tooltips.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/foundation/app.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:09 +0000
+Served asset /foundation/app.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:09 +0000
+Served asset /foundation/index.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:09 +0000
+Served asset /jquery-ui.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/lib/namespace.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:09 +0000
+Served asset /active_admin/lib/namespace.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.checkbox-toggler.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:09 +0000
+Served asset /active_admin/components/jquery.aa.checkbox-toggler.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.dropdown-menu.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:09 +0000
+Served asset /active_admin/components/jquery.aa.dropdown-menu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.popover.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:09 +0000
+Served asset /active_admin/components/jquery.aa.popover.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.table-checkbox-toggler.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:09 +0000
+Served asset /active_admin/components/jquery.aa.table-checkbox-toggler.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin/pages/application.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:09 +0000
+Served asset /active_admin/pages/application.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin/pages/batch_actions.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:09 +0000
+Served asset /active_admin/pages/batch_actions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:09 +0000
+Served asset /active_admin/application.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:09 +0000
+Served asset /active_admin/base.js - 304 Not Modified (31ms)
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:10 +0000
+Served asset /active_admin.js - 304 Not Modified (93ms)
+
+
+Started GET "/assets/gocardless.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:10 +0000
+Served asset /gocardless.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/manager.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:10 +0000
+Served asset /manager.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/subscriptions.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:10 +0000
+Served asset /subscriptions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:10 +0000
+Served asset /application.js - 304 Not Modified (125ms)
+
+
+Started GET "/assets/box-home.jpg" for 127.0.0.1 at 2012-10-29 15:37:10 +0000
+Served asset /box-home.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/background-paper.jpg" for 127.0.0.1 at 2012-10-29 15:37:10 +0000
+Served asset /background-paper.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/social/twitter.png" for 127.0.0.1 at 2012-10-29 15:37:10 +0000
+Served asset /social/twitter.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/social/facebook.png" for 127.0.0.1 at 2012-10-29 15:37:10 +0000
+Served asset /social/facebook.png - 304 Not Modified (15ms)
+
+
+Started GET "/assets/social/pinterest.png" for 127.0.0.1 at 2012-10-29 15:37:10 +0000
+Served asset /social/pinterest.png - 304 Not Modified (15ms)
+
+
+Started GET "/assets/busy-box-300x100.png" for 127.0.0.1 at 2012-10-29 15:37:11 +0000
+Served asset /busy-box-300x100.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo-sketched.png" for 127.0.0.1 at 2012-10-29 15:37:11 +0000
+Served asset /logo-sketched.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/misc/button-gloss.png" for 127.0.0.1 at 2012-10-29 15:37:11 +0000
+Served asset /foundation/misc/button-gloss.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/works-home-box.png" for 127.0.0.1 at 2012-10-29 15:37:11 +0000
+Served asset /works-home-box.png - 304 Not Modified (15ms)
+
+
+Started GET "/assets/box-home-box.png" for 127.0.0.1 at 2012-10-29 15:37:11 +0000
+Served asset /box-home-box.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sibling-home-box.png" for 127.0.0.1 at 2012-10-29 15:37:11 +0000
+Served asset /sibling-home-box.png - 304 Not Modified (15ms)
+
+
+Started GET "/assets/foundation/misc/input-bg.png" for 127.0.0.1 at 2012-10-29 15:37:11 +0000
+Served asset /foundation/misc/input-bg.png - 304 Not Modified (0ms)
+
+
+Started GET "/manager" for 127.0.0.1 at 2012-10-29 15:37:14 +0000
+Processing by ManagerController#index as HTML
+  [1m[35mAdminUser Load (0.0ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE (status = 'pending')[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "subscriptions" WHERE (status = 'Active')
+  [1m[36mSubscription Load (0.0ms)[0m  [1mSELECT "subscriptions".* FROM "subscriptions" WHERE (status = 'Active') ORDER BY created_at DESC[0m
+  [1m[35mSubscriptionItem Load (0.0ms)[0m  SELECT "subscription_items".* FROM "subscription_items" WHERE "subscription_items"."subscription_id" = 48 LIMIT 1
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "subscription_items".* FROM "subscription_items" WHERE "subscription_items"."subscription_id" = 48 LIMIT 1
+  [1m[36mSubscriptionItem Load (0.0ms)[0m  [1mSELECT "subscription_items".* FROM "subscription_items" WHERE "subscription_items"."subscription_id" = 47 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "subscription_items".* FROM "subscription_items" WHERE "subscription_items"."subscription_id" = 47 LIMIT 1[0m
+  [1m[35mSubscription Load (0.0ms)[0m  SELECT "subscriptions".* FROM "subscriptions" WHERE (status = 'Cancelled') ORDER BY created_at DESC
+  Rendered manager/index.html.erb within layouts/application (93.8ms)
+  [1m[36mArticle Load (0.0ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE (published = 't') ORDER BY created_at DESC LIMIT 4[0m
+Completed 200 OK in 156ms (Views: 156.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/foundation/globals.css?body=1" for 127.0.0.1 at 2012-10-29 15:37:15 +0000
+Served asset /foundation/globals.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-29 15:37:15 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/typography.css?body=1" for 127.0.0.1 at 2012-10-29 15:37:15 +0000
+Served asset /foundation/typography.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/grid.css?body=1" for 127.0.0.1 at 2012-10-29 15:37:15 +0000
+Served asset /foundation/grid.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/ui.css?body=1" for 127.0.0.1 at 2012-10-29 15:37:15 +0000
+Served asset /foundation/ui.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/forms.css?body=1" for 127.0.0.1 at 2012-10-29 15:37:15 +0000
+Served asset /foundation/forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/orbit.css?body=1" for 127.0.0.1 at 2012-10-29 15:37:15 +0000
+Served asset /foundation/orbit.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/reveal.css?body=1" for 127.0.0.1 at 2012-10-29 15:37:15 +0000
+Served asset /foundation/reveal.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/mobile.css?body=1" for 127.0.0.1 at 2012-10-29 15:37:15 +0000
+Served asset /foundation/mobile.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/index.css?body=1" for 127.0.0.1 at 2012-10-29 15:37:15 +0000
+Served asset /foundation/index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2012-10-29 15:37:15 +0000
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:15 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:15 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.purr.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:15 +0000
+Served asset /jquery.purr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/best_in_place.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:15 +0000
+Served asset /best_in_place.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/modernizr.foundation.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:15 +0000
+Served asset /foundation/modernizr.foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.reveal.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:15 +0000
+Served asset /foundation/jquery.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.orbit-1.4.0.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:15 +0000
+Served asset /foundation/jquery.orbit-1.4.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.customforms.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:15 +0000
+Served asset /foundation/jquery.customforms.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.placeholder.min.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:16 +0000
+Served asset /foundation/jquery.placeholder.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.tooltips.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:16 +0000
+Served asset /foundation/jquery.tooltips.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/app.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:16 +0000
+Served asset /foundation/app.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:16 +0000
+Served asset /foundation/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:16 +0000
+Served asset /jquery-ui.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/lib/namespace.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:16 +0000
+Served asset /active_admin/lib/namespace.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.checkbox-toggler.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:16 +0000
+Served asset /active_admin/components/jquery.aa.checkbox-toggler.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.dropdown-menu.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:16 +0000
+Served asset /active_admin/components/jquery.aa.dropdown-menu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.popover.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:16 +0000
+Served asset /active_admin/components/jquery.aa.popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/pages/application.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:16 +0000
+Served asset /active_admin/pages/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.table-checkbox-toggler.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:16 +0000
+Served asset /active_admin/components/jquery.aa.table-checkbox-toggler.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/pages/batch_actions.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:16 +0000
+Served asset /active_admin/pages/batch_actions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:16 +0000
+Served asset /active_admin/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:16 +0000
+Served asset /active_admin/base.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:16 +0000
+Served asset /active_admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gocardless.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:16 +0000
+Served asset /gocardless.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/manager.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:16 +0000
+Served asset /manager.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/subscriptions.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:16 +0000
+Served asset /subscriptions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:16 +0000
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/background-paper.jpg" for 127.0.0.1 at 2012-10-29 15:37:16 +0000
+Served asset /background-paper.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/social/pinterest.png" for 127.0.0.1 at 2012-10-29 15:37:17 +0000
+Served asset /social/pinterest.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/social/facebook.png" for 127.0.0.1 at 2012-10-29 15:37:17 +0000
+Served asset /social/facebook.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/social/twitter.png" for 127.0.0.1 at 2012-10-29 15:37:17 +0000
+Served asset /social/twitter.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo-sketched.png" for 127.0.0.1 at 2012-10-29 15:37:17 +0000
+Served asset /logo-sketched.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/busy-box-300x100.png" for 127.0.0.1 at 2012-10-29 15:37:17 +0000
+Served asset /busy-box-300x100.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/misc/button-gloss.png" for 127.0.0.1 at 2012-10-29 15:37:17 +0000
+Served asset /foundation/misc/button-gloss.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/misc/input-bg.png" for 127.0.0.1 at 2012-10-29 15:37:17 +0000
+Served asset /foundation/misc/input-bg.png - 304 Not Modified (0ms)
+
+
+Started GET "/manager/pack_sheets" for 127.0.0.1 at 2012-10-29 15:37:44 +0000
+Processing by ManagerController#pack_sheets as HTML
+  [1m[35mAdminUser Load (0.0ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1
+  [1m[36mSubscription Load (15.6ms)[0m  [1mSELECT "subscriptions".* FROM "subscriptions" WHERE (status = 'Active') ORDER BY created_at DESC[0m
+  [1m[35mSubscriptionItem Load (0.0ms)[0m  SELECT "subscription_items".* FROM "subscription_items" WHERE "subscription_items"."subscription_id" = 48 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "subscription_items".* FROM "subscription_items" WHERE "subscription_items"."subscription_id" = 48 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "subscription_items".* FROM "subscription_items" WHERE "subscription_items"."subscription_id" = 48 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "subscription_items".* FROM "subscription_items" WHERE "subscription_items"."subscription_id" = 48 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "subscription_items".* FROM "subscription_items" WHERE "subscription_items"."subscription_id" = 48 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "subscription_items".* FROM "subscription_items" WHERE "subscription_items"."subscription_id" = 48 LIMIT 1[0m
+  [1m[35mSubscriptionItem Load (0.0ms)[0m  SELECT "subscription_items".* FROM "subscription_items" WHERE "subscription_items"."subscription_id" = 48
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1[0m
+  [1m[35mSubscriptionItem Load (0.0ms)[0m  SELECT "subscription_items".* FROM "subscription_items" WHERE "subscription_items"."subscription_id" = 47 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "subscription_items".* FROM "subscription_items" WHERE "subscription_items"."subscription_id" = 47 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "subscription_items".* FROM "subscription_items" WHERE "subscription_items"."subscription_id" = 47 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "subscription_items".* FROM "subscription_items" WHERE "subscription_items"."subscription_id" = 47 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "subscription_items".* FROM "subscription_items" WHERE "subscription_items"."subscription_id" = 47 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "subscription_items".* FROM "subscription_items" WHERE "subscription_items"."subscription_id" = 47 LIMIT 1[0m
+  [1m[35mSubscriptionItem Load (0.0ms)[0m  SELECT "subscription_items".* FROM "subscription_items" WHERE "subscription_items"."subscription_id" = 47
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1[0m
+  Rendered manager/pack_sheets.html.erb (78.1ms)
+Completed 200 OK in 78ms (Views: 62.5ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-29 15:37:44 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/globals.css?body=1" for 127.0.0.1 at 2012-10-29 15:37:44 +0000
+Served asset /foundation/globals.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/typography.css?body=1" for 127.0.0.1 at 2012-10-29 15:37:44 +0000
+Served asset /foundation/typography.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/grid.css?body=1" for 127.0.0.1 at 2012-10-29 15:37:44 +0000
+Served asset /foundation/grid.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/forms.css?body=1" for 127.0.0.1 at 2012-10-29 15:37:44 +0000
+Served asset /foundation/forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/ui.css?body=1" for 127.0.0.1 at 2012-10-29 15:37:44 +0000
+Served asset /foundation/ui.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/orbit.css?body=1" for 127.0.0.1 at 2012-10-29 15:37:44 +0000
+Served asset /foundation/orbit.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/reveal.css?body=1" for 127.0.0.1 at 2012-10-29 15:37:44 +0000
+Served asset /foundation/reveal.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/mobile.css?body=1" for 127.0.0.1 at 2012-10-29 15:37:44 +0000
+Served asset /foundation/mobile.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/index.css?body=1" for 127.0.0.1 at 2012-10-29 15:37:44 +0000
+Served asset /foundation/index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2012-10-29 15:37:44 +0000
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:44 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:44 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.purr.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:45 +0000
+Served asset /jquery.purr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/best_in_place.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:45 +0000
+Served asset /best_in_place.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/foundation/modernizr.foundation.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:45 +0000
+Served asset /foundation/modernizr.foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.reveal.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:45 +0000
+Served asset /foundation/jquery.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.orbit-1.4.0.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:45 +0000
+Served asset /foundation/jquery.orbit-1.4.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.customforms.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:45 +0000
+Served asset /foundation/jquery.customforms.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.placeholder.min.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:45 +0000
+Served asset /foundation/jquery.placeholder.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.tooltips.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:45 +0000
+Served asset /foundation/jquery.tooltips.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/app.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:45 +0000
+Served asset /foundation/app.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:45 +0000
+Served asset /foundation/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:45 +0000
+Served asset /jquery-ui.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/lib/namespace.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:45 +0000
+Served asset /active_admin/lib/namespace.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.checkbox-toggler.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:45 +0000
+Served asset /active_admin/components/jquery.aa.checkbox-toggler.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.dropdown-menu.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:45 +0000
+Served asset /active_admin/components/jquery.aa.dropdown-menu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.popover.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:45 +0000
+Served asset /active_admin/components/jquery.aa.popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.table-checkbox-toggler.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:45 +0000
+Served asset /active_admin/components/jquery.aa.table-checkbox-toggler.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/pages/application.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:45 +0000
+Served asset /active_admin/pages/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/pages/batch_actions.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:45 +0000
+Served asset /active_admin/pages/batch_actions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:45 +0000
+Served asset /active_admin/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:46 +0000
+Served asset /active_admin/base.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:46 +0000
+Served asset /active_admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gocardless.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:46 +0000
+Served asset /gocardless.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/manager.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:46 +0000
+Served asset /manager.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/subscriptions.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:46 +0000
+Served asset /subscriptions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:46 +0000
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/background-paper.jpg" for 127.0.0.1 at 2012-10-29 15:37:46 +0000
+Served asset /background-paper.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/manager/subscription_details?id=48" for 127.0.0.1 at 2012-10-29 15:37:56 +0000
+Processing by ManagerController#subscription_details as HTML
+  Parameters: {"id"=>"48"}
+  [1m[35mAdminUser Load (0.0ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1
+  [1m[36mSubscription Load (0.0ms)[0m  [1mSELECT "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."id" = ? LIMIT 1[0m  [["id", "48"]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSubscriptionItem Load (0.0ms)[0m  [1mSELECT "subscription_items".* FROM "subscription_items" WHERE "subscription_items"."subscription_id" = 48 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "subscription_items".* FROM "subscription_items" WHERE "subscription_items"."subscription_id" = 48 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "subscription_items".* FROM "subscription_items" WHERE "subscription_items"."subscription_id" = 48 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "subscription_items".* FROM "subscription_items" WHERE "subscription_items"."subscription_id" = 48 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "subscription_items".* FROM "subscription_items" WHERE "subscription_items"."subscription_id" = 48 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "subscription_items".* FROM "subscription_items" WHERE "subscription_items"."subscription_id" = 48 LIMIT 1
+  [1m[36mSubscriptionItem Load (0.0ms)[0m  [1mSELECT "subscription_items".* FROM "subscription_items" WHERE "subscription_items"."subscription_id" = 48[0m
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1
+  Rendered manager/subscription_details.html.erb within layouts/application (46.9ms)
+  [1m[36mArticle Load (0.0ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE (published = 't') ORDER BY created_at DESC LIMIT 4[0m
+Completed 200 OK in 109ms (Views: 93.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-29 15:37:57 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/typography.css?body=1" for 127.0.0.1 at 2012-10-29 15:37:57 +0000
+Served asset /foundation/typography.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/ui.css?body=1" for 127.0.0.1 at 2012-10-29 15:37:57 +0000
+Served asset /foundation/ui.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/globals.css?body=1" for 127.0.0.1 at 2012-10-29 15:37:57 +0000
+Served asset /foundation/globals.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/grid.css?body=1" for 127.0.0.1 at 2012-10-29 15:37:57 +0000
+Served asset /foundation/grid.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/forms.css?body=1" for 127.0.0.1 at 2012-10-29 15:37:57 +0000
+Served asset /foundation/forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/orbit.css?body=1" for 127.0.0.1 at 2012-10-29 15:37:57 +0000
+Served asset /foundation/orbit.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/reveal.css?body=1" for 127.0.0.1 at 2012-10-29 15:37:57 +0000
+Served asset /foundation/reveal.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/mobile.css?body=1" for 127.0.0.1 at 2012-10-29 15:37:57 +0000
+Served asset /foundation/mobile.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/index.css?body=1" for 127.0.0.1 at 2012-10-29 15:37:57 +0000
+Served asset /foundation/index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2012-10-29 15:37:57 +0000
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:57 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:57 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/best_in_place.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:57 +0000
+Served asset /best_in_place.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.purr.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:57 +0000
+Served asset /jquery.purr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/modernizr.foundation.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:57 +0000
+Served asset /foundation/modernizr.foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.reveal.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:57 +0000
+Served asset /foundation/jquery.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.orbit-1.4.0.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:57 +0000
+Served asset /foundation/jquery.orbit-1.4.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.customforms.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:57 +0000
+Served asset /foundation/jquery.customforms.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.placeholder.min.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:58 +0000
+Served asset /foundation/jquery.placeholder.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.tooltips.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:58 +0000
+Served asset /foundation/jquery.tooltips.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/app.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:58 +0000
+Served asset /foundation/app.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:58 +0000
+Served asset /foundation/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:58 +0000
+Served asset /jquery-ui.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/lib/namespace.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:58 +0000
+Served asset /active_admin/lib/namespace.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.checkbox-toggler.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:58 +0000
+Served asset /active_admin/components/jquery.aa.checkbox-toggler.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.dropdown-menu.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:58 +0000
+Served asset /active_admin/components/jquery.aa.dropdown-menu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.popover.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:58 +0000
+Served asset /active_admin/components/jquery.aa.popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.table-checkbox-toggler.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:58 +0000
+Served asset /active_admin/components/jquery.aa.table-checkbox-toggler.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/pages/application.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:58 +0000
+Served asset /active_admin/pages/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/pages/batch_actions.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:58 +0000
+Served asset /active_admin/pages/batch_actions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:58 +0000
+Served asset /active_admin/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:58 +0000
+Served asset /active_admin/base.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:58 +0000
+Served asset /active_admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gocardless.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:58 +0000
+Served asset /gocardless.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/manager.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:58 +0000
+Served asset /manager.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/subscriptions.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:58 +0000
+Served asset /subscriptions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-29 15:37:58 +0000
+Served asset /application.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/background-paper.jpg" for 127.0.0.1 at 2012-10-29 15:37:59 +0000
+Served asset /background-paper.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/social/twitter.png" for 127.0.0.1 at 2012-10-29 15:37:59 +0000
+Served asset /social/twitter.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/social/facebook.png" for 127.0.0.1 at 2012-10-29 15:37:59 +0000
+Served asset /social/facebook.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/social/pinterest.png" for 127.0.0.1 at 2012-10-29 15:37:59 +0000
+Served asset /social/pinterest.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo-sketched.png" for 127.0.0.1 at 2012-10-29 15:37:59 +0000
+Served asset /logo-sketched.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/misc/input-bg.png" for 127.0.0.1 at 2012-10-29 15:37:59 +0000
+Served asset /foundation/misc/input-bg.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/busy-box-300x100.png" for 127.0.0.1 at 2012-10-29 15:37:59 +0000
+Served asset /busy-box-300x100.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/misc/button-gloss.png" for 127.0.0.1 at 2012-10-29 15:37:59 +0000
+Served asset /foundation/misc/button-gloss.png - 304 Not Modified (0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2012-10-29 15:52:26 +0000
+Processing by Admin::DashboardController#index as HTML
+  [1m[35mAdminUser Load (0.0ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activeadmin-0.5.0/app/views/active_admin/dashboard/index.html.arb (93.8ms)
+Completed 200 OK in 109ms (Views: 109.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2012-10-29 15:52:27 +0000
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2012-10-29 15:52:27 +0000
+Served asset /active_admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2012-10-29 15:52:27 +0000
+Served asset /active_admin.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow.gif" for 127.0.0.1 at 2012-10-29 15:52:27 +0000
+Served asset /active_admin/nested_menu_arrow.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow_dark.gif" for 127.0.0.1 at 2012-10-29 15:52:40 +0000
+Served asset /active_admin/nested_menu_arrow_dark.gif - 304 Not Modified (0ms)
+
+
+Started GET "/admin/subscriptions" for 127.0.0.1 at 2012-10-29 15:53:21 +0000
+Processing by Admin::SubscriptionsController#index as HTML
+  [1m[36mAdminUser Load (0.0ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "subscriptions" LIMIT 30 OFFSET 0) subquery_for_count 
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "subscriptions" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "subscriptions" LIMIT 30 OFFSET 0) subquery_for_count 
+  [1m[36mSubscription Load (0.0ms)[0m  [1mSELECT "subscriptions".* FROM "subscriptions" ORDER BY "subscriptions"."id" desc LIMIT 30 OFFSET 0[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" 
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activeadmin-0.5.0/app/views/active_admin/resource/index.html.arb (1656.2ms)
+Completed 200 OK in 1672ms (Views: 1671.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2012-10-29 15:53:22 +0000
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2012-10-29 15:53:22 +0000
+Served asset /active_admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2012-10-29 15:53:22 +0000
+Served asset /active_admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow.gif" for 127.0.0.1 at 2012-10-29 15:53:23 +0000
+Served asset /active_admin/nested_menu_arrow.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/datepicker/datepicker-input-icon.png" for 127.0.0.1 at 2012-10-29 15:53:23 +0000
+Served asset /active_admin/datepicker/datepicker-input-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/orderable.png" for 127.0.0.1 at 2012-10-29 15:53:23 +0000
+Served asset /active_admin/orderable.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow_dark.gif" for 127.0.0.1 at 2012-10-29 15:53:23 +0000
+Served asset /active_admin/nested_menu_arrow_dark.gif - 304 Not Modified (0ms)
+
+
+Started GET "/admin/suppliers" for 127.0.0.1 at 2012-10-29 15:53:45 +0000
+Processing by Admin::SuppliersController#index as HTML
+  [1m[36mAdminUser Load (0.0ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "suppliers" LIMIT 30 OFFSET 0) subquery_for_count 
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "suppliers" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "suppliers" LIMIT 30 OFFSET 0) subquery_for_count 
+  [1m[36mSupplier Load (0.0ms)[0m  [1mSELECT "suppliers".* FROM "suppliers" ORDER BY "suppliers"."id" desc LIMIT 30 OFFSET 0[0m
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activeadmin-0.5.0/app/views/active_admin/resource/index.html.arb (1265.6ms)
+Completed 200 OK in 1281ms (Views: 1281.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2012-10-29 15:53:47 +0000
+Served asset /active_admin.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2012-10-29 15:53:47 +0000
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2012-10-29 15:53:47 +0000
+Served asset /active_admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow.gif" for 127.0.0.1 at 2012-10-29 15:53:47 +0000
+Served asset /active_admin/nested_menu_arrow.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/orderable.png" for 127.0.0.1 at 2012-10-29 15:53:47 +0000
+Served asset /active_admin/orderable.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow_dark.gif" for 127.0.0.1 at 2012-10-29 15:53:47 +0000
+Served asset /active_admin/nested_menu_arrow_dark.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/datepicker/datepicker-input-icon.png" for 127.0.0.1 at 2012-10-29 15:53:47 +0000
+Served asset /active_admin/datepicker/datepicker-input-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/admin/suppliers/new" for 127.0.0.1 at 2012-10-29 15:53:49 +0000
+Processing by Admin::SuppliersController#new as HTML
+  [1m[35mAdminUser Load (0.0ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activeadmin-0.5.0/app/views/active_admin/resource/new.html.arb (437.5ms)
+Completed 200 OK in 453ms (Views: 437.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2012-10-29 15:53:50 +0000
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2012-10-29 15:53:50 +0000
+Served asset /active_admin.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2012-10-29 15:53:50 +0000
+Served asset /active_admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow_dark.gif" for 127.0.0.1 at 2012-10-29 15:53:50 +0000
+Served asset /active_admin/nested_menu_arrow_dark.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow.gif" for 127.0.0.1 at 2012-10-29 15:53:50 +0000
+Served asset /active_admin/nested_menu_arrow.gif - 304 Not Modified (0ms)
+
+
+Started POST "/admin/suppliers" for 127.0.0.1 at 2012-10-29 15:54:05 +0000
+Processing by Admin::SuppliersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/UfZzDk98kcRPTg6bHOrMUfFuWZbbfhCUbda7TDt2yw=", "supplier"=>{"name"=>"Baker Ross", "address"=>"", "telephone"=>"", "email"=>"", "website"=>"http://www.bakerross.co.uk", "account_number"=>""}, "commit"=>"Create Supplier"}
+  [1m[36mAdminUser Load (0.0ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "suppliers" ("account_number", "address", "created_at", "email", "name", "telephone", "updated_at", "website") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["account_number", ""], ["address", ""], ["created_at", Mon, 29 Oct 2012 15:54:05 UTC +00:00], ["email", ""], ["name", "Baker Ross"], ["telephone", ""], ["updated_at", Mon, 29 Oct 2012 15:54:05 UTC +00:00], ["website", "http://www.bakerross.co.uk"]]
+  [1m[35m (78.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/admin/suppliers/2
+Completed 302 Found in 125ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/suppliers/2" for 127.0.0.1 at 2012-10-29 15:54:06 +0000
+Processing by Admin::SuppliersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdminUser Load (15.6ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1[0m
+  [1m[35mSupplier Load (0.0ms)[0m  SELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = 'Supplier' AND "active_admin_comments"."resource_id" = '2' AND "active_admin_comments"."namespace" = 'admin'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = 'Supplier' AND "active_admin_comments"."resource_id" = '2' AND "active_admin_comments"."namespace" = 'admin'
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activeadmin-0.5.0/app/views/active_admin/resource/show.html.arb (234.4ms)
+Completed 200 OK in 250ms (Views: 234.4ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2012-10-29 15:54:06 +0000
+Served asset /active_admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2012-10-29 15:54:06 +0000
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2012-10-29 15:54:06 +0000
+Served asset /active_admin.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow_dark.gif" for 127.0.0.1 at 2012-10-29 15:54:06 +0000
+Served asset /active_admin/nested_menu_arrow_dark.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow.gif" for 127.0.0.1 at 2012-10-29 15:54:06 +0000
+Served asset /active_admin/nested_menu_arrow.gif - 304 Not Modified (0ms)
+
+
+Started GET "/admin/suppliers" for 127.0.0.1 at 2012-10-29 15:54:08 +0000
+Processing by Admin::SuppliersController#index as HTML
+  [1m[36mAdminUser Load (0.0ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "suppliers" LIMIT 30 OFFSET 0) subquery_for_count 
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "suppliers" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "suppliers" LIMIT 30 OFFSET 0) subquery_for_count 
+  [1m[36mSupplier Load (0.0ms)[0m  [1mSELECT "suppliers".* FROM "suppliers" ORDER BY "suppliers"."id" desc LIMIT 30 OFFSET 0[0m
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activeadmin-0.5.0/app/views/active_admin/resource/index.html.arb (1546.9ms)
+Completed 200 OK in 1562ms (Views: 1562.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2012-10-29 15:54:10 +0000
+Served asset /active_admin.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2012-10-29 15:54:10 +0000
+Served asset /active_admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2012-10-29 15:54:10 +0000
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow.gif" for 127.0.0.1 at 2012-10-29 15:54:10 +0000
+Served asset /active_admin/nested_menu_arrow.gif - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin/datepicker/datepicker-input-icon.png" for 127.0.0.1 at 2012-10-29 15:54:10 +0000
+Served asset /active_admin/datepicker/datepicker-input-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow_dark.gif" for 127.0.0.1 at 2012-10-29 15:54:10 +0000
+Served asset /active_admin/nested_menu_arrow_dark.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/orderable.png" for 127.0.0.1 at 2012-10-29 15:54:10 +0000
+Served asset /active_admin/orderable.png - 304 Not Modified (0ms)
+
+
+Started GET "/admin/suppliers/new" for 127.0.0.1 at 2012-10-29 15:54:13 +0000
+Processing by Admin::SuppliersController#new as HTML
+  [1m[35mAdminUser Load (0.0ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activeadmin-0.5.0/app/views/active_admin/resource/new.html.arb (281.2ms)
+Completed 200 OK in 297ms (Views: 296.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2012-10-29 15:54:13 +0000
+Served asset /active_admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2012-10-29 15:54:13 +0000
+Served asset /active_admin.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2012-10-29 15:54:14 +0000
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow_dark.gif" for 127.0.0.1 at 2012-10-29 15:54:14 +0000
+Served asset /active_admin/nested_menu_arrow_dark.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow.gif" for 127.0.0.1 at 2012-10-29 15:54:14 +0000
+Served asset /active_admin/nested_menu_arrow.gif - 304 Not Modified (0ms)
+
+
+Started POST "/admin/suppliers" for 127.0.0.1 at 2012-10-29 15:54:25 +0000
+Processing by Admin::SuppliersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/UfZzDk98kcRPTg6bHOrMUfFuWZbbfhCUbda7TDt2yw=", "supplier"=>{"name"=>"Greyhound Box", "address"=>"", "telephone"=>"", "email"=>"", "website"=>"http://www.greyhoundbox.co.uk", "account_number"=>""}, "commit"=>"Create Supplier"}
+  [1m[36mAdminUser Load (0.0ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "suppliers" ("account_number", "address", "created_at", "email", "name", "telephone", "updated_at", "website") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["account_number", ""], ["address", ""], ["created_at", Mon, 29 Oct 2012 15:54:25 UTC +00:00], ["email", ""], ["name", "Greyhound Box"], ["telephone", ""], ["updated_at", Mon, 29 Oct 2012 15:54:25 UTC +00:00], ["website", "http://www.greyhoundbox.co.uk"]]
+  [1m[35m (78.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/admin/suppliers/3
+Completed 302 Found in 109ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/suppliers/3" for 127.0.0.1 at 2012-10-29 15:54:25 +0000
+Processing by Admin::SuppliersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.0ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1[0m
+  [1m[35mSupplier Load (0.0ms)[0m  SELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = 'Supplier' AND "active_admin_comments"."resource_id" = '3' AND "active_admin_comments"."namespace" = 'admin'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = 'Supplier' AND "active_admin_comments"."resource_id" = '3' AND "active_admin_comments"."namespace" = 'admin'
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activeadmin-0.5.0/app/views/active_admin/resource/show.html.arb (156.2ms)
+Completed 200 OK in 172ms (Views: 156.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2012-10-29 15:54:25 +0000
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2012-10-29 15:54:25 +0000
+Served asset /active_admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2012-10-29 15:54:25 +0000
+Served asset /active_admin.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow_dark.gif" for 127.0.0.1 at 2012-10-29 15:54:25 +0000
+Served asset /active_admin/nested_menu_arrow_dark.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow.gif" for 127.0.0.1 at 2012-10-29 15:54:26 +0000
+Served asset /active_admin/nested_menu_arrow.gif - 304 Not Modified (0ms)
+
+
+Started GET "/admin/stock_items" for 127.0.0.1 at 2012-10-29 15:57:21 +0000
+Processing by Admin::StockItemsController#index as HTML
+  [1m[36mAdminUser Load (0.0ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "stock_items" LIMIT 30 OFFSET 0) subquery_for_count 
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "stock_items" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "stock_items" LIMIT 30 OFFSET 0) subquery_for_count 
+  [1m[36mStockItem Load (0.0ms)[0m  [1mSELECT "stock_items".* FROM "stock_items" ORDER BY "stock_items"."id" desc LIMIT 30 OFFSET 0[0m
+  [1m[35mSupplier Load (0.0ms)[0m  SELECT "suppliers".* FROM "suppliers" 
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activeadmin-0.5.0/app/views/active_admin/resource/index.html.arb (843.8ms)
+Completed 200 OK in 859ms (Views: 859.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2012-10-29 15:57:22 +0000
+Served asset /active_admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2012-10-29 15:57:22 +0000
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2012-10-29 15:57:22 +0000
+Served asset /active_admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow.gif" for 127.0.0.1 at 2012-10-29 15:57:23 +0000
+Served asset /active_admin/nested_menu_arrow.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow_dark.gif" for 127.0.0.1 at 2012-10-29 15:57:23 +0000
+Served asset /active_admin/nested_menu_arrow_dark.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/orderable.png" for 127.0.0.1 at 2012-10-29 15:57:23 +0000
+Served asset /active_admin/orderable.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/datepicker/datepicker-input-icon.png" for 127.0.0.1 at 2012-10-29 15:57:23 +0000
+Served asset /active_admin/datepicker/datepicker-input-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/admin/stock_items/new" for 127.0.0.1 at 2012-10-29 15:57:27 +0000
+Processing by Admin::StockItemsController#new as HTML
+  [1m[36mAdminUser Load (0.0ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1[0m
+  [1m[35mSupplier Load (0.0ms)[0m  SELECT "suppliers".* FROM "suppliers" 
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activeadmin-0.5.0/app/views/active_admin/resource/new.html.arb (171.9ms)
+Completed 200 OK in 250ms (Views: 171.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2012-10-29 15:57:28 +0000
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2012-10-29 15:57:28 +0000
+Served asset /active_admin.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2012-10-29 15:57:28 +0000
+Served asset /active_admin.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow.gif" for 127.0.0.1 at 2012-10-29 15:57:28 +0000
+Served asset /active_admin/nested_menu_arrow.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow_dark.gif" for 127.0.0.1 at 2012-10-29 15:57:28 +0000
+Served asset /active_admin/nested_menu_arrow_dark.gif - 304 Not Modified (0ms)
+
+
+Started GET "/admin/subscriptions" for 127.0.0.1 at 2012-10-29 15:57:36 +0000
+Processing by Admin::SubscriptionsController#index as HTML
+  [1m[36mAdminUser Load (0.0ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "subscriptions" LIMIT 30 OFFSET 0) subquery_for_count 
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "subscriptions" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "subscriptions" LIMIT 30 OFFSET 0) subquery_for_count 
+  [1m[36mSubscription Load (0.0ms)[0m  [1mSELECT "subscriptions".* FROM "subscriptions" ORDER BY "subscriptions"."id" desc LIMIT 30 OFFSET 0[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" 
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activeadmin-0.5.0/app/views/active_admin/resource/index.html.arb (2078.1ms)
+Completed 200 OK in 2078ms (Views: 2078.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2012-10-29 15:57:38 +0000
+Served asset /active_admin.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2012-10-29 15:57:38 +0000
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2012-10-29 15:57:38 +0000
+Served asset /active_admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow_dark.gif" for 127.0.0.1 at 2012-10-29 15:57:38 +0000
+Served asset /active_admin/nested_menu_arrow_dark.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/orderable.png" for 127.0.0.1 at 2012-10-29 15:57:38 +0000
+Served asset /active_admin/orderable.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow.gif" for 127.0.0.1 at 2012-10-29 15:57:38 +0000
+Served asset /active_admin/nested_menu_arrow.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/datepicker/datepicker-input-icon.png" for 127.0.0.1 at 2012-10-29 15:57:38 +0000
+Served asset /active_admin/datepicker/datepicker-input-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/admin/subscriptions/48" for 127.0.0.1 at 2012-10-29 15:57:41 +0000
+Processing by Admin::SubscriptionsController#show as HTML
+  Parameters: {"id"=>"48"}
+  [1m[36mAdminUser Load (0.0ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1[0m
+  [1m[35mSubscription Load (0.0ms)[0m  SELECT "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."id" = ? LIMIT 1  [["id", "48"]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = 'Subscription' AND "active_admin_comments"."resource_id" = '48' AND "active_admin_comments"."namespace" = 'admin'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = 'Subscription' AND "active_admin_comments"."resource_id" = '48' AND "active_admin_comments"."namespace" = 'admin'[0m
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activeadmin-0.5.0/app/views/active_admin/resource/show.html.arb (156.2ms)
+Completed 200 OK in 172ms (Views: 171.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2012-10-29 15:57:41 +0000
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2012-10-29 15:57:41 +0000
+Served asset /active_admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2012-10-29 15:57:41 +0000
+Served asset /active_admin.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow_dark.gif" for 127.0.0.1 at 2012-10-29 15:57:41 +0000
+Served asset /active_admin/nested_menu_arrow_dark.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow.gif" for 127.0.0.1 at 2012-10-29 15:57:41 +0000
+Served asset /active_admin/nested_menu_arrow.gif - 304 Not Modified (0ms)
+
+
+Started GET "/admin/stock_items" for 127.0.0.1 at 2012-10-29 15:57:50 +0000
+Processing by Admin::StockItemsController#index as HTML
+  [1m[35mAdminUser Load (15.6ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "stock_items" LIMIT 30 OFFSET 0) subquery_for_count [0m
+  [1m[35m (15.6ms)[0m  SELECT COUNT(*) FROM "stock_items" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "stock_items" LIMIT 30 OFFSET 0) subquery_for_count [0m
+  [1m[35mStockItem Load (0.0ms)[0m  SELECT "stock_items".* FROM "stock_items" ORDER BY "stock_items"."id" desc LIMIT 30 OFFSET 0
+  [1m[36mSupplier Load (0.0ms)[0m  [1mSELECT "suppliers".* FROM "suppliers" [0m
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activeadmin-0.5.0/app/views/active_admin/resource/index.html.arb (953.1ms)
+Completed 200 OK in 969ms (Views: 937.5ms | ActiveRecord: 31.2ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2012-10-29 15:57:51 +0000
+Served asset /active_admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2012-10-29 15:57:51 +0000
+Served asset /active_admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2012-10-29 15:57:51 +0000
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow.gif" for 127.0.0.1 at 2012-10-29 15:57:52 +0000
+Served asset /active_admin/nested_menu_arrow.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow_dark.gif" for 127.0.0.1 at 2012-10-29 15:57:52 +0000
+Served asset /active_admin/nested_menu_arrow_dark.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/orderable.png" for 127.0.0.1 at 2012-10-29 15:57:52 +0000
+Served asset /active_admin/orderable.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/datepicker/datepicker-input-icon.png" for 127.0.0.1 at 2012-10-29 15:57:52 +0000
+Served asset /active_admin/datepicker/datepicker-input-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/admin/stock_items/2" for 127.0.0.1 at 2012-10-29 15:57:53 +0000
+Processing by Admin::StockItemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mAdminUser Load (0.0ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1
+  [1m[36mStockItem Load (0.0ms)[0m  [1mSELECT "stock_items".* FROM "stock_items" WHERE "stock_items"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mSupplier Load (0.0ms)[0m  SELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = 'StockItem' AND "active_admin_comments"."resource_id" = '2' AND "active_admin_comments"."namespace" = 'admin'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = 'StockItem' AND "active_admin_comments"."resource_id" = '2' AND "active_admin_comments"."namespace" = 'admin'
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activeadmin-0.5.0/app/views/active_admin/resource/show.html.arb (234.4ms)
+Completed 200 OK in 250ms (Views: 234.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2012-10-29 15:57:53 +0000
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2012-10-29 15:57:53 +0000
+Served asset /active_admin.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2012-10-29 15:57:53 +0000
+Served asset /active_admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow_dark.gif" for 127.0.0.1 at 2012-10-29 15:57:53 +0000
+Served asset /active_admin/nested_menu_arrow_dark.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow.gif" for 127.0.0.1 at 2012-10-29 15:57:53 +0000
+Served asset /active_admin/nested_menu_arrow.gif - 304 Not Modified (0ms)

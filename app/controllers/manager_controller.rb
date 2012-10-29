@@ -4,6 +4,7 @@ class ManagerController < ApplicationController
   def index
   	@subscriptions = Subscription.where("status = ?", "Active").order("created_at DESC")
     @cancelled = Subscription.where("status = ?", "Cancelled").order("created_at DESC")
+    @comments = Comment.where("status = ?", "pending").count
   end
 
   def subscription_details

@@ -1,4 +1,6 @@
 ActiveAdmin.register Product do
+	menu :parent => "Subscriptions"
+	
   index do
     column :name
     column :is_subscription
