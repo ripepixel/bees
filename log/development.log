@@ -83026,3 +83026,4 @@ Served asset /active_admin/nested_menu_arrow_dark.gif - 304 Not Modified (0ms)
 
 Started GET "/assets/active_admin/nested_menu_arrow.gif" for 127.0.0.1 at 2012-10-29 15:57:53 +0000
 Served asset /active_admin/nested_menu_arrow.gif - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
