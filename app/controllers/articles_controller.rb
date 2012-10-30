@@ -3,6 +3,10 @@ class ArticlesController < ApplicationController
 
   def index
     @featured = Article.where("published = ?", true).last
+    
+    @page_title = @featured.title
+    @meta_desc = @featured.body[0..300]
+    
   	@articles = Article.exclude_latest.where("published = ?", true).order("created_at DESC").limit(3)
   end
 
@@ -11,6 +15,10 @@ class ArticlesController < ApplicationController
   def show
     if params[:permalink]
     	@article = Article.find_by_permalink(params[:permalink])
+    	
+    	@page_title = @article.title
+      @meta_desc = @article.body[0..300]
+      
     	@comments = Comment.where("article_id = ? AND status = ?", @article.id, "Active").order("created_at ASC")
     	if @article.nil?
     	  redirect_to blog_url, alert: "Sorry, that page does not exist"

@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   
   def new
     @user = User.new
+    @page_title = "Sign up for kids craft boxes delivered monthly to your door"
   end
   
   def create
