@@ -2,6 +2,7 @@
 	<h4>Admin Area</h4>
 
 	<p>There are <%= @comments %> comments waiting to be checked.</p>
+	
 
 </div>
 
@@ -52,5 +53,9 @@
 		
 		<% end %>
 	</div>
-	
+	<% if @m_end.empty? %>
+		<p><%= link_to "Month End Job", manager_month_end_path, class: "button nice radius small" %></p>
+	<% else %>
+		<p>Month end job has already been run</p>
+	<% end %>
 </div>

@@ -5,6 +5,8 @@ class ManagerController < ApplicationController
   	@subscriptions = Subscription.where("status = ?", "Active").order("created_at DESC")
     @cancelled = Subscription.where("status = ?", "Cancelled").order("created_at DESC")
     @comments = Comment.where("status = ?", "pending").count
+    @m_end = MonthlySale.find(:all, :conditions => ["created_at between ? and ?",
+             Date.today.beginning_of_month, Date.today.end_of_month])
   end
 
   def subscription_details
@@ -32,7 +34,7 @@ class ManagerController < ApplicationController
       # Create sales records for the month
       box_no = ((Date.today.year*12+Date.today.month) - (sub.first_delivery.year*12+sub.first_delivery.month) + 1)
       next_box = Box.find_by_box_number(box_no)
-      #sale = MonthlySale.new(subscription_id: sub.id, box_id: next_box.id)
+      sale = MonthlySale.new(subscription_id: sub.id, box_id: next_box.id)
       count = count + 1
       end
     end

@@ -5,7 +5,7 @@
 <div class="row mbottom30">
 	<div class="panel">
 		<h5>Subscriptions</h5>
-		<% if @subscriptions.empty? %>
+		<% if @subscriptions.empty? && @cancelled.empty? %>
 			<p>You have not purchased any subscriptions yet :( Would you like to look at our <%= link_to "subscriptions", join_path %>?</p>
 		<% else %>
 		<table width="99%">

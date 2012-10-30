@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   def index
-    @page_title = "Craft Boxes for Children"
-    @meta_desc = "Kids craft items delivered monthly. All arts and craft materials are included to keep the children entertained for hours. Receive a packed craft box every month, with free delivery."
+    @page_title = "Kids Craft Boxes - Monthly Craft Boxes for Children"
+    @meta_desc = "Kids craft boxes from Little Busy Bees; providing childrens craft items, delivered monthly. All arts and craft materials are included to keep the children entertained for hours. Receive a packed craft box every month, with free delivery."
     @meta_keys = "crafts, arts crafts, kids crafts, childrens crafts, crafts for kids, crafts for children, craft activities"
   end
   

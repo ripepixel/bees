@@ -16,6 +16,12 @@
 </head>
 
 <body>
+	<% if @subscriptions.empty? %>
+		<div id="a4page">
+			<p>There are no subscriptions to delivery. You're obviously not working hard enough!</p>
+		</div>
+	<% else %>
+	
 	<% @subscriptions.each do |sub| %>
 	<div id="a4page">
 		<h1>PICK SHEET</h1>
@@ -88,6 +94,7 @@
 
 	</div>
 	<div class="page-break"></div>
+	<% end %>
 	<% end %>
 </body>
 
