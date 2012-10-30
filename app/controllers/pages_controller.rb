@@ -50,7 +50,7 @@ class PagesController < ApplicationController
   end
   
   def newsletter
-    @page_title = "Sign up to our newsletter"
+    @page_title = "Sign up to the Little Busy Bees newsletter"
     @meta_desc = "Sign up to the Little Busy Bees newsletter, for art and craft ideas, competitions and special offers."
   end
 
