@@ -51,6 +51,9 @@ Bees::Application.routes.draw do
   get 'manager', to: 'manager#index'
   get 'manager/subscription_details', to: 'manager#subscription_details'
   get 'manager/pack_sheets', to: 'manager#pack_sheets'
+
+  get 'manager/month_end', to: 'manager#month_end'
+  post 'manager/process_month_end', to: 'manager#process_month_end'
   
   ActiveAdmin.routes(self)
 

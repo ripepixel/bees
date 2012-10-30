@@ -7,6 +7,7 @@ class Subscription < ActiveRecord::Base
   has_many :promo_uses
   has_many :promo_codes, through: :promo_uses
   belongs_to :user
+  belongs_to :monthly_sale
   
   accepts_nested_attributes_for :subscription_items, allow_destroy: true
   

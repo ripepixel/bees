@@ -8,11 +8,17 @@
 	<%= javascript_include_tag "application" %>
   
   	<%= csrf_meta_tags %>
+  	<style type="text/css">
+  		.page-break  { display: block; page-break-after: always; }
+  		tr { text-align: left; }
+  		td { border-bottom: 1px solid #ccc; }
+  	</style>
 </head>
 
 <body>
 	<% @subscriptions.each do |sub| %>
 	<div id="a4page">
+		<h1>PICK SHEET</h1>
 		<h3>Delivery Details</h3>
 		<p><%= sub.street %><br />
 			<%= sub.town %><br />
@@ -35,21 +41,50 @@
 		<% end %>
 
 		<table class="nice" width="99%">
-				<thead>
-					<tr>
+			<thead>
+				<tr>
 					<th>Item</th>
 					<th>Box Number</th>
+					<th>Box Name</th>
 				</tr>
-				</thead>
-				<tbody>
-					<% sub.subscription_items.each do |item| %>
+			</thead>
+			<tbody>
+				<% sub.subscription_items.each do |item| %>
+					<% box_no = ((Date.today.year*12+Date.today.month) - (sub.first_delivery.year*12+sub.first_delivery.month) + 1) %>
+					<% next_box = Box.find_by_box_number(box_no) %>
 					<tr>
 						<td><%= item.product.name %></td>
-						<td><strong><%= ((Date.today.year*12+Date.today.month) - (sub.first_delivery.year*12+sub.first_delivery.month) + 1) %></strong></td>
+						<td><strong><%= box_no %></strong></td>
+						<td><strong><%= next_box.name %></strong></td>
 					</tr>
-					<% end %>
-				</tbody>	
-			</table>
+				<% end %>
+			</tbody>	
+		</table>
+
+		<h4>Box Items</h4>
+
+		<table class="nice" width="99%">
+			<thead>
+				<tr>
+					<th>Item</th>
+					<th>Quantity</th>
+					<th>Picked</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% box_no = ((Date.today.year*12+Date.today.month) - (sub.first_delivery.year*12+sub.first_delivery.month) + 1) %>
+				<% next_box = Box.find_by_box_number(box_no) %>
+				<% next_box.box_contents.each do |con| %>
+					<tr>
+						<td><%= con.stock_item.name %></td>
+						<td><strong><%= con.quantity %></strong></td>
+						<td></td>
+					</tr>
+				<% end %>
+			</tbody>	
+		</table>
+
+		<p>Picked By: </p>
 
 	</div>
 	<div class="page-break"></div>
