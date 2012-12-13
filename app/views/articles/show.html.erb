@@ -4,13 +4,16 @@
 		<h2><%= @article.title %></h2>
 		<p>Published on <%= @article.created_at.strftime('%d/%m/%Y') %> in <%= link_to @article.article_category.name, articles_category_path(:name => @article.article_category.name) %></p>
 		<p>
-			<div class="addthis_toolbox addthis_default_style ">
-			<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
-			<a class="addthis_button_tweet"></a>
-			<a class="addthis_counter addthis_pill_style"></a>
-			</div>
-			<script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
-			<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5074307162f9adf7"></script>
+			<!-- AddThis Button BEGIN -->
+				<div class="addthis_toolbox addthis_default_style ">
+				<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+				<a class="addthis_button_tweet"></a>
+				<a class="addthis_button_pinterest_pinit"></a>
+				<a class="addthis_counter addthis_pill_style"></a>
+				</div>
+				<script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
+				<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5074307162f9adf7"></script>
+				<!-- AddThis Button END -->
 		</p>
 		
 		<%= image_tag @article.image.to_s if @article.image? %>
@@ -20,14 +23,15 @@
 
 		<div class="row mtop30 mbottom30">
 			<!-- AddThis Button BEGIN -->
-			<div class="addthis_toolbox addthis_default_style ">
-			<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
-			<a class="addthis_button_tweet"></a>
-			<a class="addthis_counter addthis_pill_style"></a>
-			</div>
-			<script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
-			<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5074307162f9adf7"></script>
-			<!-- AddThis Button END -->
+				<div class="addthis_toolbox addthis_default_style ">
+				<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+				<a class="addthis_button_tweet"></a>
+				<a class="addthis_button_pinterest_pinit"></a>
+				<a class="addthis_counter addthis_pill_style"></a>
+				</div>
+				<script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
+				<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5074307162f9adf7"></script>
+				<!-- AddThis Button END -->
 		</div>
 		<div class="row mtop30 mbottom30">
 			<div class="four columns">

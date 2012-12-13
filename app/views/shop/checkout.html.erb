@@ -1,0 +1,95 @@
+<div class="row mbottom30">
+	<div class="twelve columns">
+		<h1 class="subs">Your Order</h1>
+		<div class="row">
+		<table class="nice" width="100%">
+			<thead>
+				<tr>
+					<th>Item</th>
+					<th>Item Price</th>
+					<th>Quantity</th>
+					<th>Total</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @cart_items.each do |item| %>
+					<tr>
+						<td><%= item.shop_product.name %></td>
+						<td><%= number_to_currency(item.shop_product.sell) %></td>
+						<td><%= item.quantity %></td>
+						<td><%= number_to_currency(item.total_price) %></td>
+					</tr>
+				<% end %>
+				<% subtotal = @cart_items.first.shop_cart.total_cart_price
+				 	weight = @cart_items.first.shop_cart.total_cart_weight
+					if subtotal > 50
+						delivery = 0.00
+					else
+				 		delivery = @cart_items.first.shop_cart.delivery_charge(weight)
+				 	end %>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>Subtotal:</td>
+						<td><%= number_to_currency(subtotal) %></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>Delivery:</td>
+						<td><%= number_to_currency(delivery) %></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td><strong>Total:</strong></td>
+						<td><strong><%= number_to_currency(subtotal + delivery) %></strong></td>
+					</tr>
+			</tbody>
+		</table>
+		</div>
+		<div class="row">
+			<div class="two columns"><p class="small"><%= link_to "Edit Order", shop_basket_path, class: "button radius nice small" %></p></div>
+			<div class="seven columns"></div>
+			<div class="three columns"></div>
+		</div>
+		<div class="row">
+			<%= form_tag shop_create_order_path, class: "nice" do |f| %>
+			<div class="panel">
+			<div class="six columns">
+					<h4>Delivery Details</h4>
+					<p class="small">* required fields</p>
+					<p><%= label_tag "Name *" %>
+							<%= text_field_tag :name, nil, class: "oversize input-text" %>
+					</p>
+					<p><%= label_tag "Address *" %>
+							<%= text_area_tag :address, nil, class: "oversize input-text" %>
+					</p>
+					<p><%= label_tag "Telephone" %>
+							<%= text_field_tag :telephone, nil, class: "oversize input-text" %>
+					</p>
+			</div>
+			<div class="six columns">
+					<h4>Account Details</h4>
+					<% if current_user %>
+						<p>You are signed in as <%= current_user.email %> <%= link_to "Sign Out?", logout_path %></p>
+					<% else %>
+					<p>If you already have an account, please enter your details below, otherwise, enter your email and choose a password to create your account.</p>
+						<p><%= label_tag "Email *" %>
+								<%= text_field_tag :email, nil, class: "oversize input-text" %>
+						</p>
+						<p>
+						<%= label_tag :password, "Password *" %><%= password_field_tag :password, nil, class: "oversize input-text" %></p>
+					<% end %>
+			</div>
+			</div>
+		</div>
+		<div class="row">
+			<span class="right"><%= button_to "Place Order", "#", class: "button medium nice radius green" %></span>
+		</div>
+		<% end %>
+	</div>
+</div>
+
+
+

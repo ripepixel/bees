@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121031154930) do
+ActiveRecord::Schema.define(:version => 20121105115927) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -96,11 +96,26 @@ ActiveRecord::Schema.define(:version => 20121031154930) do
 
   add_index "comments", ["article_id"], :name => "index_comments_on_article_id"
 
+  create_table "delivery_charges", :force => true do |t|
+    t.string   "name"
+    t.decimal  "weight_from"
+    t.decimal  "weight_to"
+    t.decimal  "price"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
   create_table "monthly_sales", :force => true do |t|
     t.integer  "subscription_id"
     t.integer  "box_id"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+  end
+
+  create_table "order_statuses", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "products", :force => true do |t|
@@ -134,6 +149,75 @@ ActiveRecord::Schema.define(:version => 20121031154930) do
     t.integer  "subscription_id"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+  end
+
+  create_table "shop_cart_items", :force => true do |t|
+    t.integer  "shop_cart_id"
+    t.integer  "shop_product_id"
+    t.integer  "quantity"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  create_table "shop_carts", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "shop_order_deliveries", :force => true do |t|
+    t.integer  "shop_order_id"
+    t.integer  "delivery_charge_id"
+    t.decimal  "total_weight",       :precision => 8, :scale => 2
+    t.decimal  "price",              :precision => 8, :scale => 2
+    t.datetime "created_at",                                       :null => false
+    t.datetime "updated_at",                                       :null => false
+  end
+
+  create_table "shop_order_items", :force => true do |t|
+    t.integer  "shop_order_id"
+    t.integer  "shop_product_id"
+    t.integer  "quantity"
+    t.decimal  "price",           :precision => 8, :scale => 2
+    t.datetime "created_at",                                    :null => false
+    t.datetime "updated_at",                                    :null => false
+  end
+
+  create_table "shop_orders", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "name"
+    t.text     "address"
+    t.string   "telephone"
+    t.integer  "order_status_id"
+    t.string   "resource_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.decimal  "order_total"
+  end
+
+  create_table "shop_product_categories", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.text     "details"
+  end
+
+  create_table "shop_product_images", :force => true do |t|
+    t.integer  "shop_product_id"
+    t.string   "image"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  create_table "shop_products", :force => true do |t|
+    t.string   "name"
+    t.text     "details"
+    t.decimal  "cost",                     :precision => 8, :scale => 2
+    t.decimal  "sell",                     :precision => 8, :scale => 2
+    t.decimal  "weight",                   :precision => 8, :scale => 2
+    t.integer  "shop_product_category_id"
+    t.boolean  "is_active"
+    t.datetime "created_at",                                             :null => false
+    t.datetime "updated_at",                                             :null => false
   end
 
   create_table "stock_items", :force => true do |t|

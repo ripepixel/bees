@@ -1,0 +1,37 @@
+<div class="row mbottom30">
+	<div class="three columns">
+		<%= render "sidebar" %>
+		<div class="home-panel mtop30">
+			<h4>Monthly Craft Boxes</h4>
+			<p>Have a look at our subscription packages and receive a great craft box, filled with craft projects, every month!</p>
+			<p><%= link_to "Join", join_path, class: "button nice radius medium blue" %> </p>
+		</div>
+	</div>
+
+	<div class="nine columns">
+		<h1 class="subs"><%= params[:name] %></h1>
+		<p><%= @categ.details if @categ.details %></p>
+
+		<div class="row">
+			<% if @products.empty? %>
+				<p>There are no products to show in this category.</p>
+			<% else %>
+				<% @products.each do |prod| %>
+					<div class="four columns">
+						<div class="item_thumb">
+							<%= link_to (image_tag prod.shop_product_images.first.image, alt: prod.name), shop_product_details_path(name: prod.name, id: prod.id) %>
+							<span class="item_price"><%= number_to_currency(prod.sell) %></span>
+						</div>
+						<%= link_to prod.name, shop_product_details_path(name: prod.name, id: prod.id) %>
+					</div>
+				<% end %>
+			<% end %>
+
+		</div>
+
+	</div>
+</div>
+
+
+
+

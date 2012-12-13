@@ -1,0 +1,79 @@
+<div class="row mbottom30">
+	<div class="three columns">
+		<%= render "sidebar" %>
+	</div>
+
+	<div class="nine columns">
+		<h1 class="subs">Your Basket</h1>
+		<% if @cart_items.exists? %>
+		<div class="row">
+		<table class="nice" width="99%">
+			<thead>
+				<tr>
+					<th>Item</th>
+					<th>Item Price</th>
+					<th>Quantity</th>
+					<th>Total</th>
+				</tr>
+			</thead>
+			<tbody>
+				<%= form_tag shop_cart_items_update_items_path, :method => :post do |a| %>
+				<% @cart_items.each_with_index do |item, i| %>
+					<%= fields_for "items[]", item, :index => i do |f| %>
+					<tr>
+						<td><%= item.shop_product.name %></td>
+						<td><%= number_to_currency(item.shop_product.sell) %></td>
+						<td><%= text_field_tag "items[][quantity]", item.quantity, size: "3" %> <%= link_to "x", shop_cart_item_path(item.id), :method => :delete, confirm: "Are you sure? This will remove the item from your basket", title: "Delete?", class: "red" %> <%= hidden_field_tag "items[][id]", item.id %></td>
+						<td><%= number_to_currency(item.total_price) %></td>
+					</tr>
+					<% end %>
+				<% end %>
+					<tr>
+						<td></td>
+						<td></td>
+						<td><%= submit_tag "Update", class: "button nice radius tiny" %></td>
+						<td></td>
+					</tr>
+				<% end %>
+				<% subtotal = @cart_items.first.shop_cart.total_cart_price
+				 	weight = @cart_items.first.shop_cart.total_cart_weight
+					if subtotal > 50
+						delivery = 0.00
+					else
+				 		delivery = @cart_items.first.shop_cart.delivery_charge(weight)
+				 	end %>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>Subtotal:</td>
+						<td><%= number_to_currency(subtotal) %></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>Delivery:</td>
+						<td><%= number_to_currency(delivery) %></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>Total:</td>
+						<td><%= number_to_currency(subtotal + delivery) %></td>
+					</tr>
+			</tbody>
+		</table>
+		</div>
+		<div class="row">
+			<div class="two columns"><span class="small"><%= link_to "Empty Basket", shop_empty_basket_path, confirm: "Are you sure? This will delete all items in your basket!" %></span></div>
+			<div class="four columns"></div>
+			<div class="six columns"><%= link_to "<< Continue Shopping", shop_path, class: "button nice radius medium" %> or <%= link_to "Checkout", shop_checkout_path, class: "button medium nice radius green" %></div>
+		</div>
+		
+		<% else %>
+			<p>There a currently no items in your basket :(</p>
+		<% end %>
+	</div>
+</div>
+
+
+

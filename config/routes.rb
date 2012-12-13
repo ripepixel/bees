@@ -1,10 +1,13 @@
 Bees::Application.routes.draw do
 
   
+  
+
   get "comments/create"
 
   get "account", to: "account#index"
   get "account/subscription", to: "account#subscription"
+  get "account/order", to: "account#order"
 
   resources :subscriptions
   post "subscriptions/new"
@@ -46,6 +49,19 @@ Bees::Application.routes.draw do
   post 'send_new_password', to: 'sessions#send_new_password'
   post 'send_change_password', to: 'account#send_change_password'
 
+
+  # Shop pages
+  resources :shop_cart_items
+  
+  get 'shop', to: 'shop#index'
+  match 'shop/category', to: 'shop#category'
+  get 'shop/product_details'
+  get 'shop/basket'
+  get 'shop/checkout'
+  post 'shop/create_order'
+  get 'shop/empty_basket'
+  post 'shop_cart_items/update_items'
+  get 'confirm_shop_order', to: 'gocardless#confirm_shop_order'
 
   # Manager Static Pages
   get 'manager', to: 'manager#index'

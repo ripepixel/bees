@@ -38,7 +38,8 @@ Bees::Application.configure do
   
   # Mail options  
     config.action_mailer.default_url_options = { :host => 'localhost:3000' }
-    config.action_mailer.delivery_method = :smtp
+    #config.action_mailer.delivery_method = :smtp
+    config.action_mailer.delivery_method = :file
     config.action_mailer.smtp_settings = {
   	  address: "mail.littlebusybees.co.uk",
   	  user_name: "contact@littlebusybees.co.uk",

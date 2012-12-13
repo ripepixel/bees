@@ -1,0 +1,83 @@
+<div class="row mbottom30">
+	<h4>Order Details</h4>
+	<p class="small"><%= link_to "<< Back to My Account", account_path %></p>
+</div>
+
+<div class="row mbottom30">
+	
+		<div class="eight columns">
+				<div class="row mbottom30">
+					<table class="nice" width="100%">
+						<thead>
+							<tr>
+								<th>Item</th>
+								<th>Item Price</th>
+								<th>Quantity</th>
+								<th>Total</th>
+							</tr>
+						</thead>
+						<tbody>
+							<% @order.shop_order_items.each do |item| %>
+								<tr>
+									<td><%= item.shop_product.name %></td>
+									<td><%= number_to_currency(item.shop_product.sell) %></td>
+									<td><%= item.quantity %></td>
+									<td><%= number_to_currency(item.total_price) %></td>
+								</tr>
+							<% end %>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<% subtotal = @order.total_order_price
+							 	weight = @order.total_order_weight
+								if subtotal > 50
+									delivery = 0.00
+								else
+							 		delivery = @order.delivery_charge(weight)
+							 	end %>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>Subtotal:</td>
+									<td><%= number_to_currency(subtotal) %></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>Delivery:</td>
+									<td><%= number_to_currency(delivery) %></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td><strong>Total:</strong></td>
+									<td><strong><%= number_to_currency(subtotal + delivery) %></strong></td>
+								</tr>
+						</tbody>
+					</table>
+				</div>
+			
+		</div>
+		
+		<div class="four columns">
+			<div class="panel">
+				<h5>Order Reference</h5>
+				<p><%= @order.resource_id %> - <%= @order.id %></p>
+
+				<h5>Status</h5>
+				<p><%= @order.order_status.name %></p>
+
+				<h5>Order Date</h5>
+				<p><%= @order.created_at.strftime('%d/%m/%Y') %></p>
+
+				<h5>Delivery Address</h5>
+				<p><%= @order.name %></p>
+				<p><%= simple_format(@order.address) %></p>
+			</div>
+		</div>
+		
+	
+</div>

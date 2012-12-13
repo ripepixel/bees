@@ -54,6 +54,41 @@
 
 <div class="row mbottom30">
 	<div class="panel">
+		<h5>Shop Orders</h5>
+		<% if @orders.empty? %>
+			<p>You have no orders to display yet :( Would you like to visit our <%= link_to "shop", shop_path %>?</p>
+		<% else %>
+		<table width="99%">
+			<thead>
+				<tr>
+					<th>Order Ref</th>
+					<th>Total</th>
+					<th>Date</th>
+					<th>Status</th>
+					<th>View</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @orders.each do |ord| %>
+				<tr>
+					<td><%= ord.resource_id %> - <%= ord.id %></td>
+					<td><%= number_to_currency(ord.order_total) %></td>
+					<td><%= ord.created_at.strftime('%d/%m/%Y')  %></td>
+					<td><%= ord.order_status.name %>
+					<td><%= link_to "View", action: :order, order_id: ord.id %></td>
+				</tr>
+				<% end %>
+				
+			</tbody>
+		</table>
+		
+		<% end %>
+	</div>
+	
+</div>
+
+<div class="row mbottom30">
+	<div class="panel">
 		<h5>Profile</h5>
 		<p><%= link_to "Change your password", change_password_path %></p>
 	</div>

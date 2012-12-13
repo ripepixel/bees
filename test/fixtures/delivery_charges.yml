@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  weight_from: 9.99
+  weight_to: 9.99
+  price: 9.99
+
+two:
+  name: MyString
+  weight_from: 9.99
+  weight_to: 9.99
+  price: 9.99

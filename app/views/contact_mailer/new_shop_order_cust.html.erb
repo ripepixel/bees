@@ -1,0 +1,35 @@
+<h3>Your Little Busy Bees Order</h3>
+
+<p>Thanks for your order, we appreciate it.</p>
+
+<p>You have ordered the following items:</p>
+
+<table width="100%">
+			<thead>
+				<tr>
+					<th>Item</th>
+					<th>Item Price</th>
+					<th>Quantity</th>
+					<th>Total</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @items.each do |item| %>
+					<tr>
+						<td><%= item.shop_product.name %></td>
+						<td><%= number_to_currency(item.shop_product.sell) %></td>
+						<td><%= item.quantity %></td>
+						<td><%= number_to_currency(item.total_price) %></td>
+					</tr>
+				<% end %>
+				
+					<tr>
+						<td></td>
+						<td></td>
+						<td><strong>Total:</strong></td>
+						<td><strong><%= number_to_currency(@ord.order_total) %></strong></td>
+					</tr>
+			</tbody>
+		</table>
+<p>Your order will be delivered shortly. Thanks for using Little Busy Bees</p>
+<p>The Little Busy Bees Team</p>

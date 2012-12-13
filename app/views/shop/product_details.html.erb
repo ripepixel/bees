@@ -1,0 +1,71 @@
+<div class="row mbottom30">
+	<div class="three columns">
+		<%= render "sidebar" %>
+	</div>
+
+	<div class="nine columns">
+		<div class="row mbottom30">
+			<div class="eight columns">
+				<div id="featured">
+					<% @item.shop_product_images.each do |img| %>
+						<%= image_tag img.image.to_s, size: "530x530" %>
+					<% end %>
+				</div>
+				
+			</div>
+			<div class="four columns">
+				<h1 class="product"><%= @item.name %></h1>
+				<p class="big_price"><%= number_to_currency(@item.sell) %></p>
+				
+				<p><%= button_to 'Add to Cart', shop_cart_items_path(:shop_product_id => @item, :quantity => 1), class: "add_to_cart" %></p>
+				<hr />
+				<p><%= @item.details %></p>
+				<!-- AddThis Button BEGIN -->
+				<div class="addthis_toolbox addthis_default_style ">
+				<a class="addthis_button_preferred_1"></a>
+				<a class="addthis_button_preferred_2"></a>
+				<a class="addthis_button_preferred_3"></a>
+				<a class="addthis_button_preferred_4"></a>
+				<a class="addthis_button_compact"></a>
+				<a class="addthis_counter addthis_bubble_style"></a>
+				</div>
+				<script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
+				<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5074307162f9adf7"></script>
+				<!-- AddThis Button END -->
+
+			</div>
+		</div>
+		<div class="row mbottom30">
+			<div class="twelve columns">
+				<h2 class="product">Other Products in this category</h2>
+				<hr />
+				<% @others.each do |prod| %>
+					<div class="three columns">
+						<div class="item_thumb_three">
+							<%= link_to image_tag(prod.shop_product_images.first.image, alt: prod.name), shop_product_details_path(name: prod.name, id: prod.id) %>
+							<span class="item_price"><%= number_to_currency(prod.sell) %></span>
+						</div>
+						<%= link_to prod.name, shop_product_details_path(name: prod.name, id: prod.id) %>
+					</div>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+   $(window).load(function() {
+       $('#featured').orbit({
+			     animation: 'fade',                  // fade, horizontal-slide, vertical-slide, horizontal-push
+			     animationSpeed: 1200, 
+			     pauseOnHover: true,
+				 startClockOnMouseOut: true,
+			     directionalNav: false,
+			     fluid: true                        // or set a aspect ratio for content slides (ex: '4x3') 
+			});
+   });
+</script>
+
+
+

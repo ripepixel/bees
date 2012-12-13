@@ -1,0 +1,31 @@
+<div class="row mbottom30">
+	<div class="three columns">
+		<%= render "sidebar" %>
+	</div>
+
+	<div class="nine columns">
+		<h1 class="subs">Shop</h1>
+
+		<div class="row">
+			<% if @products.empty? %>
+				<p>There are no products to show.</p>
+			<% else %>
+				<% @products.each do |prod| %>
+					<div class="four columns">
+						<div class="item_thumb">
+							<%= link_to (image_tag prod.shop_product_images.first.image.to_s, alt: prod.name), shop_product_details_path(name: prod.name, id: prod.id) %>
+							<span class="item_price"><%= number_to_currency(prod.sell) %></span>
+						</div>
+						<%= link_to prod.name, shop_product_details_path(name: prod.name, id: prod.id) %>
+					</div>
+				<% end %>
+			<% end %>
+
+		</div>
+
+	</div>
+</div>
+
+
+
+

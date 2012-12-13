@@ -1,5 +1,5 @@
 <div class="row mbottom30">
-	<div>
+	<!-- >
 	<div class="four columns">
 		<h1 class="home-title">Kids Craft Boxes</h1>
 		<h2 class="home-title">Receive a craft box, every month, packed with projects for your children.</h2>
@@ -15,6 +15,24 @@
 	<div class="eight columns">
 		<%= image_tag "box-home.jpg", class: "home-image" %>
 	</div>
+	<-->
+	<div class="twelve columns">
+		<div id="featured">
+			<%= image_tag "home-slide-1.jpg", class: "home-image" %>
+			<%= image_tag "home-slide-2.jpg", class: "home-image" %>
+			<%= image_tag "home-slide-3.jpg", class: "home-image" %>
+		</div>
+		<div class="home-overlay four">
+			<h1 class="home-title">Kids Craft Boxes</h1>
+			<h2 class="home-title">Receive a craft box, every month, packed with projects for your children.</h2>
+			<ul>
+				<li>Free Delivery</li>
+				<li>For children aged 3 to 7 (and up)</li>
+				<li>All craft materials included</li>
+				<li>From <strong>&pound;14.99</strong> per month</li>
+			</ul>
+			<p><%= link_to "Join Today", join_path, class: "button nice radius blue large" %></p>
+		</div>
 	</div>
 </div>
 
@@ -47,3 +65,17 @@
 		</div>
 	</div>
 </div>
+
+<script type="text/javascript">
+   $(window).load(function() {
+       $('#featured').orbit({
+			     animation: 'fade',                  // fade, horizontal-slide, vertical-slide, horizontal-push
+			     animationSpeed: 1800,
+			 		 advanceSpeed: 6000,
+			     pauseOnHover: true,
+					 startClockOnMouseOut: true,
+			     directionalNav: false,
+			     fluid: true                         // or set a aspect ratio for content slides (ex: '4x3') 
+			});
+   });
+</script>

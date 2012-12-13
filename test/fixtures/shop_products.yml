@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  details: MyText
+  cost: 9.99
+  sell: 9.99
+  weight: 9.99
+  shop_product_category_id: 1
+  is_active: false
+
+two:
+  name: MyString
+  details: MyText
+  cost: 9.99
+  sell: 9.99
+  weight: 9.99
+  shop_product_category_id: 1
+  is_active: false

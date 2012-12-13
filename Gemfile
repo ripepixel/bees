@@ -17,8 +17,8 @@ group :assets do
   gem 'zurb-foundation', '~>2.2'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  gem 'therubyracer', :platforms => :ruby
-
+  gem 'therubyracer', '0.11.0beta5', :platforms => :ruby
+	gem 'libv8', '~> 3.11.8'
   gem 'uglifier', '>= 1.0.3'
 end
 

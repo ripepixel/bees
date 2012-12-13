@@ -4,6 +4,8 @@ class AccountController < ApplicationController
   def index
     @subscriptions = Subscription.where("user_id = ? AND status = ?", current_user, "Active").order("created_at DESC")
     @cancelled = Subscription.where("user_id = ? AND status = ?", current_user, "Cancelled").order("created_at DESC")
+
+    @orders = ShopOrder.where("user_id = ? AND order_status_id != ?", current_user, 1).order("id DESC")
     # @gifts = Gift.where("user_id = ? AND status = ?", current_user, "Paid").order("created_at DESC")
   end
 
@@ -23,6 +25,20 @@ class AccountController < ApplicationController
 	      redirect_to account_url, alert: "Error finding Subscription details"
 	    end
 	  end
+  end
+
+  def order
+    begin
+      @order = ShopOrder.find(params[:order_id])
+    rescue ActiveRecord::RecordNotFound
+      redirect_to account_url, alert: "Error finding Order details"
+    else
+      if @order && @order.user_id == current_user.id
+        render "order"
+      else
+        redirect_to account_url, alert: "Error finding Order details"
+      end
+    end
   end
 
   def change_password

@@ -1,0 +1,21 @@
+<div>
+	<% unless @cart_items.empty? %>
+		<div class="panel">
+		<h4>Your Basket</h4>
+		<ul class="basket">
+		<% @cart_items.each do |itm| %>
+			<li><%= itm.quantity %> x <%= itm.shop_product.name %></li>
+		<% end %>
+		</ul>
+		<p><strong>Total: <%= number_to_currency(@cart_items.first.shop_cart.total_cart_price) %></strong> <span class="small">exc. delivery</span></p>
+		<p><%= link_to "Checkout", shop_basket_path %></p>
+		</div>
+	<% end %>
+	<h4>Shop Categories</h4>
+	<ul>
+		<li><%= link_to "Shop Home", shop_path %></li>
+		<% @categories.each do |cat| %>
+			<li><%= link_to cat.name, shop_category_path(:name => cat.name) %></li>
+		<% end %>
+	</ul>
+</div>
