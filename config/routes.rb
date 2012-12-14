@@ -67,6 +67,10 @@ Bees::Application.routes.draw do
   get 'manager', to: 'manager#index'
   get 'manager/subscription_details', to: 'manager#subscription_details'
   get 'manager/pack_sheets', to: 'manager#pack_sheets'
+  get 'manager/orders', to: 'manager#orders'
+  get 'manager/order_details', to: 'manager#order_details'
+  post 'manager/update_order_status', to: 'manager#update_order_status'
+  get 'manager/sort_orders', to: 'manager#sort_orders'
 
   get 'manager/month_end', to: 'manager#month_end'
   post 'manager/process_month_end', to: 'manager#process_month_end'

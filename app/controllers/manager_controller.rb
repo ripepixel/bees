@@ -1,5 +1,6 @@
 class ManagerController < ApplicationController
   before_filter :authenticate_admin_user!
+  before_filter :get_order_statuses
 
   def index
   	@subscriptions = Subscription.where("status = ?", "Active").order("created_at DESC")
@@ -7,6 +8,7 @@ class ManagerController < ApplicationController
     @comments = Comment.where("status = ?", "pending").count
     @m_end = MonthlySale.find(:all, :conditions => ["created_at between ? and ?",
              Date.today.beginning_of_month, Date.today.end_of_month])
+    @orders = ShopOrder.all
   end
 
   def subscription_details
@@ -16,6 +18,28 @@ class ManagerController < ApplicationController
   def pack_sheets
   	@subscriptions = Subscription.where("status = ?", "Active").order("created_at DESC")
   	render :layout => nil
+  end
+
+  def orders
+    @orders = ShopOrder.all
+    
+  end
+
+  def sort_orders
+    @orders = ShopOrder.status_sort(params[:status])
+  end
+
+  def order_details
+    @order = ShopOrder.find(params[:id])
+  end
+
+  def update_order_status
+    @order = ShopOrder.find(params[:order_id])
+    @order.update_attributes(:order_status_id => params[:order_status])
+
+    # send email to customer to tell them order status has been updated
+
+    redirect_to manager_order_details_path(:id => params[:order_id]), notice: "Order status has been updated"
   end
 
   def month_end
@@ -39,6 +63,10 @@ class ManagerController < ApplicationController
       end
     end
     redirect_to manager_month_end_path, notice: "Job has been processed #{count} times"
+  end
+
+  def get_order_statuses
+    @statuses = OrderStatus.all
   end
 
 end

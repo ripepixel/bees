@@ -6,6 +6,8 @@ class ShopOrder < ActiveRecord::Base
   has_many :shop_order_items
   has_many :shop_order_deliveries
 
+  scope :status_sort, lambda { |status| joins(:order_status).where("order_statuses.name = ?", status) }
+
 
   def total_order_price
   	shop_order_items.to_a.sum { |item| item.total_price }
@@ -19,5 +21,7 @@ class ShopOrder < ActiveRecord::Base
     del = DeliveryCharge.where("weight_from < ? AND weight_to > ?", weight, weight)
     del.first.price
   end
+
+  
 
 end

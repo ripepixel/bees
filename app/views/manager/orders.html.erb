@@ -1,0 +1,40 @@
+<div class="row mbottom30">
+	<h4>Admin Area - Orders</h4>
+	<%= render 'manager/status_menu' %>
+</div>
+
+<div class="row mbottom30">
+	<div class="panel">
+		<h5>Orders</h5>
+		<% if @orders.empty? %>
+			<p>There are no orders yet :(</p>
+		<% else %>
+		<table width="99%">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Date</th>
+					<th>Status</th>
+					<th>Name</th>
+					<th>Total</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @orders.each do |ord| %>
+				<tr>
+					<td><%= link_to ord.id, manager_order_details_path(:id => ord.id) %></td>
+					<td><%= ord.created_at.strftime('%d/%m/%Y') %></td>
+					<td><%= ord.order_status.name %></td>
+					<td><%= ord.name  %></td>
+					<td><%= number_to_currency(ord.order_total) %></td>
+				</tr>
+				<% end %>
+				
+			</tbody>
+		</table>
+		
+		<% end %>
+
+	</div>
+	
+</div>

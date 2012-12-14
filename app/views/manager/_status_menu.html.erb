@@ -1,0 +1,6 @@
+<p>
+	<%= link_to "All", manager_orders_path %> | 
+	<% @statuses.each do |status| %>
+		<%= link_to status.name, manager_sort_orders_path(:status => status.name) %> | 
+	<% end %>
+	</p>

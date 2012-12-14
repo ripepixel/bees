@@ -52,6 +52,17 @@
 		</table>
 		
 		<% end %>
+
+		<h5>Orders</h5>
+		<% if @orders.empty? %>
+			<p>There are no shop orders.</p>
+		<% else %>
+			<p>There <%= pluralize_without_count(@orders.count, "is") %> <%= pluralize(@orders.count, "order") %></p>
+			<% @orders.each do |ord| %>
+				<%= ord.order_total %> - <%= ord.order_status.name %>
+			<% end %>
+		<% end %>
+
 	</div>
 	<% if @m_end.empty? %>
 		<p><%= link_to "Month End Job", manager_month_end_path, class: "button nice radius small" %></p>
