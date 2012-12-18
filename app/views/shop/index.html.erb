@@ -8,7 +8,8 @@
 
 		<div class="row">
 			<% if @products.empty? %>
-				<p>There are no products to show.</p>
+				<h4>Coming Soon</h4>
+				<p>Our shop will be live shortly. We will be bringing some awesome craft kits for kids of all ages, so keep checking back, or sign up for our <%= link_to "newsletter", newsletter_path %>.</p>
 			<% else %>
 				<% @products.each do |prod| %>
 					<div class="four columns">
