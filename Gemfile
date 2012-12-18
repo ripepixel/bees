@@ -32,6 +32,7 @@ gem 'will_paginate', '~> 3.0.0'
 gem 'activeadmin'
 gem 'best_in_place'
 gem 'gibbon'
+gem 'feed-abstract', "~> 0.0.13"
 
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'

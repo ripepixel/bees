@@ -80,6 +80,7 @@ GEM
     faraday (0.8.4)
       multipart-post (~> 1.1)
     fastercsv (1.5.5)
+    feed-abstract (0.0.13)
     formtastic (2.2.1)
       actionpack (>= 3.0)
     gibbon (0.3.5)
@@ -211,6 +212,7 @@ DEPENDENCIES
   capistrano
   carrierwave
   coffee-rails (~> 3.2.1)
+  feed-abstract (~> 0.0.13)
   gibbon
   gocardless
   jquery-rails

@@ -132,15 +132,11 @@ respond_to :html, :json
    end
   
   def get_start_date
-    # Set first date to December for launch
-    if Date.today < Date.parse("2012-12-01")
-    	start_date = "2012-12-14"
-    else
-    	if Date.today.day <= 13
-	    	start_date = "#{Date.today.year}-#{Date.today.month}-14"
-	  	else
-	    	start_date = "#{Date.today.year}-#{Date.today.month + 1}-14"
-	  	end
-	  end
-	end
+      if Date.today.day <= 13
+        start_date = "#{Date.today.year}-#{Date.today.month}-14"
+      else
+        start_date = "#{Date.today.year}-#{Date.today.month}-14"
+        start_date = start_date.to_date + 1.month
+      end
+  end
 end

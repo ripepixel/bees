@@ -5,7 +5,8 @@ module ApplicationHelper
   end
   
   def latest_blog_posts
-  	Article.where("published = ?", true).order("created_at DESC").limit(4)
+  	#Article.where("published = ?", true).order("created_at DESC").limit(4)
+    feed = FeedAbstract::Feed.new(Net::HTTP.get(URI.parse("http://littlebusybeesblog.tumblr.com/rss")))
   end
   
   def pluralize_without_count(count, noun, text = nil)
