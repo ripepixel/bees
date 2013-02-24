@@ -83,7 +83,7 @@
 					<li><%= link_to "Join", join_path, class: "main" %></li>
 					<li><%= link_to "Craft Boxes", craft_boxes_path, class: "main" %></li>
 					<li><%= link_to "Shop", shop_path, class: "main new" %></li>
-					<li><%= link_to "Blog", "http://littlebusybeesblog.tumblr.com", target: "_blank", class: "main" %></li>
+					<li><%= link_to "Blog", articles_path, class: "main" %></li>
 					<li><%= link_to "Contact", contact_path, class: "main" %></li>
 				</ul>
 			</div>
@@ -159,8 +159,8 @@
 						<div class="eight columns">
 							<h5>Latest Blog Posts</h5>
 							<ul>
-								<% latest_blog_posts.items.last(5).each do |blog| %>
-									<li><%= link_to blog.title, blog.link, target: "_blank" %></li>
+								<% latest_blog_posts.each do |blog| %>
+									<li><%= link_to blog.title, article_path(blog.permalink) %></li>
 								<% end %>
 							</ul>
 						</div>
